@@ -3,13 +3,13 @@
     
     Tại bài hướng dẫn này mình sẽ cài bản distro Linux Ubuntu Minimal
 # MỤC LỤC
-[Yêu cầu cấu hình](Y)
+[Yêu cầu cấu hình](#Y)
 
-[1. Chuẩn bị và cài đặt](1)
-- [Tải ISO và tạo USB boottable](1.1)
-- [Cấu hình BIOS/UEFI để khởi động từ USB](1.2)
+[1. Chuẩn bị và cài đặt](#1)
+- [Tải ISO và tạo USB boottable](#1.1)
+- [Cấu hình BIOS/UEFI để khởi động từ USB](#1.2)
 
-[2. Quá trình cài đặt](2)
+[2. Quá trình cài đặt](#2)
 
 <a name="Y"></a>
 ## Yêu cầu cấu hình
