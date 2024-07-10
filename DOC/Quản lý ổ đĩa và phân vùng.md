@@ -101,14 +101,14 @@
 
     Khi được gọi, fdisk sẽ hiển thị một lời chào và sau đó là một cảnh báo, sau đó nó sẽ chờ lệnh từ bạn để thực hiện các thao tác trên đĩa.
 
-    ![Image description](/thuctap/img/fdisk.png)
+    ![Image description](/img/fdisk.png)
 
     Cảnh báo này rất quan trọng. Bạn có thể tạo, chỉnh sửa hoặc xóa các phân vùng một cách tự do, nhưng không có gì sẽ được ghi vào đĩa trừ khi bạn sử dụng lệnh ghi ``(w)``. Vì vậy, bạn có thể "thực hành" mà không lo lắng mất dữ liệu, miễn là bạn không nhấn phím ``w``. Để thoát khỏi fdisk mà không lưu các thay đổi, bạn sử dụng lệnh ``q``.
 
     **Xem bảng phân vùng hiện tại**
     Lệnh ``p`` trong fdisk được sử dụng để in bảng phân vùng hiện tại. Đầu ra thường có dạng như sau:
 
-    ![Image description](/thuctap/img/fdisk_p.png)
+    ![Image description](/img/fdisk_p.png)
 
     **Đây là mô tả ý nghĩa của từng cột trong bảng phân vùng**
 
@@ -140,13 +140,13 @@
     
     Ví dụ, nếu bạn muốn tạo một phân vùng 1 GB, bạn có thể chỉ định +1G làm ``End Sector``, và ``fdisk`` sẽ cấp phát kích thước phân vùng tương ứng. Xem ví dụ sau để tạo một phân vùng chính:
 
-    ![Image description](/thuctap/img/fdisk_n.png)
+    ![Image description](/img/fdisk_n.png)
 
     **Kiểm tra xem còn dung lượng trống không**
     
     Nếu bạn không biết có bao nhiêu không gian trống trên đĩa, bạn có thể sử dụng lệnh ``F`` để hiển thị không gian chưa phân vùng, như sau:
 
-    ![Image description](/thuctap/img/fdisk_F.png)
+    ![Image description](/img/fdisk_F.png)
 
 ### 3. Gắn kết và tháo gỡ phân vùng
 * **Cách sử dụng lệnh mount**
@@ -190,19 +190,19 @@
 
   * **Hiển thị thông tin về các file system được mount:**
 
-    ![Image description](/thuctap/img/mount_ext4.png)
+    ![Image description](/img/mount_ext4.png)
 
   * **Mount các file system:**
 
-    ![Image description](/thuctap/img/mount_file.png)
+    ![Image description](/img/mount_file.png)
 
   * **Hiển thị thông tin phiên bản:**
 
-    ![Image description](/thuctap/img/mount_ver.png)
+    ![Image description](/img/mount_ver.png)
 
   * **Umount filesystem:**
     
-    ![Image description](/thuctap/img/umount_.png)
+    ![Image description](/img/umount_.png)
 
 ## III. Quản lý LVM (Logical Volume Management)
 ### 1. Khái niệm về LVM
@@ -213,11 +213,11 @@
 
   * **Logical Volume Group**: Nhiều Physical Volume trên những ổ đĩa khác nhau được kết hợp lại thành một Logical Volume Group, với LVM Logical Volume Group được xem như một ổ đĩa ảo.
 
-    ![Image description](/thuctap/img/LVG.png)
+    ![Image description](/img/LVG.png)
 
   * **Logical Volumes:** Logical Volume Group được chia nhỏ thành nhiều Logical Volume, mỗi Logical Volume có ý nghĩa tương tự như partition. Nó được dùng cho các mount point và được format với những định dạng khác nhau như ext2, ext3 ... 
 
-    ![Image description](/thuctap/img/LVG_1.png)
+    ![Image description](/img/LVG_1.png)
     
     Khi dung lượng của Logical Volume được sử dụng hết có thể đưa thêm ổ đĩa mới bổ sung cho Logical Volume Group và do đó tăng được dung lượng của Logical Volume.
 
@@ -230,13 +230,13 @@
 
     Sử dụng câu lệnh ``lsblk`` để kiểm tra xem có những Hard Drives nào trên hệ thống.
 
-    ![](/thuctap/img/listdisk.png)
+    ![](/img/listdisk.png)
 
 * **Bước 2. Tạo Partition**
 
     Từ các Hard Drives trên hệ thống, bạn tạo các partition. Ở đây, từ sdb, mình tạo các partition bằng cách sử dụng lệnh sau ``fdisk /dev/sdb``
 
-    ![](/thuctap/img/sdb_p.png)
+    ![](/img/sdb_p.png)
     
     * Trong đó bạn nhập `n` để bắt đầu tạo partition
 
@@ -254,7 +254,7 @@
     
     Tiếp theo bạn thay đổi định dạng của partition vừa mới tạo thành LVM
 
-    ![](/thuctap/img/LVMsdb.png)
+    ![](/img/LVMsdb.png)
 
     * Bạn nhập `t` để thay đổi định dạng partition.
 
@@ -262,11 +262,11 @@
     
     Tương tự, bạn tạo thêm các partition primary từ sdb.
 
-    ![](/thuctap/img/more_sdb.png)
+    ![](/img/more_sdb.png)
 
     Chúng ta làm tương tự các bước trên với sdc.
 
-    ![](/thuctap/img/more_sdc.png)
+    ![](/img/more_sdc.png)
 
 * **Bước 3. Tạo Physical Volume**
 
@@ -276,15 +276,15 @@
 
     ``# pvcreate /dev/sdb1``
 
-    ![](/thuctap/img/pvcreate.png)
+    ![](/img/pvcreate.png)
 
     Để kiểm tra các Physical Volume ta dùng câu lệnh ``pvs``
     
-    ![](/thuctap/img/pvs.png)
+    ![](/img/pvs.png)
     
     hoặc ``pvdispay``
 
-    ![](/thuctap/img/pvdisplay.png)
+    ![](/img/pvdisplay.png)
 
 * **Bước 4. Tạo Volume Group**
 
@@ -296,11 +296,11 @@
 
     trong đó ``vg-demo1`` là tên của Volume Group
 
-    ![](/thuctap/img/vgcreate.png)
+    ![](/img/vgcreate.png)
 
     Tương tự như Physical Volume ta dùng các câu lệnh như ``vgs`` hoặc ``vgdisplay`` để kiểm tra Volume Group
     
-    ![](/thuctap/img/vgs.png)
+    ![](/img/vgs.png)
 
 * **Bước 5. Tạo Logical Volume**
 
@@ -315,11 +315,11 @@
 
     * ``vg-demo1``: là Volume Group mà ta đã tạo từ bước trước. 
 
-    ![](/thuctap/img/lvcreate.png)
+    ![](/img/lvcreate.png)
 
     * Ta dùng câu lệnh ``lvs`` hoặc # ``lvdisplay`` để kiểm tra Logical Volume
 
-    ![](/thuctap/img/lvs.png)
+    ![](/img/lvs.png)
 > [!WARNING]
 > Chúng ta có thể tạo nhiều Logical Volume từ 1 Volume Group
 
@@ -329,7 +329,7 @@
 
     ``# mkfs -t ext4 /dev/vg-demo1/lv-demo1``
 
-    ![](/thuctap/img/mkfs.png)
+    ![](/img/mkfs.png)
 
 * **Bước 7.Mount và sử dụng**
 
@@ -345,4 +345,4 @@
     
     ``# df -h``
 
-    ![](/thuctap/img/mount_demo1.png)
+    ![](/img/mount_demo1.png)
