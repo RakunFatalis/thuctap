@@ -34,11 +34,11 @@
        
         **Các Trường Hợp Sử Dụng của Ext4**
        
-            Ext4 thích hợp cho các trường hợp sử dụng truyền thống như máy tính để bàn, laptop và máy chủ. Độ ổn định và tính tương thích của nó làm cho Ext4 trở thành lựa chọn mặc định cho nhiều bản phân phối Linux.
+        * Ext4 thích hợp cho các trường hợp sử dụng truyền thống như máy tính để bàn, laptop và máy chủ. Độ ổn định và tính tương thích của nó làm cho Ext4 trở thành lựa chọn mặc định cho nhiều bản phân phối Linux.
         
         **Giới Hạn của Ext4**
        
-            Mặc dù có nhiều lợi ích, Ext4 vẫn có những giới hạn khi đến với khả năng mở rộng và các tính năng tiên tiến trong quản lý dữ liệu. Trong các tình huống yêu cầu khả năng mở rộng mạnh mẽ hoặc các tính năng quản lý dữ liệu tiên tiến, các hệ thống tập tin khác có thể phù hợp hơn.
+        * Mặc dù có nhiều lợi ích, Ext4 vẫn có những giới hạn khi đến với khả năng mở rộng và các tính năng tiên tiến trong quản lý dữ liệu. Trong các tình huống yêu cầu khả năng mở rộng mạnh mẽ hoặc các tính năng quản lý dữ liệu tiên tiến, các hệ thống tập tin khác có thể phù hợp hơn.
     
         Tóm lại, Ext4 là một hệ thống tập tin mạnh mẽ và ổn định trong cộng đồng Linux, cung cấp sự đáng tin cậy cho nhiều ứng dụng từ các máy tính cá nhân đến các môi trường máy chủ quan trọng. Tuy nhiên, việc lựa chọn hệ thống tập tin nên phụ thuộc vào yêu cầu cụ thể của từng hệ thống và các tính năng kỹ thuật mong muốn.
 
@@ -52,11 +52,11 @@
 
         **Các Trường Hợp Sử Dụng của XFS**
                 
-            XFS phù hợp trong các môi trường yêu cầu khả năng lưu trữ khổng lồ và tốc độ lớn, chẳng hạn như trung tâm dữ liệu, sản xuất phương tiện và tính toán khoa học.
+        * XFS phù hợp trong các môi trường yêu cầu khả năng lưu trữ khổng lồ và tốc độ lớn, chẳng hạn như trung tâm dữ liệu, sản xuất phương tiện và tính toán khoa học.
         
         **Nhược điểm và Thách thức với XFS**
 
-            Mặc dù XFS cung cấp khả năng mở rộng và hiệu suất vượt trội, nó có thể không phải là lựa chọn tốt nhất đối với các hệ thống quy mô nhỏ hoặc yêu cầu các tính năng tiên tiến như snapshotting và tính toàn vẹn tích hợp sẵn.
+        * Mặc dù XFS cung cấp khả năng mở rộng và hiệu suất vượt trội, nó có thể không phải là lựa chọn tốt nhất đối với các hệ thống quy mô nhỏ hoặc yêu cầu các tính năng tiên tiến như snapshotting và tính toàn vẹn tích hợp sẵn.
         
         Tóm lại, XFS là một hệ thống tập tin mạnh mẽ và linh hoạt, phù hợp cho các môi trường có nhu cầu lưu trữ lớn và yêu cầu hiệu suất cao. Tuy nhiên, việc lựa chọn hệ thống tập tin nên dựa trên yêu cầu cụ thể của từng ứng dụng và môi trường sử dụng.
 
@@ -69,11 +69,11 @@
         
         **Các Trường Hợp Sử Dụng của Btrfs**
 
-            Btrfs rất phù hợp cho các kịch bản yêu cầu quản lý dữ liệu tiên tiến, như ảo hóa, containerization và các kịch bản yêu cầu tính toàn vẹn dữ liệu và linh hoạt cao.
+        * Btrfs rất phù hợp cho các kịch bản yêu cầu quản lý dữ liệu tiên tiến, như ảo hóa, containerization và các kịch bản yêu cầu tính toàn vẹn dữ liệu và linh hoạt cao.
         
         **Các Yếu tố Cần Xem Xét và Vấn Đề Tiềm Ẩn của Btrfs**
 
-            Mặc dù Btrfs cung cấp nhiều tính năng tiên tiến, nó có thể không phải lựa chọn lý tưởng cho mọi trường hợp sử dụng. Người dùng nên cẩn thận đánh giá các khả năng của nó và xem xét các yếu tố như tính ổn định và hỗ trợ từ cộng đồng.
+        * Mặc dù Btrfs cung cấp nhiều tính năng tiên tiến, nó có thể không phải lựa chọn lý tưởng cho mọi trường hợp sử dụng. Người dùng nên cẩn thận đánh giá các khả năng của nó và xem xét các yếu tố như tính ổn định và hỗ trợ từ cộng đồng.
     
         Tóm lại, Btrfs là một hệ thống tập tin tiên tiến và mạnh mẽ trong cộng đồng Linux, mang đến những tính năng và lợi ích đáng chú ý cho quản lý và bảo vệ dữ liệu. Tuy nhiên, sự lựa chọn hệ thống tập tin phù hợp nên dựa trên yêu cầu cụ thể của từng ứng dụng và các yếu tố kỹ thuật khác.
 
@@ -97,7 +97,7 @@
 ### 2. Sử dụng FDISK để quản lí MBR
 * **Công cụ tiêu chuẩn để quản lý các phân vùng MBR trên Linux là ``fdisk``**. Đây là một công cụ tương tác, dựa trên menu. Để sử dụng, bạn gõ lệnh fdisk sau đó là tên thiết bị tương ứng với đĩa mà bạn muốn chỉnh sửa. Ví dụ, câu lệnh thực hiện là:
         
-        # fdisk /dev/sda
+    ``# fdisk /dev/sda``
 
     Khi được gọi, fdisk sẽ hiển thị một lời chào và sau đó là một cảnh báo, sau đó nó sẽ chờ lệnh từ bạn để thực hiện các thao tác trên đĩa.
 
