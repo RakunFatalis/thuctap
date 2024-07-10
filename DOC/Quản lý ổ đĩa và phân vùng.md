@@ -2,6 +2,19 @@
 
 # Mục lục
 
+
+- [Quản lí ổ đĩa và phân vùng](#quản-lí-ổ-đĩa-và-phân-vùng)
+- [Mục lục](#mục-lục)
+  - [I. Khái niệm về phân vùng và hệ thống tập tin](#i-khái-niệm-về-phân-vùng-và-hệ-thống-tập-tin)
+  - [II. Tạo, xóa và quản lý phân vùng](#ii-tạo-xóa-và-quản-lý-phân-vùng)
+    - [1. Hiểu về MBR và GPT](#1-hiểu-về-mbr-và-gpt)
+    - [2. Sử dụng FDISK để quản lí MBR](#2-sử-dụng-fdisk-để-quản-lí-mbr)
+    - [3. Gắn kết và tháo gỡ phân vùng](#3-gắn-kết-và-tháo-gỡ-phân-vùng)
+  - [III. Quản lý LVM (Logical Volume Management)](#iii-quản-lý-lvm-logical-volume-management)
+    - [1. Khái niệm về LVM](#1-khái-niệm-về-lvm)
+    - [2. Tạo và quản lý Volume Group, Logical Volume](#2-tạo-và-quản-lý-volume-group-logical-volume)
+
+
 ## I. Khái niệm về phân vùng và hệ thống tập tin
 
 * **Phân vùng:** là quá trình chia ổ đĩa lưu trữ thành các phần nhỏ hơn, gọi là phân vùng, để sử dụng hiệu quả không gian lưu trữ và quản lý dữ liệu trên hệ thống máy tính.
@@ -23,7 +36,9 @@
 
     Tóm lại, cơ bản về phân vùng là một phần quan trọng trong quản lý hệ thống máy tính và lưu trữ dữ liệu, cung cấp cho người dùng các công cụ cần thiết để tổ chức, bảo vệ và quản lý dữ liệu hiệu quả trên các thiết bị lưu trữ.
 
+
 * **Các hệ thống tập tin**
+
     * **Hệ thống tập tin Ext4, viết tắt của "fourth extended filesystem"**, đánh dấu bước tiến lớn trong công nghệ hệ thống tập tin trong thế giới Linux. Được phát triển như một sự cải tiến so với Ext3, Ext4 đã trở thành một trong những hệ thống tập tin phổ biến nhất trong hệ sinh thái Linux.
 
        1. **Journaling (Ghi nhật ký):** Ext4 sử dụng ghi nhật ký để đảm bảo tính nhất quán dữ liệu, làm cho nó trở thành một lựa chọn đáng tin cậy cho các ứng dụng quan trọng.
@@ -77,7 +92,9 @@
     
         Tóm lại, Btrfs là một hệ thống tập tin tiên tiến và mạnh mẽ trong cộng đồng Linux, mang đến những tính năng và lợi ích đáng chú ý cho quản lý và bảo vệ dữ liệu. Tuy nhiên, sự lựa chọn hệ thống tập tin phù hợp nên dựa trên yêu cầu cụ thể của từng ứng dụng và các yếu tố kỹ thuật khác.
 
+
 ## II. Tạo, xóa và quản lý phân vùng
+
 
 ### 1. Hiểu về MBR và GPT
 
@@ -94,7 +111,9 @@
     
     2. **GPT:** Để quản lý phân vùng trên các đĩa sử dụng GPT, bạn có thể sử dụng ``gdisk``, ``parted``, ``GParted``, hoặc các công cụ quản lý phân vùng tích hợp trong hệ điều hành như ``diskpart`` trên Windows.
 
+
 ### 2. Sử dụng FDISK để quản lí MBR
+
 * **Công cụ tiêu chuẩn để quản lý các phân vùng MBR trên Linux là ``fdisk``**. Đây là một công cụ tương tác, dựa trên menu. Để sử dụng, bạn gõ lệnh fdisk sau đó là tên thiết bị tương ứng với đĩa mà bạn muốn chỉnh sửa. Ví dụ, câu lệnh thực hiện là:
         
     ``# fdisk /dev/sda``
@@ -205,6 +224,7 @@
     ![Image description](/img/umount_.png)
 
 ## III. Quản lý LVM (Logical Volume Management)
+
 ### 1. Khái niệm về LVM
 
 * LVM là một phương pháp cho phép ấn định không gian đĩa cứng thành những Logical Volume khiến cho việc thay đổi kích thước trở lên dễ dàng ( so với partition ).  Với kỹ thuật **Logical Volume Manager (LVM)** có thể thay đổi kích thước mà không cần phải sửa lại partition table của OS. Điều này thực sự hữu ích với những trường hợp đã sử dụng hết phần bộ nhớ còn trống của partition và muốn mở rộng dung lượng của nó.
@@ -224,7 +244,7 @@
   * **Physical Extent**: là một đại lượng thể hiện một khối dữ liệu dùng làm đơn vị tính dung lượng của Logical Volume.
 > [!WARNING]
 > Một điểm cần lưu ý là boot loader không thể đọc **/boot** khi nó nằm trên Logical Volume Group. Do đó không thể sử dụng kỹ thuật LVM với /boot mount point.
-
+<a name="III.2"></a>
 ### 2. Tạo và quản lý Volume Group, Logical Volume
 * **Bước 1. Kiểm tra các Hard Drives có trên hệ thống**
 
