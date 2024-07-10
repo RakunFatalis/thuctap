@@ -1,6 +1,9 @@
+# Tìm hiêu Linux
+
+
+
+
 # Các tài liệu tham khảo
-
-
 https://www.eassos.com/blog/partition-types-primary-extended-and-logical-partitions/
 
 https://help.ubuntu.com/community/HowtoPartition/PartitioningBasics
