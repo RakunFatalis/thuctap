@@ -2,7 +2,7 @@
 
 # Mục lục
 
-## 1. Khái niệm về phân vùng và hệ thống tập tin
+## I. Khái niệm về phân vùng và hệ thống tập tin
 
 * **Phân vùng:** là quá trình chia ổ đĩa lưu trữ thành các phần nhỏ hơn, gọi là phân vùng, để sử dụng hiệu quả không gian lưu trữ và quản lý dữ liệu trên hệ thống máy tính.
     
@@ -77,7 +77,7 @@
     
         Tóm lại, Btrfs là một hệ thống tập tin tiên tiến và mạnh mẽ trong cộng đồng Linux, mang đến những tính năng và lợi ích đáng chú ý cho quản lý và bảo vệ dữ liệu. Tuy nhiên, sự lựa chọn hệ thống tập tin phù hợp nên dựa trên yêu cầu cụ thể của từng ứng dụng và các yếu tố kỹ thuật khác.
 
-## 2. Tạo, xóa và quản lý phân vùng
+## II. Tạo, xóa và quản lý phân vùng
 
 ### 1. Hiểu về MBR và GPT
 
@@ -94,7 +94,7 @@
     
     2. **GPT:** Để quản lý phân vùng trên các đĩa sử dụng GPT, bạn có thể sử dụng ``gdisk``, ``parted``, ``GParted``, hoặc các công cụ quản lý phân vùng tích hợp trong hệ điều hành như ``diskpart`` trên Windows.
 
-### 2. Sử dụng Fdisk để quản lí MBR
+### 2. Sử dụng FDISK để quản lí MBR
 * **Công cụ tiêu chuẩn để quản lý các phân vùng MBR trên Linux là ``fdisk``**. Đây là một công cụ tương tác, dựa trên menu. Để sử dụng, bạn gõ lệnh fdisk sau đó là tên thiết bị tương ứng với đĩa mà bạn muốn chỉnh sửa. Ví dụ, câu lệnh thực hiện là:
         
         # fdisk /dev/sda
@@ -147,3 +147,202 @@
     Nếu bạn không biết có bao nhiêu không gian trống trên đĩa, bạn có thể sử dụng lệnh ``F`` để hiển thị không gian chưa phân vùng, như sau:
 
     ![Image description](/thuctap/img/fdisk_F.png)
+
+### 3. Gắn kết và tháo gỡ phân vùng
+* **Cách sử dụng lệnh mount**
+
+  * Mọi file trong một Linux filesystem đều được sắp xếp theo cấu trúc cây, có gốc là ``/``. Các file này có thể được phân tán trên nhiều thiết bị khác nhau tùy vào bảng phân vùng. Thư mục cha sẽ được mount đầu tiên tại ``/``, sau đó những thư mục khác có thể được mount thủ công bằng giao diện GUI (nếu có) hoặc bằng lệnh mount trong Linux.
+  * **Lệnh mount có cú pháp như sau:**
+    
+        # mount -t  device dir
+
+    ``-t type``: Chỉ định loại hệ thống tập tin (ví dụ: ext4, ntfs, vfat).
+    ``device``: Thiết bị hoặc phân vùng bạn muốn gắn kết (ví dụ: /dev/sda1).
+    ``dir``: Thư mục nơi hệ thống tập tin sẽ được gắn kết (ví dụ: /mnt).
+
+    ***Ngoài ra còn có một số dạng khác như:***
+    ```
+    # mount [-l|-h|-V]
+    # mount -a [-fFnrsvw] [-t fstype] [-O optlist] 
+    # mount [-fnrsvw] [-o options] device|dir 
+    # mount [-fnrsvw] [-t fstype] [-o options] device dir
+    ```
+    **Bạn có thể gõ cú pháp để biết thêm thông tin:**
+
+        # man mount
+    **Một số option quan trọng của lệnh mount trong Linux:**
+    
+    ``l:`` Liệt kê mọi filesystem đã được mount.
+
+    ``h:`` Hiển thị các option của lệnh.
+
+    ``V:`` Hiển thị thông tin phiên bản.
+
+    ``a:`` Mount mọi thiết bị trong /etc/fstab.
+
+    ``t:`` Loại filesystem mà thiết bị sử dụng.
+
+    ``T:`` Mô tả file fstab thay thế.
+
+    ``r:`` Mount ở chế độc chỉ đọc (read-only).
+
+* **Một số ví dụ về lệnh mount**
+
+  * **Hiển thị thông tin về các file system được mount:**
+
+    ![Image description](/thuctap/img/mount_ext4.png)
+
+  * **Mount các file system:**
+
+    ![Image description](/thuctap/img/mount_file.png)
+
+  * **Hiển thị thông tin phiên bản:**
+
+    ![Image description](/thuctap/img/mount_ver.png)
+
+  * **Umount filesystem:**
+    
+    ![Image description](/thuctap/img/umount_.png)
+
+## III. Quản lý LVM (Logical Volume Management)
+### 1. Khái niệm về LVM
+
+* LVM là một phương pháp cho phép ấn định không gian đĩa cứng thành những Logical Volume khiến cho việc thay đổi kích thước trở lên dễ dàng ( so với partition ).  Với kỹ thuật **Logical Volume Manager (LVM)** có thể thay đổi kích thước mà không cần phải sửa lại partition table của OS. Điều này thực sự hữu ích với những trường hợp đã sử dụng hết phần bộ nhớ còn trống của partition và muốn mở rộng dung lượng của nó.
+* Một số khái niệm cơ bản sử dụng trong LVM:
+  * **Physical Volume**: Là một cách gọi khác của partition trong kỹ thuật LVM, là những thành phần cơ bản được sử dụng bởi LVM. Một Physical Volume không thể mở rộng ra ngoài phạm vi một ổ đĩa.
+
+  * **Logical Volume Group**: Nhiều Physical Volume trên những ổ đĩa khác nhau được kết hợp lại thành một Logical Volume Group, với LVM Logical Volume Group được xem như một ổ đĩa ảo.
+
+    ![Image description](/thuctap/img/LVG.png)
+
+  * **Logical Volumes:** Logical Volume Group được chia nhỏ thành nhiều Logical Volume, mỗi Logical Volume có ý nghĩa tương tự như partition. Nó được dùng cho các mount point và được format với những định dạng khác nhau như ext2, ext3 ... 
+
+    ![Image description](/thuctap/img/LVG_1.png)
+    
+    Khi dung lượng của Logical Volume được sử dụng hết có thể đưa thêm ổ đĩa mới bổ sung cho Logical Volume Group và do đó tăng được dung lượng của Logical Volume.
+
+  * **Physical Extent**: là một đại lượng thể hiện một khối dữ liệu dùng làm đơn vị tính dung lượng của Logical Volume.
+> [!WARNING]
+> Một điểm cần lưu ý là boot loader không thể đọc **/boot** khi nó nằm trên Logical Volume Group. Do đó không thể sử dụng kỹ thuật LVM với /boot mount point.
+
+### 2. Tạo và quản lý Volume Group, Logical Volume
+* **Bước 1. Kiểm tra các Hard Drives có trên hệ thống**
+
+    Sử dụng câu lệnh ``lsblk`` để kiểm tra xem có những Hard Drives nào trên hệ thống.
+
+    ![](/thuctap/img/listdisk.png)
+
+* **Bước 2. Tạo Partition**
+
+    Từ các Hard Drives trên hệ thống, bạn tạo các partition. Ở đây, từ sdb, mình tạo các partition bằng cách sử dụng lệnh sau ``fdisk /dev/sdb``
+
+    ![](/thuctap/img/sdb_p.png)
+    
+    * Trong đó bạn nhập `n` để bắt đầu tạo partition
+
+    * Bạn nhập `p` để tạo partition primary
+
+    * Bạn nhập `1` để tạo partition primary 1
+
+    * Tại `First sector (2048-20971519, default 2048)` bạn để mặc định
+
+    * Tại `Last sector, +sectors or +size{K,M,G} (2048-20971519, default 20971519)` 
+    * 
+    * Bạn nhập `+1G` để partition bạn tạo ra có dung lượng 1 G
+
+    * Bạn nhập `w` để lưu lại và thoát.
+    
+    Tiếp theo bạn thay đổi định dạng của partition vừa mới tạo thành LVM
+
+    ![](/thuctap/img/LVMsdb.png)
+
+    * Bạn nhập `t` để thay đổi định dạng partition.
+
+    * Bạn nhập `8e` để đổi thành LVM.
+    
+    Tương tự, bạn tạo thêm các partition primary từ sdb.
+
+    ![](/thuctap/img/more_sdb.png)
+
+    Chúng ta làm tương tự các bước trên với sdc.
+
+    ![](/thuctap/img/more_sdc.png)
+
+* **Bước 3. Tạo Physical Volume**
+
+    Sử dụng các câu lệnh sau để tạo các Physical Volume là ``/dev/sdb1`` và ``/dev/sdc1``:
+
+    ``# pvcreate /dev/sdb1``
+
+    ``# pvcreate /dev/sdb1``
+
+    ![](/thuctap/img/pvcreate.png)
+
+    Để kiểm tra các Physical Volume ta dùng câu lệnh ``pvs``
+    
+    ![](/thuctap/img/pvs.png)
+    
+    hoặc ``pvdispay``
+
+    ![](/thuctap/img/pvdisplay.png)
+
+* **Bước 4. Tạo Volume Group**
+
+    Tiếp theo chúng ta sẽ nhóm các Physical Volume lại thành một Volume Group
+
+    Chúng ta sử dụng câu lệnh sau để tạo:
+    
+    ``# vgcreate vg-demo1 /dev/sdb1 /dev/sdc1``
+
+    trong đó ``vg-demo1`` là tên của Volume Group
+
+    ![](/thuctap/img/vgcreate.png)
+
+    Tương tự như Physical Volume ta dùng các câu lệnh như ``vgs`` hoặc ``vgdisplay`` để kiểm tra Volume Group
+    
+    ![](/thuctap/img/vgs.png)
+
+* **Bước 5. Tạo Logical Volume**
+
+    Từ một Volume Group, chúng ta có thể tạo ra các Logical Volume bằng cách sử dụng câu lệnh sau:
+
+    ``# lvcreate -L 1G -n lv-demo1 vg-demo1``
+
+    Trong đó:
+    * ``-L``: chỉ ra dung lượng mà ta muốn tạo của Logical Volume.
+
+    * ``-n``: đặt tên cho Logical Volume.
+
+    * ``vg-demo1``: là Volume Group mà ta đã tạo từ bước trước. 
+
+    ![](/thuctap/img/lvcreate.png)
+
+    * Ta dùng câu lệnh ``lvs`` hoặc # ``lvdisplay`` để kiểm tra Logical Volume
+
+    ![](/thuctap/img/lvs.png)
+> [!WARNING]
+> Chúng ta có thể tạo nhiều Logical Volume từ 1 Volume Group
+
+* **Bước 6. Định dạng Logical Volume**
+
+    Để format các Logical Volume thành các định dạng như ext2, ext3, ext4, ta có thể làm như sau:
+
+    ``# mkfs -t ext4 /dev/vg-demo1/lv-demo1``
+
+    ![](/thuctap/img/mkfs.png)
+
+* **Bước 7.Mount và sử dụng**
+
+    Ta tạo một thư mục để mount Logical Volume đã tạo vào thư mục đó.
+
+    ``# mkdir demo1``
+
+    Tiến hành mount Logical Volume lv-demo1 vào thư mục demo1.
+
+    ``# mount /dev/vg-demo1/lv-demo1 demo1``
+
+    Kiểm tra lại dung lượng của thư mục đã được mount:
+    
+    ``# df -h``
+
+    ![](/thuctap/img/mount_demo1.png)
