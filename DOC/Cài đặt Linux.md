@@ -185,3 +185,5 @@
 ### Hoàn tất
 * **Tới đây các bạn chờ tải xong rồi reboot lại là hoàn tất quá trình cài đặt**
 ![Image description](/img/Done.png)
+
+# END

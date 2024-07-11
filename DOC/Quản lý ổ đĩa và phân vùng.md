@@ -13,6 +13,7 @@
   - [III. Quản lý LVM (Logical Volume Management)](#iii-quản-lý-lvm-logical-volume-management)
     - [1. Khái niệm về LVM](#1-khái-niệm-về-lvm)
     - [2. Tạo và quản lý Volume Group, Logical Volume](#2-tạo-và-quản-lý-volume-group-logical-volume)
+- [END](#end)
 
 
 ## I. Khái niệm về phân vùng và hệ thống tập tin
@@ -366,3 +367,5 @@
     ``# df -h``
 
     ![](/img/mount_demo1.png)
+
+# END
