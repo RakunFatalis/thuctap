@@ -11,18 +11,11 @@
   - [III.  Nén và giải nén tập tin](#iii--nén-và-giải-nén-tập-tin)
     - [Các loại nén và giải nén](#các-loại-nén-và-giải-nén)
 - [END](#end)
-
-
-
-
-
-
-
 ## I. Cấu trúc thư mục của Linux
 
 Linux quản lý hệ thống trên một "hệ thống tệp tin" duy nhất, bắt đầu ở gốc là thư mục root (`/`), đây là thư mục ở cấp cao nhất. Cấu trúc cơ bản của hệ thống Linux như sau:
 
-![Filesystem Structure](/thuctap/img/filesystemlinux.png)
+![Filesystem Structure](/img/filesystemlinux.png)
 
 Trong đó:
 
@@ -79,7 +72,7 @@ Trong đó:
     
     Trong Linux, mọi thứ đều được coi như một file và khi sử dụng lệnh ``ls -l``, mỗi dòng sẽ hiển thị thông tin về một file hoặc thư mục.
 
-    ![](/thuctap/img/ls_L.png)
+    ![](/img/ls_L.png)
 
     Ta có thể thấy quyền được cấp của các thư mục và file được kí hiệu bởi 10 ký tự `-`
 
@@ -117,7 +110,7 @@ Trong đó:
 
     **Hình ảnh minh hoạ**
 
-    ![](/thuctap/img/file_permissions.png)
+    ![](/img/file_permissions.png)
 
 * **Cách sử dụng lệnh chmod để phân quyền**
     
