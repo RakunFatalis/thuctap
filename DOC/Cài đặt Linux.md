@@ -11,6 +11,7 @@
 
 [2. Quá trình cài đặt](#2)
 
+[END](#E)
 <a name="Y"></a>
 ## Yêu cầu cấu hình
 * Để cài hệ điều hành Ubuntu cần thỏa những yêu cầu sau:
@@ -186,4 +187,5 @@
 * **Tới đây các bạn chờ tải xong rồi reboot lại là hoàn tất quá trình cài đặt**
 ![Image description](/img/Done.png)
 
+<a name="Y"></a>
 # END

@@ -2,9 +2,15 @@
 
 # MỤC LỤC
 
-
-
-
+- [QUẢN LÝ TẬP TIN VÀ THƯ MỤC](#quản-lý-tập-tin-và-thư-mục)
+- [MỤC LỤC](#mục-lục)
+  - [I. Cấu trúc thư mục của Linux](#i-cấu-trúc-thư-mục-của-linux)
+  - [II.  Các lệnh quản lý tập tin và thư mục](#ii--các-lệnh-quản-lý-tập-tin-và-thư-mục)
+    - [1. Các câu lệnh thao tác với file và thư mục (tạo, xóa, tìm kiếm, phân quyền…)](#1-các-câu-lệnh-thao-tác-với-file-và-thư-mục-tạo-xóa-tìm-kiếm-phân-quyền)
+    - [2. Thay đổi quyền truy cập và chủ sở hữu](#2-thay-đổi-quyền-truy-cập-và-chủ-sở-hữu)
+  - [III.  Nén và giải nén tập tin](#iii--nén-và-giải-nén-tập-tin)
+    - [Các loại nén và giải nén](#các-loại-nén-và-giải-nén)
+- [END](#end)
 
 
 
