@@ -50,7 +50,7 @@
 
    **Hình ảnh minh hoạ cho adduser**
 
-   ![](/thuctap/img/adduser.png)
+   ![](/img/adduser.png)
 
 ### 2. Quản lí mật khẩu và thông tin người dùng
 
@@ -73,7 +73,7 @@
     
     **Ví dụ:**
     
-    ![](/thuctap/img/passwd_user.png)
+    ![](/img/passwd_user.png)
 
 * Để quản lí thông tin người dùng ta sử dụng câu lệnh ``usermod``, cú pháp câu lệnh như sau:
 
@@ -95,7 +95,7 @@
 
     **Ví dụ:** Thay đổi ngày hết hạn của tài khoản
 
-    ![](/thuctap/img/datechange.png)
+    ![](/img/datechange.png)
 
 ## II. Quản lí nhóm
 ### 1. Tạo và quản lý nhóm
@@ -129,7 +129,7 @@
 
     ``# tail /etc/group``
 
-    ![](/thuctap/img/tailgroup.png)
+    ![](/img/tailgroup.png)
 
     Nó sẽ hiện ra các thông tin của group theo form sau:
 
@@ -157,7 +157,7 @@
 
     ``# groupmod -n kythuat ketoan``
 
-    ![](/thuctap/img/group_n.png)
+    ![](/img/group_n.png)
 
     Như thế chúng ta đổi tên nhóm của "ketoan" thành "kythuat".
 
@@ -184,7 +184,7 @@
 
     ``# usermod -a -G ketoan new_user1``
 
-    ![](/thuctap/img/usermod-a-g.png)
+    ![](/img/usermod-a-g.png)
 
 
 > [!WARNING]
@@ -209,7 +209,7 @@
     
     Dùng câu lệnh ``passwd`` để đặt mật khẩu cho user
 
-    ![](/thuctap//img/step2_sudo.png)
+    ![](//img/step2_sudo.png)
 
 * **Bước 3:** Cấp quyền cho User
 
@@ -225,7 +225,7 @@
 
     Dùng lệnh ``# sudo df -h`` để kiểm tra dung lượng cho máy chủ bằng quyền root từ user **"admin_1"**
 
-    ![](/thuctap//img/su_admin_1.png)
+    ![](//img/su_admin_1.png)
 
     Như vậy chúng ta đã cấp được quyền sudo cho user.
 
@@ -235,6 +235,6 @@
 
     ``# deluser admin_1 sudo``
 
-    ![](/thuctap/img/removesudo.png)
+    ![](/img/removesudo.png)
 
 # END
