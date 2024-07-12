@@ -80,19 +80,19 @@ Sau đây chúng ta sẽ thực hành các câu lệnh ở trên để hiểu r�
 
     ``# apt update``
 
-    ![](/thuctap/img/aptupdate.png)
+    ![](/img/aptupdate.png)
 
     Cài đặt Nginx
 
     ``# apt install nginx``
 
-    ![](/thuctap/img/apt_install_nginx.png)
+    ![](/img/apt_install_nginx.png)
 
     Kiểm tra xem đã cài đặt Nginx chưa
 
     ``# Nginx -v``
 
-    ![](/thuctap/img/nginx_v.png)
+    ![](/img/nginx_v.png)
 
 
 
@@ -100,7 +100,7 @@ Sau đây chúng ta sẽ thực hành các câu lệnh ở trên để hiểu r�
 
     ``# systemctl status nginx``
 
-    ![](/thuctap/img/systemctl_status.png)
+    ![](/img/systemctl_status.png)
 
 
     Ở đây nó sẽ hiện ra một bảng gọi là **trạng thái dịch vụ chi tiết** hoặc **service status output**. Bảng này cung cấp thông tin chi tiết về trạng thái hiện tại của dịch vụ, bao gồm nhiều phần khác nhau như trạng thái hoạt động, PID của tiến trình, thời gian hoạt động, và các nhật ký (logs) gần đây.
@@ -123,19 +123,19 @@ Sau đây chúng ta sẽ thực hành các câu lệnh ở trên để hiểu r�
 
     ``# systemctl stop nginx``
 
-    ![](/thuctap/img/systemctl_stop.png)
+    ![](/img/systemctl_stop.png)
 
 * **Bắt đầu dịch vụ**
 
     ``# systemctl start nginx``
 
-    ![](/thuctap/img/systemctl_start.png)
+    ![](/img/systemctl_start.png)
 
 * **Khởi động lại dịch vụ**
 
     ``# systemctl restart nginx``
 
-    ![](/thuctap/img/systemctl_restart.png)
+    ![](/img/systemctl_restart.png)
 
 
 Và đó là mục thực hành để các bạn dễ hiểu hơn về việc quản lí dịch vụ.
@@ -189,7 +189,7 @@ Và đó là mục thực hành để các bạn dễ hiểu hơn về việc qu
 
     **Bảng thông tin của câu lệnh ``ps``**
 
-    ![](/thuctap/img/ps.png)
+    ![](/img/ps.png)
 
     ``PID – ID`` tiến trình duy nhất.
 
@@ -205,7 +205,7 @@ Và đó là mục thực hành để các bạn dễ hiểu hơn về việc qu
 
 * Câu lệnh ``top`` chỉ cần cú pháp: ``# top`` là chạy được.
 
-    ![](/thuctap/img/top.png)
+    ![](/img/top.png)
 
     Thông tin liên quan đến quy trình bao gồm:
 
@@ -249,11 +249,11 @@ Và đó là mục thực hành để các bạn dễ hiểu hơn về việc qu
 
 * **Cài đặt htop**
     
-    ![](/thuctap/img/apthtop.png)
+    ![](/img/apthtop.png)
 
     Dùng câu lệnh htop để sử dụng:
 
-    ![](/thuctap/img/menuhtop.png)
+    ![](/img/menuhtop.png)
 
 #### D. Câu lệnh kill
 
