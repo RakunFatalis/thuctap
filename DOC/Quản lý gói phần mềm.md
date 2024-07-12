@@ -53,6 +53,7 @@ APT ban đầu được thiết kế như là một giao diện cho dpkg để l
 
     ![](/thuctap//img/removehtop.png)
 
-### 4. APT, APT-GET, DPKG chúng khác gì nhau
+### 4. Apt-get và dpkg
 
-  * 
+  * **Apt-get**
+  
