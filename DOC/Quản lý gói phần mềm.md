@@ -56,4 +56,24 @@ APT ban đầu được thiết kế như là một giao diện cho dpkg để l
 ### 4. Apt-get và dpkg
 
   * **Apt-get**
+
+    Là một công cụ dòng lệnh để quản lý gói phần mềm. Nó sử dụng APT (Advanced Package Tool), một hệ thống quản lý gói phần mềm mạnh mẽ. apt-get có thể tự động tải về, cài đặt, gỡ bỏ, và nâng cấp các gói phần mềm từ các kho lưu trữ phần mềm.
+
+    Câu lệnh của apt-get không khác gì nhiều với apt chỉ cần thay từ ``apt`` thành ``apt-get``
+
+  * **DPKG**
+
+    Là một công cụ cấp thấp hơn, chuyên dùng để quản lý các gói .deb. Nó không có khả năng tự động xử lý phụ thuộc (dependencies) như apt-get. Tuy nhiên, dpkg vẫn rất hữu ích khi bạn cần cài đặt hoặc gỡ bỏ một gói .deb cụ thể mà không cần đến các kho lưu trữ.
+
+    Một số câu lệnh thường dùng của DPKG:
+
+    Câu lệnh cơ bản: # dpks [option] [name.deb]
+
+    | Lệnh                       | Mô tả                                                 |
+    |----------------------------|--------------------------------------------------------|
+    | `-i`| Cài đặt một gói `.deb`.                                |
+    | `-r`| Gỡ bỏ một gói đã cài đặt.                              |
+    | `-l`| Liệt kê tất cả các gói đã cài đặt.                     |
+    | `-s`| Hiển thị thông tin về một gói đã cài đặt.              |
+    | `-L`| Hiển thị danh sách các file thuộc về một gói đã cài đặt. |
   
