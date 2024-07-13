@@ -30,13 +30,13 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
     ``# iptables -V``
 
-    ![](/thuctap/img/iptables_v.png)
+    ![](/img/iptables_v.png)
 
 * Nếu chưa có, cài đặt iptables
 
     ``# apt install iptables``
 
-    ![](/thuctap/img/iptables_i.png)
+    ![](/img/iptables_i.png)
 
 **Cài đặt firewalld**
 
@@ -44,13 +44,13 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
     ``# systemctl status firewalld``
 
-    ![](/thuctap/img/firewalld_v.png)
+    ![](/img/firewalld_v.png)
 
 * Nếu chưa có, cài đặt firewalld
 
     ``# apt install firewalld``
 
-    ![](/thuctap/img/firewalld_i.png)
+    ![](/img/firewalld_i.png)
 
     ``# yum install firewalld`` Lệnh này dùng cho CentOS/RHEL
 
@@ -68,13 +68,13 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
     ``# ufw status``
 
-    ![](/thuctap//img/ufw_v.png)
+    ![](//img/ufw_v.png)
 
 * Nếu chưa có, cài đặt ufw:
 
     ``# apt install ufw``
 
-    ![](/thuctap/img/ufw_i.png)
+    ![](/img/ufw_i.png)
 
 ### 2. Cấu hình
 
@@ -96,7 +96,7 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
     ``# ufw reset``
 
-![](/thuctap/img/ufw_check.png)
+![](/img/ufw_check.png)
 
 
 * Thiết lập chính sách mặc định
@@ -106,7 +106,7 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
     ``# ufw default allow outgoing``
 
-    ![](/thuctap/img/ufw_default.png)
+    ![](/img/ufw_default.png)
 
 * Cho phép các port cần truy cập vào server
 
@@ -118,7 +118,7 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
     Ví dụ : mở các port 80, 443, 3306 và 8080
 
-    ![](/thuctap/img/ufw_allow_port.png)
+    ![](/img/ufw_allow_port.png)
 
 
 * Chặn truy cập đến một port.
@@ -131,7 +131,7 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
     Ví dụ : mình sẽ đóng port 80, 443
 
-    ![](/thuctap/img/ufw_deny_port.png)
+    ![](/img/ufw_deny_port.png)
 
 * Ngoài ra ufw cho phép thực hiện lệnh allow và deny với loại service cụ thể. Ví dụ: sử dụng mysql thay vì mởi port 3306, sử dụng http hay https thay vì các port 80, 443, cụ thể:
 
@@ -141,7 +141,7 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
     ``# ufw allow https``
 
-    ![](/thuctap/img/ufw_detail_servic.png)
+    ![](/img/ufw_detail_servic.png)
 
 * Cho phép môt IP hoặc một range IP truy cập đến server.
     
@@ -149,7 +149,7 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
     Ví dụ:  chặn truy cập từ IP 172.20.1.126 như sau.
 
-    ![](/thuctap/img/ufw_allow_ip.png)
+    ![](/img/ufw_allow_ip.png)
 
 * Cho phép IP kèm port nhất định vào server
 
@@ -159,7 +159,7 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
     Ví dụ: câu lệnh cho phép IP 192.168.72.1 truy cập đến port 22 và 3306
 
-    ![](/thuctap/img/ufw_allow_ip_to_port.png)
+    ![](/img/ufw_allow_ip_to_port.png)
 
 * Xóa bỏ rule firewall cấu hình trước đó.
 
@@ -167,7 +167,7 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
     ``# ufw status numbered``
 
-    ![](/thuctap/img/ufw_idnumber.png)
+    ![](/img/ufw_idnumber.png)
 
 * Xác định chính xác rule muốn xóa với số định danh tương ứng
 
@@ -177,7 +177,7 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
     Ví dụ: thực hiện xóa rule cho phép truy cập đến port SSH (22)
 
-    ![](/thuctap/img/ufw_delete_rule.png)
+    ![](/img/ufw_delete_rule.png)
 
 * Bật hoặc tắt ipv6 trên firewal UFW
 
@@ -186,13 +186,13 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
     Mở file cấu hình UFW ở /etc/default/ufw và tiến hành điều chỉnh.
     Nếu dòng ``IPV6=no`` bạn hãy chuyển sang ``YES`` để kích hoạt và ngược lại nếu muốn tắt thì chọn ``no``.
 
-    ![](/thuctap/img/ufw_IPV6.png)
+    ![](/img/ufw_IPV6.png)
 
     Sau cùng sử dụng lệnh sau để reload lại cấu hình
 
     ``# ufw reload``
 
-    ![](/thuctap/img/ufw_reload.png)
+    ![](/img/ufw_reload.png)
 
 ## II. SSH
 
@@ -206,20 +206,20 @@ SSH Key là một cặp khóa mật mã được sử dụng để xác thực n
 
     ``# apt install openssh-server``
 
-    ![](/thuctap/img/install_openssh.png)
+    ![](/img/install_openssh.png)
 
 
 * Kiểm tra OpenSSH Server đã kích hoạt chưa;
 
     ``# systemctl status ssh``
 
-    ![](/thuctap/img/checkssh.png)
+    ![](/img/checkssh.png)
 
 * Kích hoạt SSH lên
 
     ``# systemctl enable ssh``
 
-    ![](/thuctap/img/sshenable.png)
+    ![](/img/sshenable.png)
 
     Khởi động lại SSH để chạy:
 
@@ -229,18 +229,18 @@ SSH Key là một cặp khóa mật mã được sử dụng để xác thực n
 
     ``# ssh-keygen -t rsa``
 
-    ![](/thuctap/img/ssh_keygen.png)
+    ![](/img/ssh_keygen.png)
 
 
 ### Cấu hình bảo mật SSH.
 
 Vào đường dẫn ``/etc/ssh`` để kiếm file có tên ``sshd_config``
 
-![](/thuctap/img/ssh_location.png)
+![](/img/ssh_location.png)
 
 Sử dụng trình thảo ``vi`` hoặc ``nano`` để cấu hình file
 
-![](/thuctap/img/ssh_config.png)
+![](/img/ssh_config.png)
 
 
 File sshd_config là file cấu hình chính cho SSH Daemon (sshd). Mỗi dòng trong file này đại diện cho một thiết lập cụ thể của dịch vụ SSH.
