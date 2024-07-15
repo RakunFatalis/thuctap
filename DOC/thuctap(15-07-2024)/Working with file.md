@@ -55,7 +55,7 @@ Chúng ta muốn hiển thị thông tin chi tiết từ quyền, người sở 
 
 ``# ls -l``
 
-![](/thuctap/img/ls-l.png)
+![](/img/ls-l.png)
 
 
 ## Hiển thị nội dung file với lệnh cat
@@ -77,7 +77,7 @@ Các lệnh `cat` phổ biến
 
 Ví dụ: Muốn xem thông tin của một file:
 
-![](/thuctap/img/catfile1.png)
+![](/img/catfile1.png)
 
 
 ## Xem nội dung file với lệnh less và lệnh more
@@ -250,26 +250,26 @@ Lệnh awk được thiết kế để giúp việc truy xuất thông tin và x
 
 Giả sử ta có một tệp ``hoadon.txt`` như sau:
 
-![](/thuctap//img/hoadon.txt.png)
+![](//img/hoadon.txt.png)
 
 
 Để hiển thị cột thứ 2 (cột Fruit), bạn có thể sử dụng awk như sau:
 
 ``# awk '{ print $2 }' hoadon.txt``
 
-![](/thuctap/img/awk_print$2.png)
+![](/img/awk_print$2.png)
 
 Để tính toán trung bình của cột "Total Amount", bạn có thể sử dụng awk như sau:
 
 ``# awk '{ sum+=$5} END { print sum/NR}' hoadon.txt``
 
-![](/thuctap/img/awk_sumNR.png)
+![](/img/awk_sumNR.png)
 
 Chúng ta còn có thể in ra nội dung dựa vào việc ta lọc số dòng, ví dụ ta muốn in dòng có chứa thông tin STT 3 ta dùng câu lệnh sau:
 
 ``# awk 'NR==7' hoadon.txt``
 
-![](/thuctap/img/awk_NR7.png)
+![](/img/awk_NR7.png)
 
 Để hiểu rõ hơn về lệnh awk các bạn có thể đọc các tài liệu sau đây:
 
@@ -304,7 +304,7 @@ Các tuỳ chọn phổ biến trong lệnh ps
     
 * Khi chúng ta thực hiện lệnh ps mà không có bất kỳ đối số nào, nó sẽ hiển thị các tiến trình trong Shell hiện tại.
 
-    ![](/thuctap/img/ps.png)
+    ![](/img/ps.png)
 
     **Trong đó:**
 
@@ -318,7 +318,7 @@ Các tuỳ chọn phổ biến trong lệnh ps
 
 Để hiển thị mọi tiến trình hoạt động trên hệ thống Linux ở định dạng BSD chúng ta có thể sử dụng tùy chọn au hoặc tùy chọn axu, hai tuỳ chọn này tương đương nhau như sau:
 
-![](/thuctap/img/ps_au.png)
+![](/img/ps_au.png)
 
 
 ## Truy vấn thông tin DNS với lệnh dig
@@ -331,7 +331,7 @@ Lệnh ``dig`` là một công cụ dòng lệnh trong Linux được sử dụn
 
     ``# dig -v``
 
-    ![](/thuctap/img/dig_v.png)
+    ![](/img/dig_v.png)
 
     Nếu không có ta sử dụng lệnh sau để cài đặt:
 
@@ -372,17 +372,17 @@ Lệnh ``dig`` là một công cụ dòng lệnh trong Linux được sử dụn
 
 Truy vấn DNS cơ bản, tại ví dụ này ta truy vấn thông tin tên miền ``google.com``
 
-![](/thuctap/img/dig_google.png)
+![](/img/dig_google.png)
 
 Truy vấn địa chỉ IP, tại ví dụ này ta thử truy vấn địa chỉ IP của tên miền ``amazon.com``
 
-![](/thuctap/img/dig_amazon_short.png)
+![](/img/dig_amazon_short.png)
 
 Tra cứu DNS ngược, tại ví dụ này ta thử tra cứu DNS của địa chỉ IP ``17.253.144.10``
 
 ``# dig -x 17.253.144.10``, nó sẽ hiện ra DNS của IP này là của Apple
 
-![](/thuctap/img/dig_x_apple.png)
+![](/img/dig_x_apple.png)
 
 ## Xử lý và phân tích văn bản với các lệnh tr, tee, wc, cut
 
@@ -402,15 +402,15 @@ Tra cứu DNS ngược, tại ví dụ này ta thử tra cứu DNS của địa 
 
     Thay đổi hoặc xóa ký tự từ input
 
-    ![](/thuctap/img/tr_aA.png)
+    ![](/img/tr_aA.png)
 
     Xóa ký tự khoảng trắng từ input
 
-    ![](/thuctap/img/tr_space.png)
+    ![](/img/tr_space.png)
 
     Đổi chữ thường thành chữ hoa
 
-    ![](/thuctap/img/tr_upper.png)
+    ![](/img/tr_upper.png)
 
 * **Lệnh tee**
 
@@ -429,13 +429,13 @@ Tra cứu DNS ngược, tại ví dụ này ta thử tra cứu DNS của địa 
 
     * **Ghi đồng thời vào standard output và tệp tin**
 
-        ![](/thuctap/img/tee_hello.png)
+        ![](/img/tee_hello.png)
 
         Lệnh này sẽ ghi "Hello, world!" vào hello.txt và hiển thị nội dung đó trên standard output.
 
     * **Thêm nội dung vào cuối tệp tin (append)**
 
-        ![](/thuctap/img/tee_a_redandblue.png)
+        ![](/img/tee_a_redandblue.png)
 
         Lệnh này sẽ thêm "Red and Blue" vào cuối hello.txt mà không ghi đè lên nội dung đã có.
 
@@ -458,25 +458,25 @@ Tra cứu DNS ngược, tại ví dụ này ta thử tra cứu DNS của địa 
 
         ``# wc -l hoadon.txt``
 
-        ![](/thuctap/img/wc_l.png)
+        ![](/img/wc_l.png)
 
     * **Đếm số từ trong đầu vào từ standard input**
 
         ``# echo "This is a test" | wc -w``
 
-        ![](/thuctap/img/wc_w.png)
+        ![](/img/wc_w.png)
 
     * **Đếm số byte trong một tệp tin**
 
         ``# wc -c hoadon.txt``
 
-        ![](/thuctap/img/wc_c.png)
+        ![](/img/wc_c.png)
 
     * **Kết hợp đếm số dòng, số từ và số byte trong một tệp tin**
 
         ``# wc -l -w -c hoadon.txt``
 
-        ![](/thuctap/img/wc_lwc.png)
+        ![](/img/wc_lwc.png)
 
 * **Lệnh cut**
 
@@ -498,13 +498,13 @@ Tra cứu DNS ngược, tại ví dụ này ta thử tra cứu DNS của địa 
 
         ``# cut -c 3- rose.txt``
 
-        ![](/thuctap/img/cut-c3-.png)
+        ![](/img/cut-c3-.png)
 
     * **Cắt các byte thứ 1, 4 và 7 từ mỗi dòng:**
 
         ``# echo "abcdefgh" | cut -b1,4,7``
 
-        ![](/thuctap/img/cut_b147.png)
+        ![](/img/cut_b147.png)
 
 ## Tìm kiếm và phân tích văn bản với lệnh grep
 
@@ -534,25 +534,25 @@ Lệnh ``grep`` trong Linux là một công cụ mạnh mẽ để tìm kiếm v
 
     ``# grep "Violet" rose.txt``
 
-    ![](/thuctap/img/grep_violat.png)
+    ![](/img/grep_violat.png)
 
     **Tìm kiếm không phân biệt chữ hoa chữ thường**
 
     ``# grep -i "ARE" rose.txt``
 
-    ![](/thuctap/img/grep_ARE.png)
+    ![](/img/grep_ARE.png)
 
     **Đếm số dòng chứa mẫu tìm kiếm**
 
     ``# grep -c "are" rose.txt``
 
-    ![](/thuctap/img/grep_c_rose.png)
+    ![](/img/grep_c_rose.png)
 
     **Hiển thị số dòng chứa mẫu tìm kiếm**
 
     ``# grep -n "are" rose.txt``
 
-    ![](/thuctap/img/grep_n.png)
+    ![](/img/grep_n.png)
 
 ## Chỉnh sửa dữ liệu với lệnh sed
 
@@ -584,19 +584,19 @@ Lệnh ``sed`` (stream editor) trong Linux là một công cụ mạnh mẽ đ�
 
     ``# sed 's/Roses/roses/g' file.txt``
 
-    ![](/thuctap/img/sed_rose.png)
+    ![](/img/sed_rose.png)
 
     **Xóa các dòng chứa một chuỗi cụ thể**
 
     ``# sed '/are/d' rose.txt``
 
-    ![](/thuctap/img/sed_are.png)
+    ![](/img/sed_are.png)
 
     **In các dòng khớp với mẫu**
 
     `# sed -n '/are/p' rose.txt`
 
-    ![](/thuctap/img/sed_n_are.png)
+    ![](/img/sed_n_are.png)
 
 # END
 
