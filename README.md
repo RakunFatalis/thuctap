@@ -24,3 +24,5 @@ https://manpages.ubuntu.com/manpages/bionic/man8/pvcreate.8.html
 https://manpages.ubuntu.com/manpages/trusty/man8/vgcreate.8.html
 
 https://itest.com.vn/lects/netos/bai12-LVM-RAID.pdf
+
+https://www.opsschool.org/filesystems_101.html
