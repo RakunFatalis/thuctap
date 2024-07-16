@@ -2,8 +2,30 @@
 
 # Mục lục
 
-
-
+- [BOOT PROCESS](#boot-process)
+- [Mục lục](#mục-lục)
+  - [Power Supply Unit](#power-supply-unit)
+  - [BIOS and CMOS](#bios-and-cmos)
+    - [1. BIOS (Basic Input/Output System)](#1-bios-basic-inputoutput-system)
+    - [2. CMOS (Complementary Metal Oxide Semiconductor)](#2-cmos-complementary-metal-oxide-semiconductor)
+  - [POST test](#post-test)
+  - [Reading the Partition Table](#reading-the-partition-table)
+    - [Định dạng bảng phân vùng:](#định-dạng-bảng-phân-vùng)
+  - [The Boothloader](#the-boothloader)
+    - [Trên ổ đĩa định dạng MBR và BIOS chuẩn](#trên-ổ-đĩa-định-dạng-mbr-và-bios-chuẩn)
+    - [Trên ổ đĩa định dạng GPT và UEFI](#trên-ổ-đĩa-định-dạng-gpt-và-uefi)
+    - [Kết luận:](#kết-luận)
+  - [Kernel và Ramdisk](#kernel-và-ramdisk)
+    - [Quá trình khởi động với Kernel và Ramdisk](#quá-trình-khởi-động-với-kernel-và-ramdisk)
+    - [Lợi ích của Ramdisk](#lợi-ích-của-ramdisk)
+  - [OS Kernel và Init](#os-kernel-và-init)
+    - [Hệ thống init](#hệ-thống-init)
+  - [Runlevels](#runlevels)
+    - [Các Runlevel Thông thường](#các-runlevel-thông-thường)
+    - [Sự khác nhau giữa các Runlevel 2-5:](#sự-khác-nhau-giữa-các-runlevel-2-5)
+    - [Đa người dùng và Chế độ Single User:](#đa-người-dùng-và-chế-độ-single-user)
+  - [Getty](#getty)
+- [END](#end)
 
 
 ## Power Supply Unit
