@@ -1,8 +1,20 @@
 # REDIRECT
 
 # MỤC LỤC
-
-
+- [REDIRECT](#redirect)
+- [MỤC LỤC](#mục-lục)
+  - [Giới thiệu](#giới-thiệu)
+  - [Overwrite Redirection](#overwrite-redirection)
+    - [1. Toán tử \>](#1-toán-tử-)
+    - [2. Toán tử \<](#2-toán-tử-)
+  - [Append Redirection](#append-redirection)
+    - [1. Toán tử \>\>](#1-toán-tử--1)
+    - [2. Toán tử \<\<](#2-toán-tử--1)
+  - [Merge Redirection](#merge-redirection)
+    - [1. Toán tử \>\&](#1-toán-tử--2)
+    - [2. Toán tử \<\&](#2-toán-tử--2)
+  - [Error Redirection](#error-redirection)
+- [END.](#end)
 ## Giới thiệu
 
 Chuyển hướng đầu vào và đầu ra (Input and Output Redirection) là một kỹ thuật quan trọng trong hệ điều hành Linux, cho phép người dùng điều khiển luồng dữ liệu giữa các lệnh, tệp và thiết bị đầu vào/đầu ra. Kỹ thuật này giúp tăng cường hiệu suất và tính linh hoạt trong việc sử dụng các lệnh của Linux.
