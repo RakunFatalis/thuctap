@@ -123,7 +123,7 @@ Khi một kiểm tra POST thất bại, BIOS sẽ thường báo hiệu lỗi th
 
 **3. Một tiếng bíp dài, hai tiếng bíp ngắn**: Lỗi card đồ họa hoặc vấn đề hiển thị.
 
-**Chi tiết quá trình:**
+* **Chi tiết quá trình:**
 
 **1. Thiết lập tần số bộ nhớ và CPU**: BIOS lấy tần số bộ nhớ và hệ số nhân của CPU để thiết lập tốc độ chạy của CPU.
 
@@ -135,7 +135,7 @@ Khi một kiểm tra POST thất bại, BIOS sẽ thường báo hiệu lỗi th
 
 **5. Kiểm tra bàn phím và chuột**: POST đảm bảo rằng bàn phím và chuột đã được kết nối.
 
-**6. **Khởi tạo BIOS bổ sung**: POST khởi tạo bất kỳ BIOS bổ sung nào (nếu có).
+**6. Khởi tạo BIOS bổ sung**: POST khởi tạo bất kỳ BIOS bổ sung nào (nếu có).
 
 ## Reading the Partition Table
 
