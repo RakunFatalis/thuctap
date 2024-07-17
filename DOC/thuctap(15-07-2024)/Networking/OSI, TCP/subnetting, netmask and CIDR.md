@@ -84,7 +84,7 @@ Sau đó, sử dụng kỹ thuật subnet mask, bạn có thể tiếp tục chi
 
 Bạn xem ảnh dưới để hiểu rõ hơn
 
-![](/thuctap/img/subnetting.png)
+![](/img/subnetting.png)
 
 
 ## II. NETMASK
@@ -123,7 +123,7 @@ Có năm lớp chính được xác định trong hệ thống địa chỉ IP p
 
 * **Lớp E**: từ 240.0.0.0 đến 255.255.255.255, dành riêng cho mục đích thử nghiệm và nghiên cứu.
 
-![](/thuctap/img/classIP.png)
+![](/img/classIP.png)
 
 ### 4. Lí do cần Subnet Mask
 
@@ -211,7 +211,7 @@ Một CIDR blocks là một tập hợp các địa chỉ IP chia sẻ cùng ti�
 
 Internet Assigned Numbers Authority (IANA) giao các CIDR blocks lớn cho các cơ quan đăng ký internet khu vực (RIR). Sau đó, RIR phân phối các khối nhỏ hơn cho các cơ quan đăng ký internet địa phương (LIR), sau đó chuyển giao cho các tổ chức. Đồng thời, người dùng cá nhân có thể xin các kCIDR blocks từ nhà cung cấp dịch vụ internet của họ.
 
-![](/thuctap/img/CIDRblock.png)
+![](/img/CIDRblock.png)
 
 
 **CIDR notation**
