@@ -62,7 +62,7 @@ Dưới đây là giải thích chi tiết về quá trình này:
   
   * Khi server nhận được gói tin ACK này từ client, quá trình three-way handshake hoàn tất và kết nối TCP được thiết lập.
 
-![](/thuctap/img/threewayshake.png)
+![](/img/threewayshake.png)
 
 
 Thông qua quá trình này, client và server đã xác nhận và đồng ý thiết lập kết nối TCP, sẵn sàng truyền dữ liệu hai chiều giữa nhau. Mô hình ba bước này giúp đảm bảo tính toàn vẹn và đúng đắn của kết nối, đồng thời giảm thiểu khả năng xảy ra lỗi trong quá trình thiết lập kết nối.
@@ -99,7 +99,7 @@ Dưới đây là giải thích chi tiết về quá trình này, với ví dụ
 
 Sau bước này, kết nối TCP đã được chấm dứt. Tuy nhiên, để đảm bảo rằng tất cả các gói tin cuối cùng đã đến đích một cách an toàn, bên gửi ACK cuối cùng (trong trường hợp này là client) sẽ tiếp tục ở trạng thái time-wait. Trong thời gian này, bên đó sẽ đợi một khoảng thời gian (theo chuẩn RFC 793 là hai phút cho mỗi gói tin ACK và bất kỳ gói tin FIN mới nào) trước khi đóng kết nối hoàn toàn và giải phóng tài nguyên liên quan đến kết nối TCP.
 
-![](/thuctap/img/teardown.png)
+![](/img/teardown.png)
 
 Quá trình này đảm bảo rằng các bên trong kết nối TCP có thể kết thúc và giải phóng tài nguyên một cách an toàn, đồng thời đảm bảo tính toàn vẹn và đúng đắn của dữ liệu truyền qua mạng.
 
@@ -109,7 +109,7 @@ Thông thường, header của một gói tin TCP chứa các thông tin cần t
 
 Cấu trúc chi tiết của header TCP như sau:
 
-![](/thuctap/img/headerTCP.png)
+![](/img/headerTCP.png)
 
 
 1. **Source Port (Cổng nguồn)** - 16 bits:
@@ -204,7 +204,7 @@ UDP thường được sử dụng trong các ứng dụng yêu cầu truyền t
 
 Như các giao thức khác, các gói tin UDP bao gồm một phần header và dữ liệu người dùng thực tế. Header UDP chứa tất cả thông tin cần thiết cho việc truyền dữ liệu bằng giao thức vận chuyển này và làm cho gói tin UDP có thể được nhận dạng. **Chia thành hai khối 32-bit** với bốn trường dữ liệu khác nhau, cấu trúc như sau:
 
-![](/thuctap/img/headerUDP.png)
+![](/img/headerUDP.png)
 
 
 Các **16 bit đầu tiên** của vùng header cho biết cổng nguồn từ đó gói tin dữ liệu tương ứng được gửi đi. Người nhận cần thông tin này để có thể phản hồi lại gói tin. Do **UDP là một giao thức không cần thiết lập kết nối** và không có sự trao đổi giữa người gửi và người nhận, trường này là **tùy chọn**. Do đó, giá trị "0" thường được thiết lập ở đây.

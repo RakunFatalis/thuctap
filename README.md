@@ -30,3 +30,5 @@ https://www.opsschool.org/filesystems_101.html
 https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/#:~:text=The%20open%20systems%20interconnection%20(OSI,to%20communicate%20using%20standard%20protocols.
 
 https://www.ionos.com/digitalguide/server/know-how/introduction-to-tcp/
+
+https://www.simplilearn.com/tutorials/cyber-security-tutorial/what-is-sub-netting

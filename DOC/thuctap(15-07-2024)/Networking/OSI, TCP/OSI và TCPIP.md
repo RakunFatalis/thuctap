@@ -24,7 +24,7 @@ Mô hình Kết nối Hệ thống Mở (OSI) là một khung khái niệm đư�
 
 Mô hình Kết nối giữa các hệ thống mở (Open Systems Interconnection – OSI) được phát triển bởi Tổ chức tiêu chuẩn hóa quốc tế và các tổ chức khác vào cuối những năm 1970. Mô hình này được ra mắt dưới dạng đầu tiên vào năm 1984 với tên ISO 7498, và phiên bản hiện tại là ISO/IEC 7498-1:1994. Dưới đây là 7 lớp của mô hình.
 
-![](/thuctap/img/OSI7Layers.png)
+![](/img/OSI7Layers.png)
 
 * **Lớp vật lý (Physical Layer)**
 
@@ -38,7 +38,7 @@ Mô hình Kết nối giữa các hệ thống mở (Open Systems Interconnectio
 
     3. **Đồng bộ hóa**: Lớp vật lý cũng phải đảm bảo rằng cả hai thiết bị đang hoạt động đồng bộ với nhau. Điều này bao gồm việc đảm bảo rằng tín hiệu truyền đi được nhận và giải mã một cách chính xác tại đích đến.
 
-    ![](/thuctap/img/physicalplayer.png)
+    ![](/img/physicalplayer.png)
 
 * **Lớp liên kết dữ liệu (Data link Layer)**
 
@@ -61,7 +61,7 @@ Mô hình Kết nối giữa các hệ thống mở (Open Systems Interconnectio
 
     6. **Khác biệt với Lớp Mạng (Network Layer)**: Trong khi lớp liên kết dữ liệu quản lý việc truyền dữ liệu giữa hai thiết bị trên cùng một mạng (intra-network), lớp mạng chịu trách nhiệm cho việc định tuyến dữ liệu giữa các mạng khác nhau (inter-network).
 
-    ![](/thuctap/img/datalinklayer.png)
+    ![](/img/datalinklayer.png)
 
 * **Lớp mạng (Network layer)**
 
@@ -91,7 +91,7 @@ Mô hình Kết nối giữa các hệ thống mở (Open Systems Interconnectio
 
     Đảm bảo truyền dữ liệu hiệu quả: Bằng cách chia nhỏ dữ liệu thành các gói và tìm đường đi tối ưu, lớp mạng đảm bảo rằng dữ liệu được truyền tải một cách hiệu quả và đáng tin cậy từ nguồn đến đích.
 
-    ![](/thuctap/img/networklayer.png)
+    ![](/img/networklayer.png)
 
 * **Lớp truyền tải (Transport Layer)**
 
@@ -115,7 +115,7 @@ Mô hình Kết nối giữa các hệ thống mở (Open Systems Interconnectio
 
     * **User Datagram Protocol (UDP)**: UDP là một giao thức không kết nối, cho phép truyền tải dữ liệu nhanh chóng nhưng không đảm bảo tính toàn vẹn và thứ tự của dữ liệu như TCP. UDP phù hợp cho các ứng dụng yêu cầu tốc độ cao và có thể chấp nhận một mức độ mất mát dữ liệu, như streaming video hoặc audio.
 
-    ![](/thuctap/img/transportlayer.png)
+    ![](/img/transportlayer.png)
 
 * **Lớp phiên (Session Layer)**
 
@@ -133,7 +133,7 @@ Mô hình Kết nối giữa các hệ thống mở (Open Systems Interconnectio
 
     * **Đồng bộ hóa và phục hồi (Synchronization and Recovery)**: Cung cấp cơ chế đồng bộ hóa dữ liệu bằng các điểm kiểm tra, giúp phục hồi truyền dữ liệu trong trường hợp gặp sự cố. Điều này rất quan trọng để đảm bảo rằng dữ liệu không bị mất và quá trình truyền dữ liệu diễn ra một cách trơn tru.
 
-    ![](/thuctap/img/sessionlayer.png)
+    ![](/img/sessionlayer.png)
 
 * **Lớp Trình Bày (Presentation Layer)**
 
@@ -155,7 +155,7 @@ Mô hình Kết nối giữa các hệ thống mở (Open Systems Interconnectio
 
     * **Nén và giải nén (Compression and Decompression)**: Giảm kích thước dữ liệu trước khi truyền để cải thiện tốc độ và hiệu quả của truyền thông. Khi dữ liệu đến thiết bị nhận, lớp trình bày sẽ giải nén dữ liệu để nó có thể được sử dụng bởi các lớp cao hơn.
 
-    ![](/thuctap/img/presentationlayer.png)
+    ![](/img/presentationlayer.png)
 
 * **Lớp Ứng Dụng (Application Layer)**
 
@@ -194,7 +194,7 @@ TCP/ IP (Transmission Control Protocol/ Internet Protocol - Giao thức điều 
 
 Mô hình TCP/IP bao gồm bốn lớp chính, mỗi lớp đảm nhận các chức năng cụ thể trong quá trình truyền thông mạng. Đây là các lớp của mô hình TCP/IP:
 
-![](/thuctap/img/tcpiplayer.png)
+![](/img/tcpiplayer.png)
 
 
 * **Lớp truy cập mạng (Network Access Layer)**
