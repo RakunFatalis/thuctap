@@ -8,8 +8,9 @@
   - [2. Mục đích sử dụng Private Ip](#2-mục-đích-sử-dụng-private-ip)
   - [3. Lợi ích khi sử dụng Private IP](#3-lợi-ích-khi-sử-dụng-private-ip)
   - [4. Những hạn chế của Private IP](#4-những-hạn-chế-của-private-ip)
-  - [5. Kết luận](#5-kết-luận)
-- [END](#end)
+  - [6. IPv4 Shared Address Space](#6-ipv4-shared-address-space)
+  - [7. Kết luận](#7-kết-luận)
+- [ENDs](#ends)
 
 
 
@@ -61,8 +62,24 @@ Các dải địa chỉ ngoài những dải địa chỉ được gán cho Priv
 
 **Vấn đề tương thích**: Khi cần tích hợp với các dịch vụ bên ngoài, đặc biệt là những dịch vụ yêu cầu địa chỉ Public IP, địa chỉ Private IP có thể gặp vấn đề về khả năng tương thích. Điều này có thể đòi hỏi các giải pháp phức tạp hơn để đảm bảo hoạt động mượt mà.
 
-## 5. Kết luận
+## 6. IPv4 Shared Address Space
+    
+IPv4 Shared Address Space còn được gọi bằng tên khác là "Carrier-Grade NAT (CGN) Address Space" hoặc "100.64.0.0/10 address space".
+
+**Carrier-Grade NAT** (CGN) là công nghệ cho phép các nhà cung cấp dịch vụ Internet (**ISP**) sử dụng một tập hợp các địa chỉ IP riêng để phục vụ nhiều khách hàng, do đó tiết kiệm địa chỉ IP công cộng. Để thực hiện điều này, ISP sử dụng dải địa chỉ IP riêng đặc biệt từ **100.64.0.0** đến **100.127.255.255**, được gọi là CGN.
+
+CGN giúp ISP quản lý và tối ưu hóa việc sử dụng địa chỉ IPv4, cho phép nhiều thiết bị và người dùng truy cập Internet qua cùng một địa chỉ IP công cộng. Điều này giúp giảm tải và tiết kiệm tài nguyên địa chỉ IPv4 công cộng quý giá.
+
+**Các tính năng CGN đem lại:**
+
+* **Không thể định tuyến công khai**: Địa chỉ này không được sử dụng để định tuyến trên Internet công cộng, tương tự như các địa chỉ IP riêng (như 192.168.0.0/16, 172.16.0.0/12, và 10.0.0.0/8).
+
+* **Dành riêng cho ISP**: Được sử dụng bởi các ISP để quản lý việc cấp phát địa chỉ IP cho các khách hàng của họ thông qua CGN.
+
+* **Giảm thiểu sự thiếu hụt IPv4**: Giúp giảm bớt vấn đề cạn kiệt địa chỉ IPv4 bằng cách cho phép nhiều thiết bị chia sẻ một địa chỉ công cộng thông qua NAT.
+
+## 7. Kết luận
 
 Private IP là thành phần quan trọng của mạng hiện đại, cho phép các tổ chức xây dựng các mạng nội bộ an toàn, có khả năng mở rộng và hiệu quả. Bằng cách sử dụng các dải địa chỉ được dự trữ trong [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918), các tổ chức và cá nhân có thể tạo ra các hạ tầng mạng hỗ trợ giao tiếp, cộng tác và đổi mới. Hiểu rõ vai trò và lợi ích của địa chỉ IP riêng là điều cơ bản đối với quản trị viên mạng, kỹ sư và tất cả những ai tham gia vào việc thiết kế và quản lý các môi trường mạng.
 
-# END
+# ENDs
