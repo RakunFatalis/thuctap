@@ -9,8 +9,6 @@
   - [3. Các loại đầu nối sợi quang](#3-các-loại-đầu-nối-sợi-quang)
   - [4. Thiết bị chuyển đổi quang](#4-thiết-bị-chuyển-đổi-quang)
 - [END](#end)
-
-
 ## 1. Cáp quang là gì?
 
 **Cáp quang** là loại cáp làm bằng các sợi thủy tinh hay nhựa plastic thường sử dụng trong ngành viễn thông để truyền tải tín hiệu bằng ánh sáng. Loại cáp được sử dụng rất phổ biến trong đời sống hiện nay. Cáp có khả năng truyền tải tín hiệu trong khoảng cách rất xa và không gây ảnh hưởng bởi các yếu tố ngoại cảnh tác động như thời tiết, môi trường, các thiết bị điện sử dụng gần.
