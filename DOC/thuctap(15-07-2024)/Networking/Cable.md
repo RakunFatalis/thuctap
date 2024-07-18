@@ -13,7 +13,7 @@
 
 **Cáp đồng** là loại cáp làm bằng dây điện giống dây của điện thoại. Loại cáp này được sử dụng công nghệ truyền internet bằng điện có băng thông tốc độ bất đối xứng. Điều đó có nghĩa là độ download, upload không bằng nhau. Cáp đồng thường là cáp xoắn đôi, gồm có 4 cặp dây xoắn đôi và có các loại phổ thông như cat5e, cat6...
 
-![](/thuctap/img/coppercable.png)
+![](/img/coppercable.png)
 
 **Các loại cáp đồng phổ biến trong mạng lưới**:
 
@@ -47,7 +47,7 @@
 
 **Cáp quang** là loại cáp làm bằng các sợi thủy tinh hay nhựa plastic thường sử dụng trong ngành viễn thông để truyền tải tín hiệu bằng ánh sáng. Loại cáp được sử dụng rất phổ biến trong đời sống hiện nay. Cáp có khả năng truyền tải tín hiệu trong khoảng cách rất xa và không gây ảnh hưởng bởi các yếu tố ngoại cảnh tác động như thời tiết, môi trường, các thiết bị điện sử dụng gần.
 
-![](/thuctap/img/capquang.png)
+![](/img/capquang.png)
 
 ## 2. So sánh cáp quang với cáp đồng
 
