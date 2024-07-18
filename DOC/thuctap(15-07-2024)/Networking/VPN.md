@@ -19,7 +19,7 @@ VPN che giấu địa chỉ public IP thực của người dùng và tunnel cho
 
 VPN (Virtual Private Network) hoạt động bằng cách tạo ra một kết nối mạng ảo, được mã hóa, giữa thiết bị của bạn và một máy chủ VPN. Dưới đây là cách hoạt động cơ bản của VPN:
 
-![](/thuctap/img/VPN_work.jpg)
+![](/img/VPN_work.jpg)
 
 1. **Tạo kết nối**: Khi bạn kết nối với một VPN, ứng dụng VPN trên thiết bị của bạn sẽ thiết lập một kết nối mã hóa với một máy chủ VPN. Kết nối này thường được thiết lập thông qua một giao thức kết nối mạng an toàn như OpenVPN, IKEv2, hoặc L2TP/IPSec.
 
