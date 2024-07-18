@@ -2,6 +2,16 @@
 
 # MỤC LỤC
 
+- [PRIVATE ADDRESS](#private-address)
+- [MỤC LỤC](#mục-lục)
+  - [1. Private IP là gì?](#1-private-ip-là-gì)
+  - [2. Mục đích sử dụng Private Ip](#2-mục-đích-sử-dụng-private-ip)
+  - [3. Lợi ích khi sử dụng Private IP](#3-lợi-ích-khi-sử-dụng-private-ip)
+  - [4. Những hạn chế của Private IP](#4-những-hạn-chế-của-private-ip)
+  - [5. Kết luận](#5-kết-luận)
+- [END](#end)
+
+
 
 ## 1. Private IP là gì?
 
@@ -19,7 +29,7 @@ Private IP là các địa chỉ hoạt động trong mạng cục bộ (local n
 
 Các dải địa chỉ ngoài những dải địa chỉ được gán cho Private IP sẽ được sử dụng để gán địa chỉ Public IP trên mạng, vì Public IP là duy nhất cho mỗi thiết bị trên Internet. Do đó, các mạng nội bộ có thể sử dụng các dải địa chỉ này để phân bổ địa chỉ IP riêng trong một mạng lưới cụ thể. Private IP có thể được tái sử dụng trên các mạng khác, điều này là không thể thực hiện được với Public IP.
 
-![](/thuctap/img/ipprivate.png)
+![](/img/ipprivate.png)
 ## 2. Mục đích sử dụng Private Ip
 
 **Mạng gia đình**: Nhiều router trong gia đình sử dụng địa chỉ IP riêng để gán các địa chỉ duy nhất cho các thiết bị trong mạng gia đình. Điều này cho phép nhiều thiết bị như máy tính, điện thoại thông minh, TV và thiết bị IoT giao tiếp với nhau một cách an toàn.
@@ -50,3 +60,9 @@ Các dải địa chỉ ngoài những dải địa chỉ được gán cho Priv
 **Độ phức tạp trong quản lý**: Trong các mạng lưới lớn, việc quản lý địa chỉ Private IP có thể trở nên phức tạp do phải đảm bảo phân bổ hợp lý, cấu hình subnet đúng cách và quản lý định tuyến hiệu quả. Điều này đòi hỏi kiến thức và kỹ năng cao từ quản trị viên mạng.
 
 **Vấn đề tương thích**: Khi cần tích hợp với các dịch vụ bên ngoài, đặc biệt là những dịch vụ yêu cầu địa chỉ Public IP, địa chỉ Private IP có thể gặp vấn đề về khả năng tương thích. Điều này có thể đòi hỏi các giải pháp phức tạp hơn để đảm bảo hoạt động mượt mà.
+
+## 5. Kết luận
+
+Private IP là thành phần quan trọng của mạng hiện đại, cho phép các tổ chức xây dựng các mạng nội bộ an toàn, có khả năng mở rộng và hiệu quả. Bằng cách sử dụng các dải địa chỉ được dự trữ trong [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918), các tổ chức và cá nhân có thể tạo ra các hạ tầng mạng hỗ trợ giao tiếp, cộng tác và đổi mới. Hiểu rõ vai trò và lợi ích của địa chỉ IP riêng là điều cơ bản đối với quản trị viên mạng, kỹ sư và tất cả những ai tham gia vào việc thiết kế và quản lý các môi trường mạng.
+
+# END
