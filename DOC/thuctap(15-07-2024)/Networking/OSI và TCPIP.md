@@ -11,6 +11,7 @@
     - [2. Các lớp của mô hình TCP/IP](#2-các-lớp-của-mô-hình-tcpip)
   - [Mô hình OSI hay mô hình TCP/IP](#mô-hình-osi-hay-mô-hình-tcpip)
   - [TỔNG KẾT](#tổng-kết)
+- [END](#end)
 
 
 ## I. Mô hình OSI
@@ -260,3 +261,5 @@ Mô hình OSI **(Open Systems Interconnection)** và mô hình TCP/IP **(Transmi
 ## TỔNG KẾT
 
 Mô hình OSI và TCP/IP đều cung cấp một cách để hiểu cấu trúc và hoạt động của các giao thức mạng. OSI mang tính lý thuyết và chi tiết, trong khi TCP/IP mang tính thực tiễn và sử dụng rộng rãi. Mỗi mô hình có ưu điểm và hạn chế riêng, và việc lựa chọn mô hình phù hợp phụ thuộc vào mục đích cụ thể của hệ thống mạng và ứng dụng.
+
+# END
