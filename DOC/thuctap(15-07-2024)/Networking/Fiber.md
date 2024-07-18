@@ -47,19 +47,19 @@ Dưới đây là một số loại đầu nối sợi quang:
 
 **ST**: Đây là một trong những loại đầu nối quang học đầu tiên được sử dụng rộng rãi trong các mạng viễn thông. Nó có đầu kết nối hình trụ và được sử dụng chủ yếu cho các ứng dụng Multimode.
 
-![](/thuctap/img/st.jpg)
+![](/img/st.jpg)
 
 **SC**: Đây là loại đầu nối phổ biến, có hình vuông và rất dễ dàng trong việc cắm và rút ra. Nó thường được sử dụng cho cả Singlemode và Multimode.
 
-![](/thuctap/img/sc.jpg)
+![](/img/sc.jpg)
 
 **LC**: Loại đầu nối này nhỏ gọn hơn so với SC và thường được sử dụng trong các ứng dụng mà không gian để lắp đặt và sử dụng đầu nối cáp quang bị hạn chế. LC cũng có thể sử dụng cho cả Singlemode và Multimode.
 
-![](/thuctap/img/lc.jpg)
+![](/img/lc.jpg)
 
 **MTP/MPO Connector**: Đây là loại đầu nối đặc biệt được thiết kế để kết nối nhiều sợi quang cùng lúc, phù hợp cho các ứng dụng cần băng thông cao và tiết kiệm không gian như các trung tâm dữ liệu.
 
-![](/thuctap/img/mtp-mpo.jpg)
+![](/img/mtp-mpo.)
 
 ## 4. Thiết bị chuyển đổi quang
 
@@ -71,7 +71,7 @@ Với hai đầu dùng trong việc kết nối:
 
 * Đầu thứ hai dùng để kết nối với hệ thống mạng cáp quang hoặc đồng có hai kiểu kết nối một sợi đơn hoặc hai sợi đôi.
 
-![](/thuctap/img/modulequang.png)
+![](/img/modulequang.png)
 
 **Một số loại phổ biến của chuyển đổi quang**:
 
