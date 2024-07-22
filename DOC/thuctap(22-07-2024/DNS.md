@@ -11,7 +11,7 @@
   - [III. Các loại và phương pháp phân giải DNS](#iii-các-loại-và-phương-pháp-phân-giải-dns)
     - [1. Primary DNS và Secondary DNS](#1-primary-dns-và-secondary-dns)
     - [2. Round Robin DNS](#2-round-robin-dns)
-    - [3.  Reverse DNS](#3--reverse-dns)
+    - [3. Reverse DNS](#3-reverse-dns)
 - [END](#end)
 
 
@@ -150,7 +150,7 @@ Phương pháp Round Robin DNS là một phương pháp cân bằng tải phổ 
 
 Round robin DNS được sử dụng để tải các yêu cầu giúp cân bằng giữa một số máy chủ Web. Ví dụ: một công ty có một tên miền và 3 bản sao giống hệt nhau của cùng một trang web trên 3 máy chủ với ba địa chỉ IP khác nhau. Khi một người dùng cố gắng truy cập trang chủ, nó sẽ được gửi đến địa chỉ IP đầu tiên. Người dùng thứ 2 cố gắng truy cập trang chủ sẽ được gửi đến địa chỉ IP tiếp theo và người dùng thứ 3 sẽ được gửi đến địa chỉ IP thứ 3. Trong từng trường hợp, một địa chỉ IP được chuyển đến cho đến cuối danh sách được cấu hình. Người dùng thứ 4 sẽ được gửi đến địa chỉ IP đầu tiên.
 
-### 3.  Reverse DNS
+### 3. Reverse DNS
 
 Reverse DNS phục vụ cho việc xác định domain tương ứng với địa chỉ IP bằng cách truy vấn tên miền liên quan. Kỹ thuật Reverse DNS được sử dụng chủ yếu để kiểm tra tính chính xác của địa chỉ IP và hạn chế làm giả thông tin nguồn gốc của địa chỉ IP.
 
