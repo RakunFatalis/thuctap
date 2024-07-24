@@ -23,7 +23,7 @@ Web server là một phần mềm hoặc phần cứng chịu trách nhiệm x�
 
 Web server truyền tải tài liệu đến khách hàng và bao gồm cả phần mềm và phần cứng. Web server có thể được sử dụng cục bộ (trong mạng công ty) hoặc chủ yếu qua Internet, từ đó cung cấp tài liệu cục bộ, trong công ty hoặc toàn cầu. 
 
-![](/thuctap/img/webserver.png)
+![](/img/webserver.png)
 
 Những chương trình trên web server được cài đặt nhằm phục vụ ứng dụng web. Khi được tiếp nhận các yêu cầu từ trình duyệt, webserver ngay lập tức sẽ gửi phản hồi đến client thông qua giao thức HTTP hoặc những giao thức khác.
 
@@ -47,7 +47,7 @@ Hai phần chính quan trọng để thực hiện cấu hình Web Server không
 
 Về cơ bản, mỗi khi một trình duyệt cần một tệp được lưu trữ trên máy chủ, trình duyệt sẽ gửi yêu cầu tới giao thức HTTP. Khi yêu cầu được gửi đến đúng địa chỉ (**phần cứng**) của web server, máy chủ HTTP (**phần mềm**) sẽ chấp nhận yêu cầu và đi tìm tệp được yêu cầu và gửi lại cho trình duyệt cũng qua HTTP. **Nếu máy chủ không tìm thấy tài liệu được yêu cầu, nó sẽ trả về phản hồi 404.**
 
-![](/thuctap/img/Webserver_comp.png)
+![](/img/Webserver_comp.png)
 
 
 ### 3. Chức năng chính của Web Server
@@ -87,7 +87,7 @@ Các web server có nhiều loại khác nhau, mỗi loại được thiết k�
 
 
     Apache là một trong những web server được sử dụng nhiều nhất nhờ vào sự đa dạng và linh hoạt của nó. Nó tương thích với nhiều hệ điều hành, do đó có thể được sử dụng bởi một lượng lớn khách hàng. Cách tiếp cận mô-đun tinh vi cũng cung cấp sự tự do cấu hình đáng kể, cho phép người dùng thêm hoặc loại bỏ các tùy chọn chức năng theo nhu cầu. Apache rất linh hoạt trong việc xử lý các loại yêu cầu, từ nội dung tĩnh đến nội dung động. Đã có một sự tiếp nhận lớn đối với ứng dụng này và do đó nó có một cộng đồng lớn và nhiều tài liệu hỗ trợ, làm cho việc hỗ trợ và khắc phục sự cố trở nên dễ dàng hơn.
-![](/thuctap/img/Apache.png)
+
 * **Nginx Web Servers**
 
     Nginx nổi bật vì tính nhanh chóng, hiệu quả trong việc sử dụng tài nguyên hệ thống và khả năng xử lý khối lượng lớn lưu lượng truy cập. Nó nổi bật trong việc quản lý nhiều kết nối, một yếu tố làm cho nó được ưa chuộng cho các trang web quy mô lớn. Hơn nữa, Nginx thường được sử dụng như một máy chủ proxy HTTP ngược (reverse proxy), bộ cân bằng tải (load balancer) và bộ nhớ đệm HTTP (HTTP cache), ...
