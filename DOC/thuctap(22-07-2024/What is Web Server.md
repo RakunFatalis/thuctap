@@ -10,6 +10,7 @@
     - [3. Chức năng chính của Web Server](#3-chức-năng-chính-của-web-server)
     - [4. Triển khai Web Server](#4-triển-khai-web-server)
   - [II. Hiện nay có bao nhiêu loại Web Server?](#ii-hiện-nay-có-bao-nhiêu-loại-web-server)
+  - [III. Cách thức hoạt động của Web Server](#iii-cách-thức-hoạt-động-của-web-server)
 - [END](#end)
 
 
@@ -116,4 +117,36 @@ Các web server có nhiều loại khác nhau, mỗi loại được thiết k�
 
     Ngoài ra, Node.js được triển khai thông qua các trình quản lý gói như npm (Node Package Manager) có một thư viện rộng lớn gồm các công cụ và thư viện. Nhờ vào sự nhẹ nhàng và khả năng thực thi nhanh, Node.js có thể được xem là một công cụ hoàn hảo cho các ứng dụng web hiện đại.
 
+## III. Cách thức hoạt động của Web Server
+
+Trong mô hình client-server, máy chủ web và máy chủ ứng dụng tương tác và làm việc với nhau. Client (khách hàng) là thực thể yêu cầu truy cập vào một trang web, trong khi server (máy chủ) cung cấp trang web đó. Quá trình này sử dụng giao thức HTTP để phản hồi các yêu cầu được thực hiện qua World Wide Web. Giao thức này cho phép các máy tính trao đổi thông tin bằng trình duyệt web của họ.
+
+![](/img/Web_Servers_work.png)
+
+Toàn bộ quá trình hoạt động của máy chủ web có thể được chia thành các bước sau:
+
+* **Yêu cầu và địa chỉ**
+
+    Quá trình bắt đầu khi bạn gõ một URL vào trình duyệt web của mình. Trình duyệt xử lý thông tin nhập vào để tìm vị trí vật lý của máy chủ web chứa các tệp liên quan. Do đó, bước đầu tiên liên quan đến việc yêu cầu một trang web và sử dụng trình duyệt để tra cứu địa chỉ của nó.
+
+* **Chi tiết tìm kiếm của trình duyệt web**
+
+    Việc tìm kiếm máy chủ web yêu cầu bắt đầu bằng việc chuyển đổi địa chỉ web thành một địa chỉ IP sử dụng Hệ thống Tên Miền (DNS). Vì địa chỉ IP là một số duy nhất được gán cho mỗi thiết bị trên Internet, việc xác định địa chỉ IP giúp nhận diện các máy chủ ứng dụng mà yêu cầu phải được gửi đến.
+
+* **Yêu cầu nhận tại phần mềm máy chủ web**
+
+    Trình duyệt web sử dụng một máy chủ HTTP để yêu cầu truy cập vào phần mềm máy chủ web liên quan. Yêu cầu nhận được tại máy chủ web nguồn chứa thông tin về trang web cụ thể cần được truy cập.
+
+* **Tìm kiếm các tệp được yêu cầu**
+
+    Phần mềm máy chủ web tìm kiếm các tệp được lưu trữ ở phía nó để tìm các tệp được yêu cầu. Những tệp này có thể là các tài liệu HTML, hình ảnh cho đến các chương trình tạo ra nội dung web động.
+
+* **Phản hồi yêu cầu**
+
+    Khi quá trình tìm kiếm của phần mềm máy chủ hoàn tất, thông tin được truyền lại cho trình duyệt sử dụng một máy chủ HTTP. Trình duyệt web của bạn sẽ hiển thị kết quả liên quan nếu các tệp được tìm thấy bởi máy chủ.
+
+    Nếu không tìm thấy các tệp, trình duyệt sẽ hiển thị thông báo lỗi 404 Not Found. Ngoài ra, lỗi 403 cũng có thể được hiển thị nếu có vấn đề về quyền truy cập.
+
+
+Vì vậy, quá trình trên được thực hiện mỗi khi bạn gõ một URL vào trình duyệt web để lấy thông tin liên quan từ nguồn web. Các máy chủ HTTP là những người đưa tin được chỉ định để lấy thông tin yêu cầu từ phía cuối cùng đến giao diện phía trước để hiển thị.
 # END
