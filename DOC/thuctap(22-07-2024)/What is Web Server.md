@@ -149,4 +149,5 @@ Toàn bộ quá trình hoạt động của máy chủ web có thể được ch
 
 
 Vì vậy, quá trình trên được thực hiện mỗi khi bạn gõ một URL vào trình duyệt web để lấy thông tin liên quan từ nguồn web. Các máy chủ HTTP là những người đưa tin được chỉ định để lấy thông tin yêu cầu từ phía cuối cùng đến giao diện phía trước để hiển thị.
+
 # END

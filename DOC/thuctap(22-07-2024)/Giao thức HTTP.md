@@ -288,8 +288,8 @@ Dưới đây là bảng liệt kê một số mã thường gặp
 |---------------|------------------------|----------------------------------------------------------------------|
 | **400**| Bad Request| Yêu cầu không hợp lệ hoặc máy chủ không thể hiểu yêu cầu.            |
 | **401**| Unauthorized| Yêu cầu yêu cầu xác thực nhưng không được cung cấp hoặc không hợp lệ.|
-| **403**| Forbidden| Máy chủ hiểu yêu cầu nhưng từ chối thực hiện nó.                     |
-| **404**| Not Found| Máy chủ không thể tìm thấy tài nguyên yêu cầu.                       |
+| **403**| Forbidden| Máy chủ hiểu yêu cầu nhưng từ chối thực hiện nó.|
+| **404**| Not Found| Máy chủ không thể tìm thấy tài nguyên yêu cầu.|
 | **405**| Method Not Allowed| Phương thức yêu cầu không được phép trên tài nguyên yêu cầu.         |
 | **408**| Request Timeout| Máy chủ không nhận được yêu cầu hoàn chỉnh từ máy khách trong thời gian cho phép. |
 | **409**| Conflict| Yêu cầu không thể hoàn thành do xung đột với trạng thái hiện tại của tài nguyên. |
@@ -302,11 +302,12 @@ Dưới đây là bảng liệt kê một số mã thường gặp
 
 | Mã trạng thái| Cụm từ giải thích| Mô tả|
 |---------------|------------------------|----------------------------------------------------------------------|
-| **500**| Internal Server Error| Máy chủ gặp lỗi và không thể hoàn thành yêu cầu.                     |
-| **501**| Not Implemented| Máy chủ không hỗ trợ chức năng cần thiết để hoàn thành yêu cầu.      |
+| **500**| Internal Server Error| Máy chủ gặp lỗi và không thể hoàn thành yêu cầu.|
+| **501**| Not Implemented| Máy chủ không hỗ trợ chức năng cần thiết để hoàn thành yêu cầu.|
 | **502**| Bad Gateway| Máy chủ hoạt động như một cổng hoặc proxy và nhận được phản hồi không hợp lệ từ máy chủ ngược lại. |
-| **503**| Service Unavailable| Máy chủ hiện không thể xử lý yêu cầu do quá tải hoặc bảo trì.        |
+| **503**| Service Unavailable| Máy chủ hiện không thể xử lý yêu cầu do quá tải hoặc bảo trì.|
 | **504**| Gateway Timeout| Máy chủ hoạt động như một cổng hoặc proxy và không nhận được phản hồi kịp thời từ máy chủ ngược lại. |
-| **505**| HTTP Version Not Supported | Máy chủ không hỗ trợ phiên bản HTTP được sử dụng trong yêu cầu.    |
+| **505**| HTTP Version Not Supported | Máy chủ không hỗ trợ phiên bản HTTP được sử dụng trong yêu cầu.|
 
+#
 
