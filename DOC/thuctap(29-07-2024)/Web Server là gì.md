@@ -1,9 +1,15 @@
 # Web Server là gì
 
-
-
 # MỤC LỤC
-
+- [Web Server là gì](#web-server-là-gì)
+- [MỤC LỤC](#mục-lục)
+  - [I. Web Server là gì](#i-web-server-là-gì)
+    - [1. Khái niệm](#1-khái-niệm)
+    - [2. Thành phần chính của Web Server](#2-thành-phần-chính-của-web-server)
+      - [a. Phần cứng (Hardware)](#a-phần-cứng-hardware)
+      - [b. Phần mềm (Software)](#b-phần-mềm-software)
+  - [II. Các loại Web Server phổ biến.](#ii-các-loại-web-server-phổ-biến)
+- [END](#end)
 ## I. Web Server là gì
 
 ### 1. Khái niệm
@@ -117,3 +123,5 @@ Các thành phần này hoạt động cùng nhau để tạo nên các chức n
 * IIS: Máy chủ web dành riêng cho hệ điều hành Windows, tích hợp tốt với các công nghệ của Microsoft.
 
 * LiteSpeed: Máy chủ web thương mại với hiệu suất cao, tối ưu hóa tốt cho nội dung động và các tính năng bảo mật nâng cao.
+
+# END
