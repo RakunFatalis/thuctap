@@ -30,13 +30,13 @@ Cấu trúc máy chủ web đề cập đến cấu trúc và thiết kế của
 
     Trong kiến trúc đơn tầng, một máy chủ duy nhất chịu trách nhiệm cả việc xử lý các yêu cầu và phục vụ nội dung web. Điều này phù hợp cho các trang web hoặc ứng dụng nhỏ với lưu lượng truy cập thấp. Tuy nhiên, nó có những hạn chế về khả năng mở rộng và khả năng dự phòng. Nếu máy chủ gặp sự cố, toàn bộ dịch vụ sẽ trở nên không khả dụng.
 
-    ![](/thuctap/img/Single-Tier.png)
+    ![](/img/Single-Tier.png)
 
 * **Kiến trúc đa tầng (Multi-Tier Architecture):**
 
     Trong kiến trúc đa tầng, nhiều máy chủ được sử dụng để phân phối khối lượng công việc và đảm bảo tính khả dụng cao. Phương pháp này thường liên quan đến các bộ cân bằng tải (load balancers) để phân phối đồng đều các yêu cầu đến một cụm máy chủ web. Mỗi máy chủ có thể phục vụ nội dung web độc lập, và nếu một máy chủ gặp sự cố, bộ cân bằng tải sẽ chuyển hướng lưu lượng truy cập đến các máy chủ còn lại, đảm bảo dịch vụ không bị gián đoạn.
 
-    ![](/thuctap/img/multi-tier.png)
+    ![](/img/multi-tier.png)
 
 
 ### 2. Cơ chế hoạt động

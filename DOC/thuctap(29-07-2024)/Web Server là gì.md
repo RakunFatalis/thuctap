@@ -77,7 +77,7 @@ Các thành phần này hoạt động cùng nhau để tạo nên các chức n
 
 * **Apache HTTP Server**
 
-    ![](/thuctap/img/Apache_HTTP_server_logo_(2016).png)
+    ![](/img/Apache_HTTP_server_logo_(2016).png)
 
     Apache HTTP Server, thường được gọi là Apache, là một chương trình dành cho máy chủ đối thoại qua giao thức HTTP. Apache chạy trên các hệ điều hành tương tự như Unix, Microsoft Windows, Novell Netware và các hệ điều hành khác. Apache đóng một vai trò quan trọng trong quá trình phát triển của mạng web thế giới 
 
@@ -88,7 +88,7 @@ Các thành phần này hoạt động cùng nhau để tạo nên các chức n
 
 * **Nginx**
 
-    ![](/thuctap/img/Nginx_logo.png)
+    ![](/img/Nginx_logo.png)
 
     Nginx là một máy chủ web có thể được sử dụng như một reverse proxy, cân bằng tải, proxy email và bộ nhớ đệm HTTP. Phần mềm này được phát triển bởi nhà phát triển người Nga Igor Sysoev và được công khai phát hành vào năm 2004. Nginx là phần mềm mã nguồn mở, được cấp phép theo giấy phép BSD-2-Clause.
 
@@ -100,7 +100,7 @@ Các thành phần này hoạt động cùng nhau để tạo nên các chức n
 
 * **Microsoft IIS**
 
-    ![](/thuctap/img/ISS.png)
+    ![](/img/ISS.png)
 
     IIS là một máy chủ web có thể mở rộng được phát triển bởi Microsoft để sử dụng với dòng hệ điều hành Windows NT. IIS hỗ trợ các giao thức HTTP, HTTP/2, HTTP/3, HTTPS, FTP, FTPS, SMTP và NNTP.
 
@@ -110,7 +110,7 @@ Các thành phần này hoạt động cùng nhau để tạo nên các chức n
 
 * **LiteSpeed**
 
-    ![](/thuctap/img/litespeed.png)
+    ![](/img/litespeed.png)
 
     LiteSpeed hay LiteSpeed Web Server (được gọi tắt là LSWS) là một phần mềm máy chủ web độc quyền, có khả năng cung cấp hiệu suất nhanh và tiết kiệm tài nguyên mà không gây ảnh hưởng đến bảo mật của máy chủ. Đây là một máy chủ web được sử dụng rộng rãi bởi có thể mở rộng, bảo mật và cân bằng khi tải cao. Chống DDoS được tích hợp sẵn, cho phép kết nối trên mỗi IP và điều chỉnh băng thông.
 
