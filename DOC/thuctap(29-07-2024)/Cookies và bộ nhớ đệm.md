@@ -2,6 +2,12 @@
 
 # Mục lục
 
+- [Cookies và bộ nhớ đệm](#cookies-và-bộ-nhớ-đệm)
+- [Mục lục](#mục-lục)
+- [I. Cookies là gì ?](#i-cookies-là-gì-)
+- [II. Cookies thường dùng để làm gì ?](#ii-cookies-thường-dùng-để-làm-gì-)
+- [III. Bộ nhớ đệm là gì ?](#iii-bộ-nhớ-đệm-là-gì-)
+
 # I. Cookies là gì ?
 
 Cookies là những tập tin nhỏ chứa thông tin mà máy chủ web tạo ra và gửi đến trình duyệt web. Các trình duyệt web lưu trữ cookies mà chúng nhận được trong một khoảng thời gian xác định trước, hoặc trong suốt thời gian người dùng phiên làm việc trên trang web. Chúng đính kèm cookies liên quan vào bất kỳ yêu cầu nào mà người dùng gửi đến máy chủ web sau này.
