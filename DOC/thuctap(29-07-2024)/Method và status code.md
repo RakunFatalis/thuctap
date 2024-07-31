@@ -1,6 +1,13 @@
 # Method và status code
 
 # Mục lục
+- [Method và status code](#method-và-status-code)
+- [Mục lục](#mục-lục)
+- [I. Method của HTTP](#i-method-của-http)
+  - [1. HTTP Method Properties](#1-http-method-properties)
+  - [2. 9 method của HTTP](#2-9-method-của-http)
+- [II. Status code](#ii-status-code)
+- [END](#end)
 
 
 # I. Method của HTTP
@@ -86,4 +93,65 @@ Trong giao thức HTTP, các phương thức (methods) được thiết kế đ�
 
 # II. Status code
 
-Dưới đây là bảng liệt kê một số mã thường gặp
+Status Code là một số nguyên 3 ký tự, trong đó ký tự đầu tiên của mã hóa trạng thái định nghĩa hạng (loại) phản hồi và hai ký tự cuối không có bất cứ vai trò phân loại nào. Có 5 giá trị của ký tự đầu tiên như sau:
+
+**1xx (100 – 199): Information responses / Phản hồi thông tin**
+
+
+| Mã trạng thái | Cụm từ giải thích| Mô tả|
+|---------------|------------------------|----------------------------------------------------------------------|
+| **100**| Continue| Máy chủ đã nhận được một phần của yêu cầu và máy khách nên tiếp tục gửi phần còn lại của yêu cầu.|
+| **101**| Switching Protocols| Máy khách đã yêu cầu máy chủ chuyển đổi giao thức và máy chủ xác nhận rằng nó sẽ làm như vậy.|
+| **102**| Processing| Máy chủ đã nhận được yêu cầu nhưng vẫn đang xử lý nó và chưa có phản hồi hoàn chỉnh.                      |
+| **103**| Early Hints| Được sử dụng để trả về một số header phản hồi trước khi phản hồi HTTP thực sự hoàn chỉnh được gửi đến.    |
+
+**2xx (200 – 299): Successful responses / Phản hồi thành công**
+
+| Mã trạng thái| Cụm từ giải thích| Mô tả|
+|---------------|------------------------|----------------------------------------------------------------------|
+| **200**| OK| Yêu cầu đã thành công và máy chủ đã trả về tài nguyên yêu cầu.       |
+| **201**| Created| Yêu cầu đã thành công và một tài nguyên mới đã được tạo ra.          |
+| **202**| Accepted| Yêu cầu đã được chấp nhận để xử lý, nhưng việc xử lý chưa hoàn tất.   |
+| **204**| No Content| Yêu cầu đã thành công nhưng không có nội dung nào được trả về.       |
+| **206**| Partial Content| Máy chủ chỉ trả về một phần của tài nguyên do phạm vi tiêu đề được gửi bởi máy khách. |
+
+**3xx (300 – 399): Redirects / Điều hướng**
+
+
+| Mã trạng thái| Cụm từ giải thích| Mô tả|
+|---------------|------------------------|----------------------------------------------------------------------|
+| **301**| Moved Permanently| Tài nguyên yêu cầu đã được di chuyển vĩnh viễn đến URL mới.|
+| **302**| Found| Tài nguyên yêu cầu tạm thời được di chuyển đến URL mới.|
+| **303**| See Other| Máy khách nên dùng GET để yêu cầu tài nguyên ở URL khác.|
+| **304**| Not Modified| Tài nguyên không có sự thay đổi kể từ lần truy cập cuối.|
+| **307**| Temporary Redirect| Tài nguyên yêu cầu tạm thời được di chuyển đến URL khác, nhưng phương thức HTTP không thay đổi. |
+| **308**| Permanent Redirect| Tài nguyên yêu cầu đã được di chuyển vĩnh viễn đến URL mới và phương thức HTTP không thay đổi. |
+
+**4xx (400 – 499): Client errors / Lỗi phía client**
+
+
+| Mã trạng thái| Cụm từ giải thích| Mô tả|
+|---------------|------------------------|----------------------------------------------------------------------|
+| **400**| Bad Request| Yêu cầu không hợp lệ hoặc máy chủ không thể hiểu yêu cầu.            |
+| **401**| Unauthorized| Yêu cầu yêu cầu xác thực nhưng không được cung cấp hoặc không hợp lệ.|
+| **403**| Forbidden| Máy chủ hiểu yêu cầu nhưng từ chối thực hiện nó.|
+| **404**| Not Found| Máy chủ không thể tìm thấy tài nguyên yêu cầu.|
+| **405**| Method Not Allowed| Phương thức yêu cầu không được phép trên tài nguyên yêu cầu.         |
+| **408**| Request Timeout| Máy chủ không nhận được yêu cầu hoàn chỉnh từ máy khách trong thời gian cho phép. |
+| **409**| Conflict| Yêu cầu không thể hoàn thành do xung đột với trạng thái hiện tại của tài nguyên. |
+| **410**| Gone| Tài nguyên yêu cầu không còn tồn tại và không có địa chỉ chuyển hướng. |
+| **429**| Too Many Requests| Máy khách đã gửi quá nhiều yêu cầu trong một khoảng thời gian ngắn.  |
+
+**5xx (500 – 599): Server errors / Lỗi phía máy chủ**
+
+
+| Mã trạng thái| Cụm từ giải thích| Mô tả|
+|---------------|------------------------|----------------------------------------------------------------------|
+| **500**| Internal Server Error| Máy chủ gặp lỗi và không thể hoàn thành yêu cầu.|
+| **501**| Not Implemented| Máy chủ không hỗ trợ chức năng cần thiết để hoàn thành yêu cầu.|
+| **502**| Bad Gateway| Máy chủ hoạt động như một cổng hoặc proxy và nhận được phản hồi không hợp lệ từ máy chủ ngược lại. |
+| **503**| Service Unavailable| Máy chủ hiện không thể xử lý yêu cầu do quá tải hoặc bảo trì.|
+| **504**| Gateway Timeout| Máy chủ hoạt động như một cổng hoặc proxy và không nhận được phản hồi kịp thời từ máy chủ ngược lại. |
+| **505**| HTTP Version Not Supported | Máy chủ không hỗ trợ phiên bản HTTP được sử dụng trong yêu cầu.|
+
+# END
