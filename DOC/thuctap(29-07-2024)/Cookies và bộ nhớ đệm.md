@@ -30,7 +30,7 @@ Sau đây mô tả một hệ thống đăng nhập người dùng rất đơn g
 
 4. Máy chủ kiểm tra ID phiên và nếu nó vẫn hợp lệ, gửi cho người dùng phiên bản cá nhân hóa của trang mới. Nếu không hợp lệ, ID phiên bị xóa và người dùng sẽ được hiển thị phiên bản chung của trang (hoặc có thể nhận được thông báo "truy cập bị từ chối" và yêu cầu đăng nhập lại).
 
-![](/thuctap/img/Cookies.png)
+![](/img/Cookies.png)
 
 Cookies chủ yếu được sử dụng cho ba mục đích sau:
 

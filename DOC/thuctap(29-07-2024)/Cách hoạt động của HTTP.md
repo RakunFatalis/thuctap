@@ -48,7 +48,7 @@ Các yêu cầu và phản hồi HTTP có cấu trúc tương tự nhau và bao 
 
 Start-line và headers HTTP của HTTP Messages được gọi chung là phần đầu (head) của yêu cầu, trong khi đó phần tải (payload) của nó được gọi là phần thân (body).
 
-![](/thuctap/img/httpmsgstructure2.png)
+![](/img/httpmsgstructure2.png)
 
 ## 1. HTTP Requests
 
@@ -100,7 +100,7 @@ Nhiều loại tiêu đề khác nhau có thể xuất hiện trong các yêu c�
 
 * **Tiêu đề biểu diễn (Representation headers)**: Như Content-Type, mô tả định dạng gốc của dữ liệu thông điệp và bất kỳ mã hóa nào đã được áp dụng (chỉ xuất hiện nếu thông điệp có phần thân).
 
-![](/thuctap/img/header_http_request.png)
+![](/img/header_http_request.png)
 
 **Body**
 
@@ -138,7 +138,7 @@ Nhiều loại header khác nhau có thể xuất hiện trong phản hồi. Ch�
 
 * **Tiêu đề biểu diễn (Representation headers):** Như Content-Type, mô tả định dạng gốc của dữ liệu thông điệp và bất kỳ mã hóa nào đã được áp dụng (chỉ xuất hiện nếu thông điệp có phần thân).
 
-![](/thuctap/img/header_http_responses.png)
+![](/img/header_http_responses.png)
 
 **Body**
 
@@ -168,7 +168,7 @@ HTTP/2 giới thiệu một bước bổ sung:
 
 * **Đa luồng (Multiplexing)**: Nhiều luồng có thể được kết hợp lại, cho phép sử dụng hiệu quả hơn các kết nối TCP cơ bản.
 
-![](/thuctap/img/http2.png)
+![](/img/http2.png)
 
 Các khung HTTP (HTTP frames) hiện đã trở nên trong suốt đối với các nhà phát triển Web. Đây là một bước bổ sung trong HTTP/2, nằm giữa các thông điệp HTTP/1.1 và giao thức vận chuyển cơ bản. Các nhà phát triển Web không cần phải thay đổi các API mà họ sử dụng để tận dụng các khung HTTP; khi HTTP/2 có sẵn cả trong trình duyệt và máy chủ, nó sẽ được kích hoạt và sử dụng tự động.
 
