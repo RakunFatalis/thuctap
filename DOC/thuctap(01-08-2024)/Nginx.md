@@ -30,7 +30,7 @@ Sử dụng yum để cài đặt Nginx từ kho lưu trữ mặc định của 
 
 ``# yum install nginx ``
 
-![](/thuctap/img/install_nginx.png)
+![](/img/install_nginx.png)
 
 **Bước 3: Khởi Động Dịch Vụ Nginx**
 
@@ -40,7 +40,7 @@ Sau khi cài đặt xong, khởi động dịch vụ Nginx và kiểm tra dịch
 
 ``# systemctl status nginx``
 
-![](/thuctap/img/nginx_status.png)
+![](/img/nginx_status.png)
 
 **Bước 4: Cho phép các port HTTP và HTTPS:**
 
@@ -56,7 +56,7 @@ Bạn cần phải cấu hình tường lửa để Nginx có thể đáp ứng 
 
 Sau khi các bạn cài đặt thành công xong thì các bạn nhập IP Server để kiểm tra xem ta đã cài đặt thành công chưa
 
-![](/thuctap/img/Nginx_success.png)
+![](/img/Nginx_success.png)
 
 ## 2. Hướng dẫn cài đặt Nginx bằng complier từ mã nguồn
 
@@ -98,7 +98,7 @@ Tải phiên bản mới nhất của mã nguồn Nginx từ trang web chính th
     
     Các bạn lưu ý khi mình nhập thì phải cố gắng ghi hết trên 1 dòng nhá
 
-    ![](/thuctap/img/nginx_modules.png)
+    ![](/img/nginx_modules.png)
 
 
 * **Compile Nginx (make)**
@@ -125,7 +125,7 @@ Kiểm tra phiên bản Nginx đã cài đặt.
 
 ``# /usr/local/nginx/sbin/nginx -v``
 
-![](/thuctap/img/nginx_checkver.png)
+![](/img/nginx_checkver.png)
 
 
 Chúng ta thực hiện việc mở port cho Nginx như bài hướng dẫn cài Nginx bằng lệnh yum
@@ -137,7 +137,7 @@ Chúng ta thực hiện việc mở port cho Nginx như bài hướng dẫn cài
 
 Cấu trúc file cấu hình Nginx có dạng như sau
 
-![](/thuctap/img/nginx_structure.png)
+![](/img/nginx_structure.png)
 
 Tất cả các file này thông thường đều nằm trong đường dẫn  **/etc/nginx**
 
@@ -155,7 +155,7 @@ File error.log của Nginx thông thường sẽ được lưu trữ tại đư�
 
 Còn access.log thì nằm ở đường dẫn **/var/log/nginx/access.log**. Đây là nơi chứa những thông tin về tất cả các yêu cầu đến Nginx đã được lưu trữ. Trong log này, bạn có thể thấy người dùng đang truy cập vào các file nào, trình duyệt web họ đang sử dụng, địa chỉ IP của họ và mã trạng thái HTTP mà Nginx đã phản hồi cho mỗi yêu cầu.
 
-![](/thuctap/img/nginx_access_log.png)
+![](/img/nginx_access_log.png)
 
 
 Bạn có thể nắm được vài thông số qua phần phản hồi này:
@@ -170,11 +170,11 @@ Yêu cầu đã được xử lý vào ``01/Aug/2024:13:59:56 +0700``.
 
 File cấu hình chính của Nginx là nginx.conf, nó thường nằm ở đường dẫn ``/etc/nginx/nginx.conf``
 
-![](/thuctap/img/nginx_conf_default.png)
+![](/img/nginx_conf_default.png)
 
 File ``nginx.conf`` thường có dạng như sau:
 
-![](/thuctap/img/nginx_conf_structure.png)
+![](/img/nginx_conf_structure.png)
 
 **Các thành phần của file Nginx.conf**
 
@@ -182,20 +182,20 @@ File ``nginx.conf`` thường có dạng như sau:
 
     Phần Global Settings dùng để thiết lập các cấu hình chung cho toàn bộ máy chủ Nginx. Các thiết lập này ảnh hưởng đến cách Nginx chạy và quản lý các tài nguyên hệ thống
 
-    ![](/thuctap/img/Nginx_conf_global.png)
+    ![](/img/Nginx_conf_global.png)
 
 2. **Events Block**
 
     Events Block trong file cấu hình ``nginx.conf`` dùng để thiết lập cách Nginx xử lý các sự kiện liên quan đến kết nối mạng. Đây là nơi cấu hình các thông số ảnh hưởng đến hiệu suất và khả năng xử lý của Nginx khi có nhiều kết nối đồng thời.
 
-    ![](/thuctap/img/Nginx_conf_event.png)
+    ![](/img/Nginx_conf_event.png)
 
 
 3. **HTTP Block**
 
     HTTP Block trong file cấu hình ``nginx.conf`` là nơi chứa các thiết lập liên quan đến việc xử lý các yêu cầu HTTP. Đây là phần quan trọng nhất của cấu hình Nginx khi bạn sử dụng nó làm máy chủ web hoặc proxy ngược. Khối HTTP có thể chứa nhiều khối con như server, location, upstream, và bao gồm nhiều thiết lập khác nhau để điều chỉnh hành vi của Nginx.
 
-    ![](/thuctap/img/nginx_conf_httpblock.png)
+    ![](/img/nginx_conf_httpblock.png)
 
 4. **Server Block**
 
@@ -203,24 +203,24 @@ File ``nginx.conf`` thường có dạng như sau:
 
     **Lưu ý các server block thường nằm trong http block**
 
-    ![](/thuctap/img/nginx_conf_server.png)
+    ![](/img/nginx_conf_server.png)
 
 5. **Location Block**
     
     Location Block trong file cấu hình ``nginx.conf`` được sử dụng để xác định cách Nginx xử lý các yêu cầu cho các đường dẫn cụ thể trên một máy chủ ảo (server block). Nó cho phép bạn chỉ định các hành vi khác nhau tùy thuộc vào đường dẫn của yêu cầu. Bạn có thể sử dụng ``location block`` để phục vụ tệp tĩnh, chuyển tiếp yêu cầu đến một máy chủ ngược dòng (upstream server), thực hiện chuyển hướng, hoặc thực hiện các thao tác khác.
 
-    ![](/thuctap/img/nginx_conf_location.png)
+    ![](/img/nginx_conf_location.png)
 
 6. **SSL Configuration**
 
     Cấu hình SSL trong Nginx giúp bảo mật các kết nối giữa máy khách và máy chủ bằng cách mã hóa dữ liệu truyền tải
-    ![](/thuctap/img/Nginx_conf_SSL.png)
+    ![](/img/Nginx_conf_SSL.png)
 
 7. **Upstream Block**
 
     Khối upstream trong Nginx được sử dụng để xác định các nhóm máy chủ backend mà Nginx sẽ chuyển tiếp các yêu cầu đến. Đây là một phần quan trọng của cấu hình load balancing, giúp phân phối tải đến nhiều máy chủ backend để cải thiện hiệu suất và độ tin cậy của ứng dụng web.
 
-    ![](/thuctap/img/nginx_conf_upstream.png)
+    ![](/img/nginx_conf_upstream.png)
 
 File ``nginx.conf`` có thể chứa nhiều phần cấu hình khác nhau, mỗi phần đóng vai trò thiết lập các hành vi cụ thể của Nginx. Tùy thuộc vào nhu cầu và môi trường triển khai, bạn có thể thêm hoặc điều chỉnh các phần cấu hình này để phù hợp với yêu cầu cụ thể của hệ thống.
 
