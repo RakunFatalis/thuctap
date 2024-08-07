@@ -19,7 +19,7 @@
 
 # I. HAProxy là gì?
 
-![](/thuctap/img/HAProxy_logo.png)
+![](/img/HAProxy_logo.png)
 
 **HAProxy (High Availability Proxy)** là một phần mềm mã nguồn mở, miễn phí, rất nhanh và đáng tin cậy, cung cấp proxy ngược, cân bằng tải và proxy cho các ứng dụng dựa trên TCP và HTTP. Nó đặc biệt phù hợp cho các trang web có lưu lượng truy cập rất cao và là công cụ phổ biến cho một phần lớn các trang web được truy cập nhiều nhất trên thế giới. Qua nhiều năm, HAProxy đã trở thành tiêu chuẩn mặc định cho bộ cân bằng tải mã nguồn mở, được tích hợp trong hầu hết các bản phân phối Linux chính thống và thường được triển khai mặc định trên các nền tảng đám mây. Vì nó không tự quảng cáo, nên chúng ta chỉ biết đến nó khi các quản trị viên nói về nó.
 
@@ -42,7 +42,7 @@ Trong HAProxy ta có 3 loại cân bằng tải.
 
 Đây là một mô hình cơ bản nhất cho một ứng dụng web, thường được áp dụng trong môi trường có số lượng người dùng ít hoặc không có, sử dụng cho mục đích thử nghiệm hoặc phát triển.
 
-![](/thuctap/img/HAProxy_noloadbalancing.png)
+![](/img/HAProxy_noloadbalancing.png)
 
 Với mô hình này, người dùng sẽ kết nối trực tiếp với web server tại ``yourdomain.com`` và không có cân bằng tải nào được sử dụng. Nếu webserver gặp trục trặc, người dùng sẽ không thể kết nối đến ứng dụng web được nữa.
 
@@ -50,7 +50,7 @@ Với mô hình này, người dùng sẽ kết nối trực tiếp với web se
 
 Cách đơn giản nhất để có thể cân bằng tải tới nhiều server là sử dụng cân bằng tải trên tầng 4. Theo hướng này thì các request sẽ được điều hướng dựa trên khoảng địa chỉ IP và cổng (ví dụ một request tới địa chỉ ``http:://www.example.com/something`` sẽ được điều hướng tới backend được dùng để điều hướng cho domain example.com với cổng 80)
 
-![](/thuctap/img/HAProxy_layer%204%20load.png)
+![](/img/HAProxy_layer%204%20load.png)
 
 Người dùng truy cập vào bộ cân bằng tải, bộ này sẽ chuyển tiếp yêu cầu của người dùng đến nhóm máy chủ backend web. Máy chủ backend nào được chọn sẽ phản hồi trực tiếp yêu cầu của người dùng. Thông thường, tất cả các máy chủ trong nhóm backend web nên phục vụ nội dung giống nhau – nếu không, người dùng có thể nhận được nội dung không nhất quán. Lưu ý rằng cả hai máy chủ web đều kết nối đến cùng một máy chủ cơ sở dữ liệu.
 
@@ -58,7 +58,7 @@ Người dùng truy cập vào bộ cân bằng tải, bộ này sẽ chuyển t
 
 Cân bằng tải tại tầng 7 là cách cân bằng tải phức tạp nhất và cũng là cách cân bằng tải có nhiều tùy biến nhất. Sử dụng cân bằng tải tại tầng 7, ta có thể điều hướng request dựa trên nội dụng của request đó. Với kiểu câng bằng tải này, nhiều backend có thể được sử dụng cho dùng một domain và port.
 
-![](/thuctap/img/HAProxy_layer%207%20load.png)
+![](/img/HAProxy_layer%207%20load.png)
 
 ## 4. Bảng so sánh
 
