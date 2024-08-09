@@ -25,7 +25,7 @@ Các Server 1 và Server 2 đã cài đặt webserver Nginx
 
     ``# yum install haproxy -y``
 
-    ![](/thuctap/img/install_HAProxy.png)
+    ![](/img/install_HAProxy.png)
 
 * **Bước 3: Kiểm tra phiên bản HAProxy**
 
@@ -33,7 +33,7 @@ Các Server 1 và Server 2 đã cài đặt webserver Nginx
 
     ``# haproxy -v``
 
-    ![](/thuctap/img/HAProxy_ver.png)
+    ![](/img/HAProxy_ver.png)
 
 # II. Cấu hình HAProxy
 
@@ -47,25 +47,25 @@ File ``haproxy.cfg`` thường có 4 phần chính **global**, **defaults**, **f
 
     Phần này cấu hình môi trường chung cho HAProxy. Nó quy định cách HAProxy ghi log, chạy với quyền nào, giới hạn kết nối và các cài đặt an ninh như sử dụng chroot. Đây là các cấu hình nền tảng giúp HAProxy hoạt động ổn định và bảo mật.
 
-    ![](/thuctap/img/HAProxy_Global.png)
+    ![](/img/HAProxy_Global.png)
 
 * **Defaults**
 
     Các cấu hình trong phần này sẽ được áp dụng mặc định cho tất cả các frontend và backend trừ khi có cấu hình cụ thể khác. Ví dụ, nếu bạn có nhiều frontend hoặc backend, chúng sẽ kế thừa các thiết lập này trừ khi bạn ghi đè chúng trong phần tương ứng.
 
-    ![](/thuctap/img/HAProxy_Defaults.png)
+    ![](/img/HAProxy_Defaults.png)
 
 * **Frontend**
 
     Phần frontend xác định cách xử lý các yêu cầu đến, bao gồm địa chỉ IP và cổng mà HAProxy lắng nghe. Nó cũng chỉ định backend mặc định mà các yêu cầu sẽ được chuyển tiếp. Đây là điểm vào đầu tiên cho lưu lượng mạng đi vào HAProxy.
 
-    ![](/thuctap/img/HAProxy_Frontend.png)
+    ![](/img/HAProxy_Frontend.png)
 
 * **Backend**
 
     Phần backend xác định cách HAProxy chuyển tiếp các yêu cầu đến các máy chủ thực sự xử lý dữ liệu. HAProxy có thể sử dụng nhiều phương pháp để cân bằng tải giữa các máy chủ này, và kiểm tra sức khỏe của từng máy chủ để đảm bảo rằng chỉ các máy chủ khỏe mạnh mới nhận được yêu cầu.
 
-    ![](/thuctap/img/HAProxy_Backend.png)
+    ![](/img/HAProxy_Backend.png)
 
 Ngoài ra ta còn có:
 
@@ -80,7 +80,7 @@ Ngoài ra ta còn có:
 
 Sau đây mình sẽ cấu hình **Frontend** với **Backend** HAProxy đơn giản, bạn có thể xem ảnh bên dưới để tham khảo:
 
-![](/thuctap/img/HAProxy_conf.png)
+![](/img/HAProxy_conf.png)
 
 
 Sau khi các bạn đã cấu hình xong ta chạy lệnh: ``# systemctl restart haproxy`` để khởi động lại HAProxy cho nó áp dụng cấu hình đã thay đổi.
@@ -89,6 +89,6 @@ Ta mở trình duyệt web lên và nhập địa chỉ IP server của mình đ
 
 Vì thế mình sẽ nhập trên giao diện web ``http://192.168.3.152/haproxy?stats``
 
-![](/thuctap/img/HAProxy_stats.png)
+![](/img/HAProxy_stats.png)
 
 # END

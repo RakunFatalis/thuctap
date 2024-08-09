@@ -16,7 +16,7 @@
 
     ``# yum install mysql-server -y``
 
-    ![](/thuctap/img/Mysql_install.png)
+    ![](/img/Mysql_install.png)
     
 * **Bước 3: Kiểm tra phiên bản MySQL**
 
@@ -24,7 +24,7 @@
 
     ``# mysqld -V``
 
-    ![](/thuctap/img/Mysql_V.png)
+    ![](/img/Mysql_V.png)
 
     bạn dùng lệnh ``# systemctl start mysqld`` để khởi động MySQL
 
@@ -48,7 +48,7 @@ Khi bạn được hỏi có muốn thiết lập VALIDATE PASSWORD không, bạ
 
 Tại đây mình chọn **YES**
 
-![](/thuctap/img/Mysql_VALIDATE%20PASSWORD.png)
+![](/img/Mysql_VALIDATE%20PASSWORD.png)
 
 Sau khi bạn chọn YES bạn sẽ được yêu cầu chọn mức độ chính sách xác thực mật khẩu.
 
@@ -70,13 +70,13 @@ Sau khi bạn chọn YES bạn sẽ được yêu cầu chọn mức độ chín
 
     * Chế độ này yêu cầu mật khẩu phải rất mạnh và bao gồm tất cả các yếu tố bảo mật, cùng với việc kiểm tra chống lại một tập tin từ điển để tránh việc sử dụng các mật khẩu dễ đoán.
 
-![](/thuctap/img/Mysql_3lvpass.png)
+![](/img/Mysql_3lvpass.png)
 
 Tại đây mình sẽ chọn 2.
 
 Sau khi nhập mật khẩu xong, hệ thống sẽ đánh giá độ mạnh của mật khẩu mà bạn đã nhập và hiển thị thông báo về độ mạnh. Sau khi đánh giá hệ thống sẽ yêu cầu xác nhận mật khẩu nếu bạn hài lòng
 
-![](/thuctap/img/Mysql_strenghpass.png)
+![](/img/Mysql_strenghpass.png)
 
 Tiếp theo, hệ thống sẽ hiện thông báo nói rằng: 
 
@@ -86,7 +86,7 @@ Tiếp theo, hệ thống sẽ hiện thông báo nói rằng:
 
 * **Nhấn phím khác**: Nếu bạn không muốn xóa người dùng ẩn danh, tài khoản này sẽ vẫn tồn tại. Điều này không phải là một vấn đề lớn trong môi trường thử nghiệm, nhưng không được khuyến khích trong môi trường sản xuất vì có thể tạo ra lỗ hổng bảo mật.
 
-![](/thuctap/img/Mysql_anyuser.png)
+![](/img/Mysql_anyuser.png)
 
 Để bảo mật hệ thống MySQL của bạn, hãy nhấn **y** và Enter để xóa người dùng ẩn danh. Đây là một phần của quy trình bảo mật cơ bản khi chuẩn bị hệ thống cho môi trường sản xuất.
 
@@ -100,7 +100,7 @@ Tiếp đến sẽ có thông báo nói rằng:
 
 Để tăng cường bảo mật hệ thống MySQL của bạn, hãy nhấn **y** và Enter để cấm đăng nhập từ xa đối với tài khoản root. Điều này giúp bảo vệ tài khoản quản trị chính của bạn khỏi các cuộc tấn công từ xa và chỉ cho phép truy cập trực tiếp từ máy chủ cài đặt MySQL.
 
-![](/thuctap/img/Mysql_allowroot.png)
+![](/img/Mysql_allowroot.png)
 
 Kế tiếp có thông báo:
 
@@ -112,7 +112,7 @@ Kế tiếp có thông báo:
 
 Để đảm bảo môi trường MySQL của bạn an toàn và sạch sẽ trước khi chuyển sang môi trường sản xuất, hãy nhấn y và Enter để xóa cơ sở dữ liệu test và quyền truy cập của nó. Điều này giúp bạn loại bỏ các tài nguyên không cần thiết và giảm nguy cơ bị tấn công.
 
-![](/thuctap/img/Mysql_Databasetest.png)
+![](/img/Mysql_Databasetest.png)
 
 Cuối cùng, hệ thống sẽ yêu cầu bạn có muốn làm mới các bảng quyền trong MySQL.
 
@@ -122,4 +122,6 @@ Cuối cùng, hệ thống sẽ yêu cầu bạn có muốn làm mới các bả
 
 Để đảm bảo rằng tất cả các thay đổi về cấu hình và quyền của bạn được áp dụng ngay lập tức, hãy nhấn **y** và Enter để làm mới các bảng quyền. Điều này giúp bạn tránh phải thực hiện lại các thay đổi hoặc khởi động lại MySQL để các thay đổi có hiệu lực.
 
-![](/thuctap/img/Mysql_privilege.png)
+![](/img/Mysql_privilege.png)
+
+# END
