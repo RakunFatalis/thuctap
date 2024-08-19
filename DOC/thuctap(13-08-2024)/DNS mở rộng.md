@@ -4,6 +4,28 @@
 
 # Mục lục
 
+- [DNS](#dns)
+- [Mục lục](#mục-lục)
+- [I. DNS là gì, DNS hoạt động như thế nào,  phân loại DNS.](#i-dns-là-gì-dns-hoạt-động-như-thế-nào--phân-loại-dns)
+  - [1. DNS là gì.](#1-dns-là-gì)
+  - [2. DNS hoạt động như thế nào?](#2-dns-hoạt-động-như-thế-nào)
+  - [3. Phân loại DNS.](#3-phân-loại-dns)
+    - [a. DNS Master](#a-dns-master)
+    - [b. DNS Slave](#b-dns-slave)
+- [II. Cấu trúc cây DNS](#ii-cấu-trúc-cây-dns)
+  - [Root Domain](#root-domain)
+  - [Top-Level Domain (TLD)](#top-level-domain-tld)
+  - [Second-Level Domains (SLDs)](#second-level-domains-slds)
+  - [Subdomains](#subdomains)
+  - [Hostnames](#hostnames)
+- [III. Các loại bản ghi DNS trong zone file](#iii-các-loại-bản-ghi-dns-trong-zone-file)
+- [IV. Cài đặt BIND](#iv-cài-đặt-bind)
+- [V. Tìm hiểu một số lệnh dig, nslookup để query các record DNS](#v-tìm-hiểu-một-số-lệnh-dig-nslookup-để-query-các-record-dns)
+  - [Bảng các lệnh dig](#bảng-các-lệnh-dig)
+  - [Bảng các lệnh nslookup](#bảng-các-lệnh-nslookup)
+- [VI. Bắt gói tin và phân tích khi truy vấn DNS](#vi-bắt-gói-tin-và-phân-tích-khi-truy-vấn-dns)
+- [VII. DNS hoạt dộng ở layer nào trong mô hình OSI.](#vii-dns-hoạt-dộng-ở-layer-nào-trong-mô-hình-osi)
+- [END.](#end)
 
 
 
