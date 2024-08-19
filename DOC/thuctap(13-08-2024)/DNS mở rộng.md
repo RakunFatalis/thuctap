@@ -72,7 +72,7 @@ Trong trường hợp máy chủ DNS chính gặp sự cố hoặc không khả 
 
 Cấu trúc cây của DNS (Domain Name System) là một cấu trúc phân cấp, trong đó mỗi nút (node) đại diện cho một miền hoặc một phần của miền. Cấu trúc này giúp tổ chức và quản lý thông tin về tên miền theo một cách có hệ thống và hiệu quả.
 
-![](/thuctap/img/DNS_tree.png)
+![](/img/DNS_tree.png)
 
 ##  Root Domain
 
@@ -80,7 +80,7 @@ Root domain (Miền gốc) là đỉnh của cấu trúc cây DNS, được bi�
 
 Có 13 hệ thống root server được đặt tên từ A đến M trên toàn cầu. Các máy chủ này không chứa bản ghi thông tin chi tiết của tất cả các tên miền mà chỉ lưu trữ thông tin về các TLD (Top-Level Domains).
 
-![](/thuctap/img/DNS_map_rootserver.png)
+![](/img/DNS_map_rootserver.png)
 
 Khi một trình duyệt hoặc ứng dụng yêu cầu một tên miền, truy vấn DNS đầu tiên sẽ được gửi đến các máy chủ gốc.
 
@@ -215,3 +215,229 @@ Trong một zone file của hệ thống DNS, các bản ghi (record) cung cấp
 
 BIND (Berkeley Internet Name Domain) là một phần mềm hệ thống máy chủ tên miền cơ bản và phổ biến nhất hiện nay. BIND được sử dụng trên hầu hết các máy chủ phân giải tên miền trên toàn thế giới.
 
+Trong bài lab này mình có 2 máy ảo CentOS, một máy server và một máy client chúng có ip lần lượt là:
+
+* **Server**: ``192.168.3.183/24``
+* **Client**: ``192.168.3.111/24``
+
+Trên cả 2 máy ảo ta đều cài đặt BIND, để cài đặt BIND ta sử dụng câu lệnh sau:
+
+``# yum install bind -y``
+
+![](/img/bind_install.png)
+
+Khi các gói BIND của bạn được cài đặt, bạn cần khởi động dịch vụ của nó và cho phép nó tự khởi động sau mỗi lần khởi động lại, để bạn không phải bắt đầu thủ công mỗi lần. Chúng ta hãy chạy các lệnh sau để làm như vậy và sau đó kiểm tra trạng thái của dịch vụ BIND.
+
+``# systemctl enable named``
+
+``# systemctl start named``
+
+``# systemctl status named``
+
+![](/img/bind_status.png)
+
+**Cấu hình BIND trên Server**
+
+Cấu hình của BIND bao gồm nhiều tệp như tệp cấu hình chính và named.conf. Tên các tệp này bắt đầu bằng named vì đó là tên của tiến trình mà BIND chạy (với named được rút gọn từ “name daemon”, như trong “domain name daemon”). Bạn sẽ bắt đầu bằng cách cấu hình tệp named.conf
+
+``# nano /etc/named.conf`` để chỉnh sửa file named.conf
+
+![](/img/bind_blockoption.png)
+
+
+**Cấu hình file BIND**
+
+Bây giờ ta sẽ thêm các vùng chuyển tiếp và đảo ngược trong tệp ‘name.conf’ cho miền của chúng ta. Vì vậy, để thiết lập chỉnh sửa vùng chuyển tiếp /etc/named.conf theo cách như vậy để đặt các cấu hình sau.
+
+``# nano /etc/named.conf``
+
+Thêm hoặc chỉnh sửa các phần sau:
+
+        options {
+            directory "/var/named";
+            allow-query { any; };
+            listen-on port 53 { 192.168.0.183; };
+            // Các cấu hình khác nếu cần
+        };
+
+        zone "local" IN {
+            type master;
+            file "local.zone";
+        };
+
+        zone "0.168.192.in-addr.arpa" IN {
+            type master;
+            file "0.168.192.in-addr.arpa.zone";
+        };
+
+**Tạo file zone cho domain:**
+
+Tạo file zone chính tại ``/var/named/local.zone``:
+
+``# nano /var/named/local.zone``
+
+Thêm nội dung sau:
+
+        $TTL 86400
+        @   IN  SOA ns.hailong.info. admin.hailong.info. (
+                    2024081901
+                    3600
+                    1800
+                    1209600
+                    86400 )
+
+        @   IN  NS  ns.hailong.info.
+        @   IN  A   192.168.0.183
+        ns  IN  A   192.168.0.183
+
+Tạo file zone ngược tại ``/var/named/0.168.192.in-addr.arpa.zone``:
+
+``# nano /var/named/0.168.192.in-addr.arpa.zone``
+
+Thêm nội dung sau:
+
+        $TTL 86400
+        @   IN  SOA  ns1.hailong.info. admin.hailong.info. (
+                        2024081901 ; Serial
+                        3600       ; Refresh
+                        1800       ; Retry
+                        1209600    ; Expire
+                        86400 )    ; Minimum TTL
+        ;
+        @   IN  NS   ns1.hailong.info.
+        @   IN  NS   ns2.hailong.info.
+        ;
+        183 IN  PTR  hailong.info.
+
+
+**Kiểm tra lỗi file**
+
+Kiểm tra file:
+
+``# named-checkconf``
+
+``# named-checkzone local /var/named/local.zone``
+
+``# named-checkzone 0.168.192.in-addr.arpa /var/named/0.168.192.in-addr.arpa.zone``
+
+**Khỏi động dịch vụ BIND**
+
+``# systemctl start named``
+
+``# systemctl enable named``
+
+``# systemctl status named``
+
+**Mở tường lửa nếu đang chặn cổng dịch vụ BIND**
+
+``# firewall-cmd --zone=public --add-port=53/tcp --permanent``
+
+``# firewall-cmd --zone=public --add-port=53/udp --permanent``
+
+``# firewall-cmd --reload``
+
+**Cấu hình file DNS trên máy client**
+
+``# nano /etc/resolv.conf``
+
+Thêm hoặc cập nhật dòng sau:
+
+    nameserver 192.168.0.183
+
+
+# V. Tìm hiểu một số lệnh dig, nslookup để query các record DNS
+
+## Bảng các lệnh dig
+
+
+| **Lệnh**| **Mô Tả**| **Ví Dụ**|
+|----------------------------------|--------------------------------------------------------------|------------------------------------------|
+| `dig example.com`| Truy vấn tất cả các bản ghi DNS cho tên miền.| `dig example.com`|
+| `dig example.com A`| Truy vấn bản ghi A (Address Record) cho tên miền.| `dig example.com A`|
+| `dig example.com MX`| Truy vấn bản ghi MX (Mail Exchange) cho tên miền.| `dig example.com MX`|
+| `dig example.com NS`| Truy vấn bản ghi NS (Name Server) cho tên miền.| `dig example.com NS`|
+| `dig -x 192.168.1.1`| Truy vấn bản ghi PTR (Pointer Record) cho địa chỉ IP.| `dig -x 192.168.1.1`|
+| `dig example.com TXT`| Truy vấn bản ghi TXT (Text Record) cho tên miền.| `dig example.com TXT`|
+| `dig example.com CNAME`| Truy vấn bản ghi CNAME (Canonical Name) cho tên miền.| `dig example.com CNAME`|
+| `dig example.com SOA`| Truy vấn bản ghi SOA (Start of Authority) cho tên miền.| `dig example.com SOA`|
+| `dig @8.8.8.8 example.com`| Truy vấn DNS từ máy chủ cụ thể.| `dig @8.8.8.8 example.com`|
+| `dig example.com +noall +answer`| Hiển thị thông tin chi tiết, chỉ các bản ghi trả về.| `dig example.com +noall +answer`|
+| `dig example.com +short`| Truy vấn DNS với định dạng ngắn gọn.| `dig example.com +short`|
+
+Ví dụ: Mình sử dụng lệnh ``dig @192.168.0.183 -x 192.168.0.183`` để thực hiện truy vấn DNS ngược (reverse DNS lookup) từ máy chủ DNS có địa chỉ IP ``192.168.0.183`` và yêu cầu phân giải địa chỉ IP ``192.168.0.183`` về tên miền.
+
+![](/img/dig_hailonginfo.png)
+
+## Bảng các lệnh nslookup
+
+| **Lệnh**| **Mô Tả**| **Ví Dụ**|
+|-------------------------------|--------------------------------------------------------------|------------------------------------------|
+| `nslookup example.com`| Truy vấn địa chỉ IP của tên miền.| `nslookup example.com`|
+| `nslookup -query=MX example.com`| Truy vấn bản ghi MX (Mail Exchange) cho tên miền.| `nslookup -query=MX example.com`|
+| `nslookup -query=NS example.com`| Truy vấn bản ghi NS (Name Server) cho tên miền.| `nslookup -query=NS example.com`|
+| `nslookup -query=A example.com`| Truy vấn bản ghi A (Address Record) cho tên miền.| `nslookup -query=A example.com`|
+| `nslookup 192.168.1.1`| Truy vấn bản ghi PTR (Pointer Record) cho địa chỉ IP.| `nslookup 192.168.1.1`|
+| `nslookup example.com 8.8.8.8` | Chọn máy chủ DNS để thực hiện truy vấn.| `nslookup example.com 8.8.8.8`|
+| `nslookup`| Sử dụng chế độ tương tác để thực hiện nhiều truy vấn.| `nslookup` (vào chế độ tương tác)|
+
+**Ví dụ:** Lệnh nslookup ``hailong.info 192.168.0.183`` truy vấn máy chủ DNS tại địa chỉ ``192.168.0.183`` để tìm địa chỉ IP của tên miền ``hailong.info``. Kết quả cho thấy tên miền ``hailong.info`` được phân giải thành địa chỉ IP ``192.168.0.183``.
+
+![](/img/nslookup_hailonginfo.png)
+
+# VI. Bắt gói tin và phân tích khi truy vấn DNS
+
+Để bắt gói tin trên cổng 53 (cổng mặc định của DNS) thì ta sử dụng lệnh ``tcpdump``. Nếu máy bạn chưa có thì cài đặt với lệnh sau:
+
+``# yum update``
+
+``#yum install tcpdump -y``
+
+Thông thường khi bắt gói tin nó sẽ có dạng như sau:
+
+![](/img/DNS_tcpdump.png)
+
+Giờ ta hãy phân tích từng gói tin của DNS trên:
+
+**Truy vấn DNS cho A Record (IPv4) của ``hailong.info``**
+
+![](/img/DNS_tcpdump_A.png)
+
+* **Gói tin 1**: ``192.168.0.111`` gửi một yêu cầu DNS đến máy chủ DNS tại ``localhost.localdomain`` để tra cứu bản ghi A (địa chỉ IPv4) của ``hailong.info``. Số hiệu truy vấn là ``26875``.
+
+* **Gói tin 2**: Máy chủ DNS (localhost.localdomain) trả lời với bản ghi A cho hailong.info, có giá trị là ``192.168.0.183``. Truy vấn được đáp ứng với số hiệu ``26875`` và không có bản ghi phụ hoặc lỗi.
+
+**Truy vấn DNS cho AAAA Record (IPv6) của hailong.info**
+
+![](/img/DNS_tcpdump_AAAA.png)
+
+* **Gói tin 3**: ``192.168.0.111`` gửi một yêu cầu DNS để tra cứu bản ghi AAAA (địa chỉ IPv6) của ``hailong.info``. Số hiệu truy vấn là ``1020``.
+
+* **Gói tin 4**: Máy chủ DNS trả lời rằng không có bản ghi AAAA cho ``hailong.info``, do đó số bản ghi trong phần trả lời là ``0``.
+
+**Truy vấn DNS ngược (PTR Record) cho địa chỉ IPv4 192.168.0.183**
+
+![](/img/DNS_tcpdump_PTR.png)
+
+* **Gói tin 5**: Máy chủ DNS (localhost.localdomain) gửi yêu cầu để tra cứu bản ghi PTR cho địa chỉ IPv4 ``192.168.0.183`` (được chuyển đổi thành 183.0.168.192.in-addr.arpa). Số hiệu truy vấn là ``61418``.
+
+* **Gói tin 6**: Máy chủ DNS trả lời với mã lỗi ``NXDomain``, nghĩa là không có bản ghi PTR cho địa chỉ 192.168.0.183.
+
+# VII. DNS hoạt dộng ở layer nào trong mô hình OSI.
+
+DNS (Domain Name System) hoạt động chủ yếu ở Layer 7 của mô hình OSI, tức là Application Layer. Lí do nó hoạt động ở layer 7.
+
+1. **Chức Năng Ứng Dụng**
+
+    DNS cung cấp dịch vụ phân giải tên miền thành địa chỉ IP và ngược lại, điều này liên quan đến các dịch vụ và ứng dụng cụ thể mà người dùng hoặc các ứng dụng mạng sử dụng. Đây là nhiệm vụ của Application Layer, nơi các giao thức mạng cấp cao hoạt động để cung cấp các dịch vụ ứng dụng cho người dùng.
+
+2. **Giao Thức Cấp Cao**
+
+    Giao thức DNS là giao thức cấp cao được sử dụng để tìm kiếm và phân giải các tên miền. Giao thức này sử dụng UDP và TCP trên Layer 4 (Transport Layer) để truyền tải dữ liệu, nhưng logic phân giải tên miền và các quy trình xử lý thuộc về Application Layer.
+
+3. **Dịch Vụ Tên Miền:**
+
+    DNS không chỉ là một giao thức truyền dữ liệu mà còn là một dịch vụ hỗ trợ ứng dụng, giúp các ứng dụng web, email, và các dịch vụ khác hoạt động bằng cách chuyển đổi các tên miền dễ nhớ thành địa chỉ IP mà các máy chủ và thiết bị mạng có thể hiểu.
+
+**Tổng kết lại:** DNS nằm ở Layer 7 vì nó cung cấp dịch vụ phân giải tên miền cho các ứng dụng và người dùng cuối. Mặc dù DNS sử dụng các giao thức ở Layer 4 (như UDP và TCP) để truyền tải dữ liệu, toàn bộ quá trình xử lý và dịch vụ phân giải tên miền được thực hiện ở Layer 7, nơi các dịch vụ ứng dụng mạng được cung cấp.
+
+# END. 

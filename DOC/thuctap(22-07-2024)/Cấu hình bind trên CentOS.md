@@ -82,7 +82,7 @@ Bây giờ ta sẽ thêm các vùng chuyển tiếp và đảo ngược trong t�
 
 Forward zone file là nơi bạn xác định các bản ghi DNS để tra cứu DNS chuyển tiếp. Tức là, khi DNS nhận được một truy vấn tên nó sẽ tìm kiếm trong forward zone file để phản hồi địa chỉ IP riêng tương ứng.
 
-``# nano /var/named.azdigi.info.db``
+``# nano /var/named/thuctap.azdigi.info.db``
 
 ![](/img/bind_forwardzonefile.png)
 
