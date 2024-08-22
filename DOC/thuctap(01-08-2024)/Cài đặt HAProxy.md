@@ -1,7 +1,11 @@
 # Cài đặt HAProxy
 
 # Mục lục
-
+- [Cài đặt HAProxy](#cài-đặt-haproxy)
+- [Mục lục](#mục-lục)
+- [I. Cài đặt HAProxy](#i-cài-đặt-haproxy)
+- [II. Cấu hình HAProxy](#ii-cấu-hình-haproxy)
+- [END](#end)
 
 Hệ thống được cài đặt với bộ cân bằng tải HAproxy và các webserver được cài trên các máy ảo CentOS 9. Địa chỉ IP các server:
 

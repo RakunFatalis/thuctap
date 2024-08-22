@@ -1,7 +1,11 @@
 # Cài đặt MySQL
 
 # Mục lục
-
+- [Cài đặt MySQL](#cài-đặt-mysql)
+- [Mục lục](#mục-lục)
+- [I. Cài đặt MySQL](#i-cài-đặt-mysql)
+- [II. Cấu hình MySQL](#ii-cấu-hình-mysql)
+- [END](#end)
 # I. Cài đặt MySQL
 
 * **Bước 1: Cập nhật hệ thống**
