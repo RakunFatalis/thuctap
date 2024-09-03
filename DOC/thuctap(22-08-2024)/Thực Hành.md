@@ -32,7 +32,7 @@ Một VPS Ubuntu có địa chỉ IP: ``103.110.85.87``
 
  Để tạo SSH Key ta nhập lệnh sau: ``ssh-keygen -t rsa`` để tạo chuổi Public key và Private key ở máy khách.
 
- ![](/thuctap/img/VPS_SSHKey.png)
+ ![](/img/VPS_SSHKey.png)
 
 Trong thông báo bạn sẽ thấy 2 dòng:
 
@@ -42,7 +42,7 @@ Trong thông báo bạn sẽ thấy 2 dòng:
 
 Thông thường khi bạn nhập lệnh tạo SSH Key thì Public key và Private key lưu tại thư mục ``.ssh`` mà bạn nhập lệnh, ta dùng lệnh ``ls -al`` để in các tệp có trong thư mục ra.
 
-![](/thuctap/img/VPS_2Key.png)
+![](/img/VPS_2Key.png)
 
 Tiếp theo ta thêm Public key lên VPS. Bạn hãy ssh vào VPS với thông tin passwd root và thực hiện nhập tuần tự các lệnh sau.
 
@@ -58,7 +58,7 @@ Những lệnh này thiết lập môi trường bảo mật cho SSH bằng các
 
   Trên con máy có chứa Public key của bạn, bạn mở terminal và chạy lệnh ``cat`` để hiển thị nội dung của khoá và copy nó.
 
-  ![](/thuctap/img/VPS_CatPub.png)
+  ![](/img/VPS_CatPub.png)
 
   Bạn SSH tới VPS như bằng cách sử dụng lệnh: ``# ssh user@ip_server``
 
@@ -70,17 +70,17 @@ Những lệnh này thiết lập môi trường bảo mật cho SSH bằng các
   
   Sau đó ta sử dụng lệnh: ``# nano ~/.ssh/authorized_keys`` để mở thư mục ``authorized_keys`` và dán key đã copy vào.
 
-  ![](/thuctap/img/VPS_SSHCopy.png)
+  ![](/img/VPS_SSHCopy.png)
 
   Để sử dụng SSH key, ta mở Terminal lên và sử dụng lệnh sau để SSH:
 
   ``# ssh -i duong_dan_chua_Private_key root@ip_may_chu -p port_SSH``
 
-  ![](/thuctap/img/VPS_SSH_Succes.png)
+  ![](/img/VPS_SSH_Succes.png)
 
   Sau khi đã SSH key thành công bạn có thể tắt cho phép SSH bằng Passwd đi để tránh do passwd và brute force attack nhé. Để tắt đăng nhập ssh bằng passwd bạn thực hiện như sau. Bạn mở file ``/etc/ssh/sshd_config`` sau đó tìm đến dòng ``PasswordAuthentication Yes`` bạn chuyển thành ``PasswordAuthentication no``
 
-  ![](/thuctap/img/VPS_yestono.png)
+  ![](/img/VPS_yestono.png)
 
   Sau khi lưu xong bạn đừng quên khởi động lại dịch vụ ssh.
 
@@ -92,18 +92,18 @@ Ngoài cách sử dụng command line trên Linux ngoài ra ta còn có cách kh
 
 * **Tạo SSH key bằng PuttyGen**
 
-  ![](/thuctap/img/VPS_Putty_Gene.png)
+  ![](/img/VPS_Putty_Gene.png)
 
 
-  ![](/thuctap/img/VPS_Putty_Click.png)
+  ![](/img/VPS_Putty_Click.png)
 
-  ![](/thuctap/img/VPS_Putty_SaveKey.png)
+  ![](/img/VPS_Putty_SaveKey.png)
 
 * **Sử dụng SSH Key trên Putty**
 
   Bạn mở PuTTY lên sau đó click vào SSH => Auth. Tiếp đến bạn clck vào Browse để tìm đến file Private key đã tạo và lưu.. Khi đã trỏ được đến file Private và bạn thực hiện SSH thì bạn sẽ nhận được yêu cầu nhập vào Passphrase, bạn hãy nhập Passphrase để hoàn tất bước SSH nhé.
 
-  ![](/thuctap/img/VPS_Putty_Connect.png)
+  ![](/img/VPS_Putty_Connect.png)
 
 ## Đổi port SSH sang 2024
 
@@ -113,7 +113,7 @@ Mở tệp cấu hình SSH (``/etc/ssh/sshd_config``) bằng trình soạn thả
 
 Tìm dòng có nội dung ``#Port 22``. Bỏ dấu ``#`` và thay đổi số 22 thành 2024:
 
-![](/thuctap/img/VPS_Port2024.png)
+![](/img/VPS_Port2024.png)
 
 Mở cổng 2024 trên tường lửa:
 
@@ -148,7 +148,7 @@ Khởi động lại dịch vụ SSH để áp dụng các thay đổi:
 
     Nó sẽ trả ra kết quả như sau:
 
-    ![](/thuctap/img/nginx_v_2.png)
+    ![](/img/nginx_v_2.png)
 
     * **Bước 2: Cho phép các port HTTP và HTTPS.**
 
@@ -176,7 +176,7 @@ Khởi động lại dịch vụ SSH để áp dụng các thay đổi:
 
     Sau khi các bạn cài đặt thành công xong thì các bạn nhập IP Server của các bạn để kiểm tra xem ta đã cài đặt thành công chưa:
 
-    ![](/thuctap//img/Nginx_success_v2.png)
+    ![](//img/Nginx_success_v2.png)
 
 ## 2. PHP-FPM pools
 
@@ -223,7 +223,7 @@ Khởi động lại dịch vụ SSH để áp dụng các thay đổi:
 
     Bạn cấu hình như sau:
 
-    ![](/thuctap/img/VPS_PHP_Pool_8_2.png)
+    ![](/img/VPS_PHP_Pool_8_2.png)
 
     Trước khi ta tiếp tục thì ta hãy tìm hiểu từng thành phần trong file cấu hình pool:
 
@@ -380,7 +380,7 @@ Khởi động lại dịch vụ SSH để áp dụng các thay đổi:
 
     ``# systemctl status mariadb``
 
-    ![](/thuctap/img/mariadb_status.png)
+    ![](/img/mariadb_status.png)
 
     Nếu chưa thì gõ câu lệnh sau để kích hoạt nó lên:
 
@@ -461,7 +461,7 @@ Khởi động lại dịch vụ SSH để áp dụng các thay đổi:
         ?>
     Ta thử truy cập vào ``http://website1.dns.info.vn/db-test.php`` để kiểm tra kết quả.
 
-    ![](/thuctap/img/mariadb_check.png)
+    ![](/img/mariadb_check.png)
 
     Ta làm tương tự với website còn lại
 
@@ -485,15 +485,15 @@ Ta sẽ cài đặt phpMyAdmin và các mô-dun php bổ sung bằng lệnh sau:
 
 Khi cài đặt, hệ thống sẽ yêu cầu bạn chọn máy chủ web mà phpMyAdmin sẽ sử dụng. Chọn ``apache2``, sau đó ta sẽ cấu hình ``Nginx`` thủ công sau.
 
-  ![](/thuctap/img/phpMyadmin_apache.png)
+  ![](/img/phpMyadmin_apache.png)
 
 Kế đến, bạn sẽ được hỏi có muốn cài đặt và cấu hình cơ sở dữ liệu cho phpMyAdmin không. Chọn ``Yes``, rồi nhập mật khẩu cho tài khoản quản trị viên phpMyAdmin.
 
-  ![](/thuctap/img/phpMyadmin_select.png)
+  ![](/img/phpMyadmin_select.png)
 
-  ![](/thuctap/img/phpMyadmin_password.png)
+  ![](/img/phpMyadmin_password.png)
 
-  ![](/thuctap/img/phpMyadmin_password_confirm.png)
+  ![](/img/phpMyadmin_password_confirm.png)
 
 Kích hoạt các tiện ích PHP cần thiết:
 
@@ -585,7 +585,7 @@ Ta kiểm tra và khởi động lại Nginx
 
     Sau khi cài đặt thành công SSL thông qua Certbot, đường đẫn lưu file chứng chỉ của website sẽ nằm tại đường dẫn tương ứng.
 
-    ![](/thuctap/img/certbot_key.png)
+    ![](/img/certbot_key.png)
 
   * **Gia hạn SSL/TLS:**
 
@@ -600,7 +600,7 @@ Ta kiểm tra và khởi động lại Nginx
 
 Bạn có thể kiểm tra chứng chỉ SSL của trang web của mình bằng cách nhấn hình chìa khoá ngay cạnh tên miền của trang web hoặc kiểm tra chứng chỉ SSL của mình tại trang web **https://www.sslshopper.com/**
 
-![](/thuctap/img/certbot_check.png)
+![](/img/certbot_check.png)
 
 ## 6. Cài dịch vụ Redis Cache
 
@@ -625,11 +625,11 @@ Redis (**Remote Dictionary Server**) là một dịch vụ cơ sở dữ liệu 
 
   Giả sử bạn muốn Redis lắng nghe trên địa chỉ IP của VPS của bạn thì bạn hãy chỉnh sửa dòng **bind 127.0.0.1 ::1** thành **bind IP_VPS_cua_ban**
 
-  ![](/thuctap/img/Redis_Bind.png)
+  ![](/img/Redis_Bind.png)
 
   Tiếp theo bạn NÊN bật bảo mật bằng cách yêu cầu mật khẩu.
 
-  ![](/thuctap/img/Redis_foobared.png) 
+  ![](/img/Redis_foobared.png) 
 
   Ta khởi động lại dịch vụ Redis để áp dụng cấu hình.
 
@@ -661,7 +661,7 @@ Redis (**Remote Dictionary Server**) là một dịch vụ cơ sở dữ liệu 
 
   Redis sẽ trả về PONG nếu kết nối thành công.
 
-  ![](/thuctap/img/Redis_ping.png)
+  ![](/img/Redis_ping.png)
 
 # III. Cài đặt website WordPress
 
@@ -696,17 +696,17 @@ WordPress là một phần mềm nguồn mở dùng để tạo và quản lý n
 
   Sau khi cài đặt thành công các bạn vào tên miền của các bạn để cấu hình WordPress
 
-  ![](/thuctap/img/WordPress_select_tv.png)
+  ![](/img/WordPress_select_tv.png)
 
-  ![](/thuctap/img/WordPress_begin_config.png)
+  ![](/img/WordPress_begin_config.png)
 
   Tại đây các bạn nhập thông tin database đã tạo để áp dụng vào WordPress. Về phần tiền tố bản dữ liệu nếu các bạn chỉ có 1 trang WordPress thì các bạn có thể bỏ qua, còn nếu các bạn có 2 trang web trở lên mà lại dùng chung 1 database thì các bạn khai bao thứ tự cho dễ quản lí
 
-  ![](/thuctap/img/WordPress_Database.png)
+  ![](/img/WordPress_Database.png)
 
-  ![](/thuctap/img/WordPress_end_config.png)
+  ![](/img/WordPress_end_config.png)
 
-  ![](/thuctap/img/WordPress_info.png)
+  ![](/img/WordPress_info.png)
 
 ## 3. Cài theme WordPress
 
@@ -719,7 +719,7 @@ WordPress là một phần mềm nguồn mở dùng để tạo và quản lý n
 
     + Nhập tên đăng nhập và mật khẩu của bạn để truy cập vào bảng điều khiển WordPress.
       
-    ![](/thuctap/img/WordPress_login.png)
+    ![](/img/WordPress_login.png)
 
   * **Bước 2: Truy Cập Phần Giao Diện**
   
@@ -727,23 +727,23 @@ WordPress là một phần mềm nguồn mở dùng để tạo và quản lý n
   
     + Nhấp vào “Themes” (Giao diện) để mở danh sách các theme hiện tại.
     
-    ![](/thuctap/img/WordPress_Appearance.png)
+    ![](/img/WordPress_Appearance.png)
   * **Bước 3: Thêm Mới Theme**
   
     + Nhấp vào nút “Thêm mới” (Add New Theme) ở phía trên cùng của trang.
     
-    ![](/thuctap/img/WordPress_AddTheme.png)
+    ![](/img/WordPress_AddTheme.png)
   * **Bước 4: Tìm Kiếm và Cài Đặt Theme**
     
     + Search Themes: Bạn có thể sử dụng thanh tìm kiếm để tìm theme theo tên, hoặc duyệt qua các theme phổ biến, mới nhất hoặc được đề xuất.
     
     + Cài Đặt Theme: Khi bạn tìm thấy theme bạn muốn cài đặt, di chuyển chuột qua hình thu nhỏ của theme và nhấp vào nút “Install” (Cài đặt).
   
-    ![](/thuctap/img/WordPress_Install.png)
+    ![](/img/WordPress_Install.png)
   * **Bước 5: Kích Hoạt Theme**
     + Sau khi theme đã được cài đặt, nhấp vào “Kích hoạt” (Activate) để làm cho theme đó trở thành giao diện chính của trang web.
   
-    ![](/thuctap/img/WordPress_Activated.png)
+    ![](/img/WordPress_Activated.png)
 
 ### Cách 2. Cài đặt Theme qua Tập Tin ZIP
 
@@ -753,24 +753,24 @@ WordPress là một phần mềm nguồn mở dùng để tạo và quản lý n
 
   * **Bước 2: Đăng Nhập Vào Bảng Điều Khiển WordPress:**
     
-    ![](/thuctap/img/WordPress_login.png)
+    ![](/img/WordPress_login.png)
   
   * **Bước 3: Truy Cập Phần Giao Diện:**
 
-    ![](/thuctap/img/WordPress_Appearance.png)
+    ![](/img/WordPress_Appearance.png)
 
   * **Bước 4: Tải Lên Theme (Upload Theme)**
 
     + Ở phía trên của trang, nhấn vào nút "Tải lên giao diện" (Upload Theme).
 
-    ![](/thuctap/img/WordPress_Upload.png)
+    ![](/img/WordPress_Upload.png)
 
 
   * **Bước 5 Chọn Tập Tin ZIP:**
 
     + Nhấn vào nút "Chọn tệp" (Choose File), sau đó chọn tập tin ZIP của theme mà bạn đã tải về trước đó.
 
-    ![](/thuctap/img/WordPress_ChooseFile.png)
+    ![](/img/WordPress_ChooseFile.png)
 
   * **Bước 6: Cài Đặt:**
 
@@ -778,23 +778,23 @@ WordPress là một phần mềm nguồn mở dùng để tạo và quản lý n
 
     + Sau khi chọn tập tin, nhấn vào nút "Cài đặt ngay" (Install Now) để bắt đầu quá trình cài đặt.
 
-    ![](/thuctap/img/WordPress_InstallZip.png)
+    ![](/img/WordPress_InstallZip.png)
 
-    ![](/thuctap/)
+    ![](/)
 
   * **Bước 7: Kích Hoạt Theme:**
 
     + Sau khi cài đặt thành công, bạn sẽ thấy thông báo thành công với các lựa chọn như "Kích hoạt" (Activate) hoặc "Xem trước trực tiếp" (Live Preview). Nhấn vào "Kích hoạt" để bắt đầu sử dụng theme mới.
   
-    ![](/thuctap/img/WordPress_SuccessTheme.png)
+    ![](/img/WordPress_SuccessTheme.png)
 
     Website 1:
 
-    ![](/thuctap/img/WordPress_Soleadad.png)
+    ![](/img/WordPress_Soleadad.png)
 
     Website 2:
 
-    ![](/thuctap/img/WordPress_Floatsome.png)
+    ![](/img/WordPress_Floatsome.png)
 
 ## 4. Cài đặt SMTP và cấu hình SMTP Gmail
 
@@ -812,13 +812,13 @@ WordPress là một phần mềm nguồn mở dùng để tạo và quản lý n
 
   + Các bạn vào phần **Plugins** > **Add New**. Trong ô tìm kiếm, gõ “Easy WP SMTP”.
 
-  ![](/thuctap/img/WordPress_Plugins.png)
+  ![](/img/WordPress_Plugins.png)
 
   + Khi thấy plugin Easy WP SMTP, nhấn **Install Now**. Sau khi cài đặt xong, nhấn **Activate** để kích hoạt plugin.
 
-  ![](/thuctap/img/WordPress_Install_SMTP.png)
+  ![](/img/WordPress_Install_SMTP.png)
 
-  ![](/thuctap/img/WordPress_Activated_SMTP.png)
+  ![](/img/WordPress_Activated_SMTP.png)
 
 **Cấu hình SMTP Gmail**
 
@@ -828,29 +828,29 @@ Trước khi ta vào cấu hình SMTP Gmail ta cần lấy mật khẩu ứng d�
 
   Đầu tiên bạn đăng nhập vào tài khoản Gmail của bạn. Truy cập vào trang quản lý tài khoản bằng cách điều hướng đến Goolge tài khoản >> Truy cập vào Tài khoản Google
 
-  ![](/thuctap/img/Google_login.png)
+  ![](/img/Google_login.png)
 
   Tiếp theo bạn chọn mục **Bảo mật** và **kích hoạt xác minh hai bước** (2-Step Verification) nếu chưa bạn cần phải thực hiện xác minh trước đó.
 
-  ![](/thuctap/img/Google_2step.png)
+  ![](/img/Google_2step.png)
 
   Sau khi hoàn tất xác minh hai bước, các bạn hãy tới liên kết này để tạo mật khẩu ứng dụng của các bạn: **https://myaccount.google.com/apppasswords**
 
   Tại đây các bạn đặt tên mật khẩu ứng dụng và trang sẽ tự động tạo ngẫu nhiên mật khẩu ứng dụng của bạn
 
-  ![](/thuctap/img/Google_SMTPPASS.png)
+  ![](/img/Google_SMTPPASS.png)
 
-  ![](/thuctap/img/Google_hiddenpass.png)
+  ![](/img/Google_hiddenpass.png)
 
   **Cấu hình Plugin SMTP**
 
   Bạn vào phần plugin WP SMPT bạn kéo xuống đến phần **Mailer Settings** và bạn chon phần **Other SMTP**
 
-  ![](/thuctap/img/WPSMTP_Mailer.png)
+  ![](/img/WPSMTP_Mailer.png)
 
   **Trong phần Other SMTP**, phần này sẽ yêu cầu nhập các thông tin sau đây:
 
-  ![](/thuctap/img/WPSMTP_OtherSMTP.png)
+  ![](/img/WPSMTP_OtherSMTP.png)
 
   + **SMTP Host**: smtp.gmail.com — Đây là địa chỉ máy chủ SMTP của Gmail.
 
@@ -871,7 +871,7 @@ Trước khi ta vào cấu hình SMTP Gmail ta cần lấy mật khẩu ứng d�
 
   Tiếp đến là phần **General Settings**
 
-  ![](/thuctap/img/WPSMTP_General.png)
+  ![](/img/WPSMTP_General.png)
 
   + **From Email Address:**
 
@@ -883,10 +883,10 @@ Trước khi ta vào cấu hình SMTP Gmail ta cần lấy mật khẩu ứng d�
 
 Sau khi cấu hình xong các bạn hãy nhấn Save Setting để lưu cấu hình. Sau đó các bạn vào mục **Send a text** rồi click vào ô **Send Test Email** để gửi một email kiểm tra cấu hình đã được chưa
 
-  ![](/thuctap/img/WPSMTP_Sendtest.png)
+  ![](/img/WPSMTP_Sendtest.png)
 
 Và đây là email sau khi thành công.
 
-  ![](/thuctap/img/WPSMTP_email.png)
+  ![](/img/WPSMTP_email.png)
 
 # END
