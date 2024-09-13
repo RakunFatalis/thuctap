@@ -598,7 +598,7 @@ Ta kiểm tra và khởi động lại Nginx
         0 2 * * * /usr/bin/certbot renew --quiet    
 
 
-Bạn có thể kiểm tra chứng chỉ SSL của trang web của mình bằng cách nhấn hình chìa khoá ngay cạnh tên miền của trang web hoặc kiểm tra chứng chỉ SSL của mình tại trang web **https://www.sslshopper.com/**
+Bạn có thể kiểm tra chứng chỉ SSL của trang web của mình bằng cách nhấn hình chìa khoá ngay cạnh tên miền của trang web hoặc kiểm tra chứng chỉ SSL của mình tại trang web **https://www.sslshopper.com/ssl-checker.html**
 
 ![](/img/certbot_check.png)
 
