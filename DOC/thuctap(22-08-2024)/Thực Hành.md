@@ -176,7 +176,7 @@ Khởi động lại dịch vụ SSH để áp dụng các thay đổi:
 
     Sau khi các bạn cài đặt thành công xong thì các bạn nhập IP Server của các bạn để kiểm tra xem ta đã cài đặt thành công chưa:
 
-    ![](//img/Nginx_success_v2.png)
+    ![](/img/Nginx_success_v2.png)
 
 ## 2. PHP-FPM pools
 

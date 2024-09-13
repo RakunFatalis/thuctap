@@ -4,14 +4,13 @@
 [1. Linux là gì? ](#1)
   - [Lịch sử hình thành ](#1.1)
   - [Tầm quan trọng của Linux trong lĩnh vực máy chủ và dịch vụ hosting ](#1.2)
-
 [2.Các bản phân phối Linux phổ biến](#2)
 
 [END](#E)
-<a name="1"></a>
+
 ## 1.Linux là gì?
 * Linux là một hệ điều hành máy tính được phát triển từ năm 1991 dựa trên hệ điều hành Unix và bằng viết bằng ngôn ngữ C. Do Linux được phát hành miễn phí và có nhiều ưu điểm vượt trội nên Linux vẫn giữ được một chỗ đứng vững chắc trong lòng người dùng trước các ông lớn như Windows hay macOS.
-<a name="1.1"></a>
+
 ### Lịch sử hình thành
 * Linus Benedict Torvalds ông sinh ngày 28 tháng 12 năm 1969 là một nhà khoa học máy tính người Mĩ gốc Phần Lan người đã chế tạo và phát triển chính của nhân Linux sau này đã trở thành nhân cho nhiều bảng phân phối và các hệ điều hành Android và Chrome OS. Ông cũng đồng thời tạo ra hệ thống điều khiển phân phối phiên bản Git, kỹ thuật đăng nhập lặn và phần mềm lập kế hoạch Subsurface. Ông đã được vinh danh nhận giải thưởng Công nghệ Thiên niên kỷ được trao bởi Technology Academy Finland “công nhận về sự sáng tạo của ông ấy cho một hệ điều hành mã nguồn mở mới dẫn đến việc những máy tính hàng đầu để sử dụng nhân Linux một cách rộng rãi”. Ông cũng nhận giải thưởng Tiên Phong về Máy tính 2014 và giải thưởng Điện tử Tiêu dùng Masaru Ibuka 2018.
 
@@ -49,7 +48,7 @@
     Tính đến hiện tại, Linux đã có rất nhiều phiên bản khác nhau, được xây dựng và phát triển riêng biệt bởi các công ty phần mềm và các cá nhân. Nổi bật trong số đó chính là hệ điều hành di động Android của Google, hiện là một trong những hệ điều hành thông dụng nhất hiện nay.
 
     Hiện nay, Linux được sử dụng rộng rãi trên toàn thế giới, trên các máy tính cá nhân, các máy chủ, đến các thiết bị di động, máy nghe nhạc, máy tính bảng, các máy ATM và thậm chí trên cả các siêu máy tính.
-<a name="1.2"></a>
+
 ### Tầm quan trọng của Linux trong lĩnh vực máy chủ và dịch vụ hosting
 
   * Linux đóng vai trò vô cùng quan trọng trong lĩnh vực máy chủ và dịch vụ hosting vì các lý do sau đây:
@@ -65,7 +64,7 @@
     5. Cộng đồng hỗ trợ lớn: Linux có một cộng đồng sáng tạo và nhiệt tình, cung cấp hỗ trợ liên tục và các giải pháp khi gặp vấn đề. Điều này làm cho việc triển khai và quản lý hệ thống Linux trở nên dễ dàng hơn, với sự hỗ trợ từ cộng đồng và các tài liệu phong phú.
 
 **Những điểm này giúp Linux trở thành một lựa chọn hàng đầu trong lĩnh vực máy chủ và dịch vụ hosting, đáp ứng nhu cầu đa dạng của người dùng từ các doanh nghiệp nhỏ đến lớn.**
-<a name="2"></a>
+
 ## 2.Các bản phân phối Linux phổ biến
 
 
@@ -144,5 +143,5 @@
     * **Máy tính cá nhân:** Dành cho người dùng có kinh nghiệm muốn một hệ điều hành ổn định.
     * **Phát triển phần mềm:** Môi trường phát triển mạnh mẽ và đa dạng.
 
-<a name="E"></a>
+
 # END

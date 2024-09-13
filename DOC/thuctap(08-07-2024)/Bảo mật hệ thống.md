@@ -78,10 +78,6 @@ Firewall là một phần quan trọng trong bảo mật hệ thống, giúp ng�
 
 ### 2. Cấu hình
 
-
-
-
-
 **Cấu hình  bằng ufw**
 
 * Kịch hoạt ufw sau khi cài đặt 
