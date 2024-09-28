@@ -23,9 +23,9 @@ Trước khi cài đặt Docker Engine lần đầu tiên trên một máy chủ
         # yum install -y yum-utils
         # yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 
-![](/thuctap/img/Docker_Yum.png)
+![](/img/Docker_Yum.png)
 
-![](/thuctap/img/Docker_Yum_Manager.png)
+![](/img/Docker_Yum_Manager.png)
 
 Để cài đặt Docker ta sử dụng lệnh sau:
 
@@ -33,7 +33,7 @@ Trước khi cài đặt Docker Engine lần đầu tiên trên một máy chủ
 
 Lệnh này sẽ cài đăt Docker nhưng chưa kích hoạt hoạt động nó lên. Nó cũng sẽ tạo một group ``docker`` nhưng sẽ không có user nào trong đó.
 
-![](/thuctap/img/Docker_Install.png)
+![](/img/Docker_Install.png)
 
 Sử lệnh sau để kích hoạt docker lên: 
 
@@ -45,7 +45,7 @@ Xác minh rằng việc cài đặt Docker Engine thành công bằng cách ch�
 
         # docker run hello-world
 
-![](/thuctap/img/Docker_run_hello_world.png)
+![](/img/Docker_run_hello_world.png)
 
 # II. Làm quen với các hệ sinh thái trong docker
 
@@ -65,7 +65,7 @@ Khi bạn chạy lệnh này, bạn sẽ thấy một bảng thông tin với c�
 
         # docker images
 
-![](/thuctap/img/Docker_Image.png)
+![](/img/Docker_Image.png)
 
 Nếu bạn chỉ muốn hiển thị các mã ID của image, bạn có thể sử dụng cờ ``–quiet``
 
@@ -77,7 +77,7 @@ Nếu bạn chỉ muốn hiển thị các mã ID của image, bạn có thể s
 
         # docker pull ubuntu
 
-![](/thuctap/img/Docker_Image_pull.png)
+![](/img/Docker_Image_pull.png)
 
 **Xây Dựng Docker Images từ Dockerfile**
 
@@ -102,13 +102,13 @@ Trong tệp Dockerfile ta thêm nội dung này vào:
         # Định nghĩa lệnh để chạy khi container khởi động
         CMD ["./myapp"]
 
-![](/thuctap/img/Docker_Image_dockerfile.png)
+![](/img/Docker_Image_dockerfile.png)
 
 Bạn sử dụng lệnh sau để tạo một image từ một docker file:
 
         # docker build -t myapp:latest .
 
-![](/thuctap/img/Docker_Image_buildimage.png)
+![](/img/Docker_Image_buildimage.png)
 
 **Gán Tag cho Docker Images**
 
@@ -136,7 +136,7 @@ Lệnh ``docker rmi`` xóa một hoặc nhiều Docker images khỏi máy tính 
 
         # docker ps
 
-![](/thuctap/img/Docker_Container_list.png)
+![](/img/Docker_Container_list.png)
 
 **Chạy Một Docker Container**
 
@@ -154,7 +154,7 @@ Với lệnh này, bạn có thể chỉ định nhiều tùy chọn khác nhau,
 
     # docker run busybox        # Cài đặt Container của busy box khi chưa có image.
 
-![](/thuctap/img/Docker_Container_run.png)
+![](/img/Docker_Container_run.png)
 
 **Dừng Một Docker Container**
 
@@ -164,7 +164,7 @@ Cú pháp cơ bản
 
         # docker stop CONTAINER_NAME_OR_ID
 
-![](/thuctap/img/Docker_Container_stop.png)
+![](/img/Docker_Container_stop.png)
 
 **Tạm Dừng Một Docker**
 
@@ -174,7 +174,7 @@ Cú pháp cơ bản:
 
         # docker pause CONTAINER_NAME_OR_ID
 
-![](/thuctap/img/Docker_Container_pause.png)
+![](/img/Docker_Container_pause.png)
 
 **Tiếp Tục Chạy Container**
 
@@ -191,7 +191,7 @@ Cú pháp cơ bản:
 
         # docker restart CONTAINER_NAME_OR_ID
 
-![](/thuctap/img/Docker_Container_restart.png)
+![](/img/Docker_Container_restart.png)
 
 **Thực Thi Lệnh Trong Một Container Docker Đang Chạy**
 
@@ -221,7 +221,7 @@ Cú pháp cơ bản:
 
         # docker network create [OPTIONS] NETWORK_NAME
 
-![](/thuctap/img/Docker_Network_Create.png)
+![](/img/Docker_Network_Create.png)
 
 **Liệt Kê Các Mạng Docker**
 
@@ -239,7 +239,7 @@ Cú pháp cơ bản:
 
 Khi bạn chạy lệnh này, bạn sẽ nhận được thông tin chi tiết dạng JSON.
 
-![](/thuctap/img/Docker_Network_Inspect.png)
+![](/img/Docker_Network_Inspect.png)
 
 **Kết Nối Một Container Vào Mạng Docker**
 
@@ -249,7 +249,7 @@ Cú pháp cơ bản:
 
         # docker network connect NETWORK_NAME CONTAINER_NAME_OR_ID
 
-![](/thuctap/img/Docker_Network_Connect.png)
+![](/img/Docker_Network_Connect.png)
 
 **Ngắt kết nối một container khỏi một mạng**
 
@@ -259,7 +259,7 @@ Cú pháp cơ bản:
 
         # docker network disconnect NETWORK_NAME CONTAINER_NAME_OR_ID
 
-![](/thuctap/img/Docker_Network_Disconnect.png)
+![](/img/Docker_Network_Disconnect.png)
 
 **Xóa một mạng**
 
@@ -269,7 +269,7 @@ Cú pháp cơ bản:
 
         # docker network rm NETWORK_NAME
 
-![](/thuctap/img/Docker_Network_Remove.png)
+![](/img/Docker_Network_Remove.png)
 
 **Xóa các mạng không sử dụng**
 
@@ -289,7 +289,7 @@ Cú pháp cơ bản:
 
         #  docker volume create [OPTIONS] VOLUME_NAME
 
-![](/thuctap/img/Docker_Volume_Create.png)
+![](/img/Docker_Volume_Create.png)
 
 **Liệt kê Docker Volumes**
 
@@ -307,7 +307,7 @@ Cú pháp cơ bản:
 
         # docker volume inspect VOLUME_NAME
 
-![](/thuctap/img/Docker_Volume_Inspect.png)
+![](/img/Docker_Volume_Inspect.png)
 
 **Xóa một Docker Volume**
 
@@ -333,7 +333,7 @@ Trong đó:
 
   + **IMAGE_NAME**: là tên của image mà container sẽ chạy.
 
-![](/thuctap/img/Docker_Volume_Container_v.png)
+![](/img/Docker_Volume_Container_v.png)
 
 Cách sử dụng --mount:
 
@@ -418,7 +418,7 @@ Ví dụ về tệp ``docker-compose.yml``
 
 Dưới đây là một ví dụ cơ bản về tệp docker-compose.yml:
 
-![](/thuctap/img/Docker_Compose_fileyml.png)
+![](/img/Docker_Compose_fileyml.png)
 
 
 
@@ -430,7 +430,7 @@ Cú pháp cơ bản:
 
         # docker compose up
 
-![](/thuctap/img/Docker_Compose_UP.png)
+![](/img/Docker_Compose_UP.png)
 
 **Lệnh Docker Compose Down**
 
@@ -440,7 +440,7 @@ Cú pháp cơ bản:
 
         # docker compose down
 
-![](/thuctap/img/Docker_Compose_DOWN.png)
+![](/img/Docker_Compose_DOWN.png)
 
 ``Lệnh Docker Compose Build``
 
@@ -480,7 +480,7 @@ Cú pháp cơ bản:
 
         docker swarm init --advertise-addr [Public or Private IP]
 
-![](/thuctap/img/Docker_Swarm_Create.png)
+![](/img/Docker_Swarm_Create.png)
 
 Nó sẽ tạo ra một dòng lệnh chứa các token id và địa chỉ ip với cổng kết nối. Các bạn hãy lưu lại dòng lệnh này để sau này ta sẽ thêm thành viên vào swarm.
 
@@ -491,7 +491,7 @@ Ta thêm worker node của chúng ta vào cụm Swarm bằng cách sử dụng t
 
 Chúng ta sẽ sang máy Worker để sử dụng dòng lệnh này. Lưu ý là bên máy woker cũng phải cài docker thì mới dùng được lệnh này.
 
-![](/thuctap/img/Docker_Swarm_Join.png)
+![](/img/Docker_Swarm_Join.png)
 
 **Kiểm Tra Các Node**
 
@@ -499,7 +499,7 @@ Bây giờ, hãy kiểm tra trạng thái của cụm Swarm của chúng ta. Th�
 
         # docker node ls
 
-![](/thuctap/img/Docker_Swarm_List.png)
+![](/img/Docker_Swarm_List.png)
 
 **Tạo Service trong Docker Swarm**
 
@@ -509,7 +509,7 @@ Cú pháp cơ bản:
 
         # docker service create --name <Name Service> --replicas <number> <image>
 
-![](/thuctap/img/Docker_Swarm_Service_Create.png)
+![](/img/Docker_Swarm_Service_Create.png)
 
 **Xóa Service trong Docker Swarm**
 
