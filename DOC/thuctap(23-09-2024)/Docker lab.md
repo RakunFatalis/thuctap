@@ -10,6 +10,8 @@
   - [2. Docker Container](#2-docker-container)
   - [3. Docker Networking](#3-docker-networking)
   - [4. Docker Volume](#4-docker-volume)
+  - [5. Docker Compose](#5-docker-compose)
+  - [6. Docker Swarm](#6-docker-swarm)
 - [End](#end)
 
 
@@ -278,4 +280,280 @@ Cú pháp cơ bản:
         # docker network prune
 
 ## 4. Docker Volume
+
+**Tạo một Docker Volume**
+
+Nếu bạn muốn tạo một volume mới trong Docker, bạn có thể sử dụng lệnh ``docker volume create``. Các volume được tạo bằng lệnh này có thể được sử dụng bởi một hoặc nhiều container.
+
+Cú pháp cơ bản:
+
+        #  docker volume create [OPTIONS] VOLUME_NAME
+
+![](/thuctap/img/Docker_Volume_Create.png)
+
+**Liệt kê Docker Volumes**
+
+Việc liệt kê các volume trong máy chủ cục bộ là một trong những lệnh thường xuyên được sử dụng để giúp bạn quản lý các volume. Nếu bạn muốn liệt kê tất cả các Docker volume trên hệ thống của mình, bạn có thể sử dụng lệnh ``docker volume ls``.
+
+Cú pháp cơ bản:
+
+        # docker volume ls
+
+**Kiểm tra một Docker Volume**
+
+Khi bạn muốn lấy thông tin chi tiết về một volume cụ thể, bạn có thể sử dụng lệnh ``docker volume inspect``. Lệnh này yêu cầu bạn cung cấp tên hoặc ID của volume, thông tin này có thể lấy được bằng lệnh liệt kê volume. Nó sẽ cung cấp các chi tiết như vị trí của volume trên máy chủ và cấu hình của nó.
+
+Cú pháp cơ bản:
+
+        # docker volume inspect VOLUME_NAME
+
+![](/thuctap/img/Docker_Volume_Inspect.png)
+
+**Xóa một Docker Volume**
+
+Nếu bạn muốn dọn dẹp máy cục bộ và xóa các Docker volume không còn cần thiết, bạn có thể sử dụng lệnh ``docker volume rm``. Lệnh này cho phép bạn xóa những volume không còn được sử dụng bởi bất kỳ container nào.
+
+Cú pháp cơ bản:
+
+        # docker volume rm VOLUME_NAME
+
+**Sử dụng Docker Volume với một Container**
+
+Khi bạn chạy một container, bạn có thể chỉ định volume bằng tùy chọn ``-v`` hoặc ``--mount``. Tùy chọn ``-v`` đơn giản hơn và được sử dụng phổ biến hơn, trong khi ``--mount`` cung cấp nhiều tùy chọn cấu hình nâng cao hơn.
+
+Cách sử dụng -v:
+
+        # docker run -v VOLUME_NAME:/path/in/container IMAGE_NAME
+
+Trong đó:
+
+  + **VOLUME_NAME**: là tên của volume bạn muốn gắn vào container.
+
+  + **/path/in/container**: là đường dẫn trong container nơi volume sẽ được gắn vào.
+
+  + **IMAGE_NAME**: là tên của image mà container sẽ chạy.
+
+![](/thuctap/img/Docker_Volume_Container_v.png)
+
+Cách sử dụng --mount:
+
+        # docker run --mount type=volume,source=VOLUME_NAME,target=/path/in/container IMAGE_NAME
+
+Trong đó:
+
+  + **type=volume**: Xác định rằng loại mount là volume (bạn cũng có thể sử dụng type=bind để mount một thư mục từ host).
+
+  + **source=VOLUME_NAME**: Tên của volume bạn muốn gắn vào container.
+
+  + **target=/path/in/container**: Đường dẫn trong container nơi volume sẽ được gắn.
+
+  + **IMAGE_NAME**: Tên của image mà container sẽ chạy.
+
+**Xóa các Volume không sử dụng**
+
+Lệnh ``docker volume rm`` chỉ cho phép bạn xóa từng volume một. Nhưng nếu bạn muốn xóa tất cả các volume không còn sử dụng để giải phóng không gian trên máy, bạn có thể sử dụng lệnh ``docker volume prune``. Khi bạn chạy lệnh này, Docker sẽ yêu cầu bạn xác nhận trước khi xóa tất cả các volume không còn được liên kết với container nào (dangling volumes).
+
+Cú pháp cơ bản:
+
+        # docker volume prune
+
+**Sao lưu một Docker Volume**
+
+Việc sao lưu dữ liệu lưu trữ trong các volume là rất hữu ích, vì nếu bạn vô tình xóa volume, bạn có thể phục hồi dữ liệu đã mất. Bạn có thể lưu trữ dữ liệu trong volume vào một tệp tarball. Để làm điều này, bạn có thể sử dụng một container để nén nội dung của volume và xuất nó ra một tệp trên hệ thống máy chủ.
+
+        # docker run --rm -v my_volume:/volume -v $(pwd):/backup ubuntu tar cvf /backup/my_volume_backup.tar /volume
+
+Trong đó:
+
+  + ``docker run``: Khởi động một container mới.
+
+  + ``--rm``: Tự động xóa container sau khi lệnh thực thi xong.
+
+  + ``-v my_volume:/volume``: Gắn volume my_volume vào container tại đường dẫn /volume.
+
+  + ``-v $(pwd):/backup``: Gắn thư mục hiện tại (dùng $(pwd) để lấy đường dẫn đầy đủ) vào container tại đường dẫn /backup. Điều này cho phép bạn lưu tệp sao lưu vào thư mục hiện tại trên máy chủ.
+
+  + ``ubuntu``: Tên image mà bạn đang sử dụng, trong trường hợp này là Ubuntu.
+
+  + ``tar cvf /backup/my_volume_backup.tar /volume``: Lệnh này sẽ nén nội dung trong /volume (nơi chứa dữ liệu của volume) và lưu vào tệp my_volume_backup.tar trong thư mục /backup (trên máy chủ).
+
+**Khôi phục một Docker Volume từ Sao lưu**
+
+Khi bạn đã có dữ liệu được sao lưu trong một tệp tarball, bạn có thể sử dụng lệnh dưới đây để khôi phục nó trở lại một Docker volume. Dưới đây là lệnh ví dụ để khôi phục một volume có tên là my_volume từ tệp sao lưu:
+
+        # docker run --rm -v my_volume:/volume -v $(pwd):/backup ubuntu bash -c "tar xvf /backup/my_volume_backup.tar -C /volume --strip 1"
+
+
+Giải thích lệnh:
+
++ ``docker run``: Khởi động một container mới.
+
++ ``--rm``: Tự động xóa container sau khi lệnh thực thi xong.
+
++ ``-v my_volume:/volume``: Gắn volume my_volume vào container tại đường dẫn /volume.
+
++ ``-v $(pwd):/backup``: Gắn thư mục hiện tại (sử dụng $(pwd) để lấy đường dẫn đầy đủ) vào container tại đường dẫn /backup.
+
++ ``ubuntu``: Tên image mà bạn đang sử dụng, trong trường hợp này là Ubuntu.
+
++ ``bash -c "tar xvf /backup/my_volume_backup.tar -C /volume --strip 1"``: Lệnh này sẽ giải nén nội dung trong tệp sao lưu my_volume_backup.tar vào /volume. Tùy chọn --strip 1 giúp loại bỏ thư mục gốc trong tệp tarball, do đó chỉ sao chép các tệp và thư mục con trực tiếp vào trong volume.
+
+## 5. Docker Compose
+
+**Cơ chế Tệp Docker Compose (YAML)**
+
+Thông thường, tệp Docker Compose sẽ là tệp ``docker-compose.yml`` sử dụng định dạng YAML. Tệp này mô tả cấu hình mà ứng dụng của bạn cần liên quan đến các dịch vụ, mạng và volume. Nó cung cấp hướng dẫn về cách khởi động môi trường mà ứng dụng sẽ chạy. Việc hiểu cấu trúc của tệp này là rất quan trọng để sử dụng hiệu quả Docker Compose.
+
+Các Yếu Tố Chính của Tệp YAML
+
+  + Version: Xác định định dạng của tệp Docker Compose, đảm bảo tính tương thích với các tính năng khác nhau của Docker Compose.
+
+  + Services: Chứa danh sách tất cả các dịch vụ (container) cấu thành ứng dụng. Mỗi dịch vụ được mô tả với nhiều tùy chọn cấu hình không giới hạn.
+
+  + Networks: Chỉ định các mạng tùy chỉnh cho giao tiếp giữa các container và có thể xác định các tùy chọn cấu hình và driver mạng.
+
+  + Volumes: Khai báo các volume chia sẻ được sử dụng để cho phép lưu trữ bền vững. Các volume có thể được chia sẻ giữa các dịch vụ hoặc được sử dụng để lưu trữ dữ liệu bên ngoài vòng đời của container.
+
+Ví dụ về tệp ``docker-compose.yml``
+
+Dưới đây là một ví dụ cơ bản về tệp docker-compose.yml:
+
+![](/thuctap/img/Docker_Compose_fileyml.png)
+
+
+
+**Lệnh Docker Compose Up**
+
+Lệnh ``docker-compose up`` khởi động và chạy toàn bộ ứng dụng, như được định nghĩa trong tệp d``docker compose.yml``, đồng thời tạo và khởi động tất cả các dịch vụ, mạng và volume. Ngoài ra, nếu hình ảnh (images) của dịch vụ này chưa bao giờ được xây dựng, lệnh sẽ tự động xây dựng các hình ảnh Docker cần thiết.
+
+Cú pháp cơ bản: 
+
+        # docker compose up
+
+![](/thuctap/img/Docker_Compose_UP.png)
+
+**Lệnh Docker Compose Down**
+
+Lệnh ``docker compose down`` dừng và xóa tất cả các container, mạng và volume được định nghĩa trong tệp ``docker-compose.yml``. Lệnh này giúp bạn dọn dẹp các tài nguyên mà ứng dụng của bạn đã sử dụng cho đến nay, đảm bảo rằng không còn container hoặc mạng nào còn hoạt động ở đâu đó.
+
+Cú pháp cơ bản:
+
+        # docker compose down
+
+![](/thuctap/img/Docker_Compose_DOWN.png)
+
+``Lệnh Docker Compose Build``
+
+Lệnh ``docker compose build`` được sử dụng để xây dựng hoặc xây dựng lại các hình ảnh Docker cho các dịch vụ được định nghĩa trong tệp docker-compose.yml. Lệnh này sẽ chạy khi có sự thay đổi trong tệp Dockerfile hoặc mã nguồn, nhằm tạo ra các hình ảnh mới.
+
+Cú pháp cơ bản:
+
+        # docker compose build [OPTIONS] [SERVICE...]
+
+**Các Lệnh Docker Compose: Start, Stop, Restart**
+
+Lệnh ``docker compose start``: Bắt đầu các container đã được tạo mà không tái tạo chúng. Lệnh này sẽ khôi phục lại các dịch vụ đã dừng trước đó.
+
+        # docker compose start [SERVICE...]
+
+Lệnh ``docker compose stop``: Dừng các container đang chạy mà không xóa chúng, cho phép bạn khởi động lại các dịch vụ sau này.
+
+        # docker compose stop [SERVICE...]
+
+Lệnh ``docker compose restart``: Hữu ích khi bạn đã thay đổi môi trường hoặc cấu hình và muốn khởi động lại các dịch vụ.
+
+        # docker compose restart [SERVICE...]
+
+**Lệnh Trạng Thái Docker Compose**
+
+Lệnh ``docker compose ps`` hiển thị trạng thái của tất cả các dịch vụ được định nghĩa trong tệp docker-compose.yml, chỉ ra trạng thái của các container, tên của chúng, tình trạng và cổng. Lệnh này được sử dụng để kiểm tra trạng thái hiện tại của các dịch vụ.
+
+        # docker compose ps
+
+## 6. Docker Swarm
+
+**Tạo một người quản lí Swarm**
+
+Chúng ta sẽ phải tạo một manager để xử lý các worker node. Và bạn cũng nên biết rằng manager cũng là một worker node nhưng có một số quyền hạn đặc biệt.
+
+Cú pháp cơ bản: 
+
+        docker swarm init --advertise-addr [Public or Private IP]
+
+![](/thuctap/img/Docker_Swarm_Create.png)
+
+Nó sẽ tạo ra một dòng lệnh chứa các token id và địa chỉ ip với cổng kết nối. Các bạn hãy lưu lại dòng lệnh này để sau này ta sẽ thêm thành viên vào swarm.
+
+**Thêm Worker Nodes**
+Ta thêm worker node của chúng ta vào cụm Swarm bằng cách sử dụng token đã được tạo trước đó.
+
+        # docker swarm join --token <token-id> <ip:port>
+
+Chúng ta sẽ sang máy Worker để sử dụng dòng lệnh này. Lưu ý là bên máy woker cũng phải cài docker thì mới dùng được lệnh này.
+
+![](/thuctap/img/Docker_Swarm_Join.png)
+
+**Kiểm Tra Các Node**
+
+Bây giờ, hãy kiểm tra trạng thái của cụm Swarm của chúng ta. Thực hiện lệnh dưới đây.
+
+        # docker node ls
+
+![](/thuctap/img/Docker_Swarm_List.png)
+
+**Tạo Service trong Docker Swarm**
+
+Để tạo một service trong Docker Swarm, bạn có thể sử dụng lệnh ``docker service create``. Một service trong Swarm cho phép bạn triển khai và quản lý các container trên nhiều node trong cụm.
+
+Cú pháp cơ bản:
+
+        # docker service create --name <Name Service> --replicas <number> <image>
+
+![](/thuctap/img/Docker_Swarm_Service_Create.png)
+
+**Xóa Service trong Docker Swarm**
+
+Để xóa một service trong Docker Swarm, bạn có thể sử dụng lệnh ``docker service rm``. 
+
+        # docker service rm <name service>
+
+**Quản Lý Node trong Docker Swarm**
+
+Trong Docker Swarm, việc quản lý các node là rất quan trọng để duy trì và điều phối hoạt động của cụm. Dưới đây là một số lệnh cơ bản để quản lý các node trong Docker Swarm.
+
+Để kiểm tra trạng thái của tất cả các node trong cụm Swarm, bạn có thể sử dụng lệnh:
+
+        # docker node ls
+
+Nếu bạn muốn xóa một node khỏi cụm, bạn có thể sử dụng lệnh sau trên manager node:
+
+        # docker node rm <name node>
+
+Bạn có thể nâng cấp hoặc hạ cấp một node thành manager hoặc worker. 
+
+Để nâng cấp node thành manager:
+
+        # docker node promote <name node>
+
+Để hạ cấp một node trở thành worker:
+
+        # docker node demote <name node>
+
+Để xem thông tin chi tiết về một node cụ thể
+
+        #docker node inspect <name node>
+
+**Xóa Swarm**
+
+Để xóa một cụm Docker Swarm, bạn cần thực hiện một số bước, tùy thuộc vào việc bạn đang xóa một manager node hay một worker node.
+
+Nếu bạn là một worker node, bạn có thể đơn giản sử dụng lệnh sau để rời khỏi cụm:
+
+        # docker swarm leave
+
+Nếu bạn là một manager node và muốn rời khỏi cụm, bạn có thể sử dụng lệnh:
+
+        # docker swarm leave --force
+
+
 # End
