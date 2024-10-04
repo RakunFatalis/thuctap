@@ -92,7 +92,7 @@ Trong file ``docker-compose.yml`` ta sẽ soạn nội dung để cài đặt co
             image: php:8.2-fpm-alpine
             container_name: php_8.2
 ```
-![](/thuctap/img/Docker_websitewp_docker_compose.png)
+![](/img/Docker_websitewp_docker_compose.png)
 
 Chúng ta lưu lại và khi trong thư mục ``websitewp`` ta gõ lệnh để chạy file YAML
 
@@ -100,7 +100,7 @@ Chúng ta lưu lại và khi trong thư mục ``websitewp`` ta gõ lệnh để 
 
 Khi chúng ta gõ lệnh ``docker ps -a`` để liệt kê các container đang chạy ta sẽ thấy ở container mariadb sẽ có dòng trang thái là status: Exited
 
-![](/thuctap/img/Docker_websitewp_docker_mariadb_error.png)
+![](/img/Docker_websitewp_docker_mariadb_error.png)
 
 Trạng thái này nói lên Mariadb đã khởi động và sau đó dừng ngay. Chúng ta kiểm tra log để phát hiện lỗi:
 
@@ -144,7 +144,7 @@ Sau đó ta chạy lại lệnh docker compose up. Và kiểm tra xem mariadb đ
 
 Sau khi đã ổn thì ta truy cập vào localhost hoặc ip máy chủ mà docker của bạn đang chạy
 
-![](/thuctap/img/Docker_websitewp_web_refuse.png)
+![](/img/Docker_websitewp_web_refuse.png)
 
 Tại sao ta không thể kết nối được vào tên miền chúng ta ? Vì chúng ta chưa cấu hình mở port cho nginx, tiếp theo ta tới phần cấu hình Nginx
 
@@ -162,7 +162,7 @@ Vì chúng ta chưa cấu hình port cho nginx, ta lại vào file docker-compos
 
 Ta thử truy cập lại localhost hoặc ip máy chủ mà docker đang chạy trên đó
 
-![](/thuctap/img/Docker_LEMP_CheckNginx.png)
+![](/img/Docker_LEMP_CheckNginx.png)
 
 Sau khi đã chạy container nginx thành công, thì tiếp theo ta ánh xạ mã nguồn wordpress vào file YAML để chúng ta có thể cấu hình wordpress trên máy chủ.
 
@@ -189,7 +189,7 @@ php:
 ```
 Chúng ta thử truy cập lại ip máy chủ của chúng ta.
 
-![](/thuctap/img/Docker_LEMP_CheckNginx.png)
+![](/img/Docker_LEMP_CheckNginx.png)
 
 Vẫn không được.
 
@@ -233,7 +233,7 @@ Sau đó ta quay lại file YAML thêm dòng này vào trong volumes của nginx
 
 Ta thử truy cập lại ip của máy chủ
 
-![](/thuctap/img/Docker_websitewp_need_mysqli.png)
+![](/img/Docker_websitewp_need_mysqli.png)
 
 Tại đây đang thông báo ta đang thiếu các MySQL extension của PHP
 
@@ -269,7 +269,7 @@ Ta chạy lệnh:
 
 Ta thử truy cập lại ip máy chủ
 
-![](/thuctap/img/Docker_websitewp_wordpress.png)
+![](/img/Docker_websitewp_wordpress.png)
 
 # III. Cài đặt Wordpress bằng các container của Docker
 
@@ -443,9 +443,9 @@ Sau khi đã cấu hình đầy đủ các bạn gõ lệnh sau để khởi ch�
 
     # docker compose up -d 
 
-![](/thuctap/img/Docker_wp-project_wordpress.png)
+![](/img/Docker_wp-project_wordpress.png)
 
-![](/thuctap/img/Docker_wp-project_phpmyadmin.png)
+![](/img/Docker_wp-project_phpmyadmin.png)
 
 # IV. Cài đặt plugin và theme thông qua container wordpress
 
@@ -473,11 +473,11 @@ Kiểm tra cài đặt:
 
     # wp --info
 
-![](/thuctap/img/Docker_WP_CLI_Install.png)
+![](/img/Docker_WP_CLI_Install.png)
 
 Sau khi đã cài đặt xong thì chúng ta thử cài đặt plugin bằng wp-cli. Tại bài lad này mình thử cài đặt 1 một plugin có tên Classic Editor. Tại ảnh dưới là hình ảnh plugin chưa cài đặt
 
-![](/thuctap/img/Docker_WP_CLI_NotYet.png)
+![](/img/Docker_WP_CLI_NotYet.png)
 
 Để chạy được các lệnh ``wp-cli`` các bạn phải ở trong thư mục gốc của Wordpress, đa số theo mặc định nó sẽ nằm trong đường dẫn ``/var/www/html``
 
@@ -499,13 +499,13 @@ Trong đó:
 
 * ``--allow-root``: Tùy chọn này cho phép bạn chạy WP-CLI với quyền root. Theo mặc định, WP-CLI không cho phép chạy với quyền root vì lý do bảo mật, nhưng nếu bạn thực sự cần làm như vậy, bạn có thể sử dụng tùy chọn này. Tuy nhiên, việc này có thể tiềm ẩn rủi ro, vì bất kỳ mã nào chạy trên trang của bạn cũng sẽ có quyền truy cập đầy đủ vào máy chủ.
 
-![](/thuctap/img/Docker_WP_CLI_PluginSuccess.png)
+![](/img/Docker_WP_CLI_PluginSuccess.png)
 
-![](/thuctap/img/Docker_WP_CLI_CheckPlugin.png)
+![](/img/Docker_WP_CLI_CheckPlugin.png)
 
 Thông thường khi cài đặt plugin bằng wp-cli thì nó sẽ chứa vào trong đường dẫn `/var/www/html/wp-content/plugins/`
 
-![](/thuctap/img/Docker_WP_CLI_CheckPlugin_Folder.png)
+![](/img/Docker_WP_CLI_CheckPlugin_Folder.png)
 
 Tương tự như làm với theme wordpress khi ta dùng wp-cli thì theme sẽ được chứa trong đường dẫn ``/var/www/html/wp-content/themes/``
 
@@ -513,11 +513,11 @@ Mình sẽ thử cài đặt theme ``OceanWP`` bằng wp-cli. Chúng ta hãy qua
 
     # wp theme install oceanwp --active --allow-root
 
-![](/thuctap/img/Docker_WP_CLI_ThemeSucces.png)
+![](/img/Docker_WP_CLI_ThemeSucces.png)
 
-![](/thuctap/img/Docker_WP_CLI_ThemeCheck.png)
+![](/img/Docker_WP_CLI_ThemeCheck.png)
 
-![](/thuctap/img/Docker_WP_CLI_ThemeCheck_Folder.png)
+![](/img/Docker_WP_CLI_ThemeCheck_Folder.png)
 
 ## 2. Cài đặt thông qua bản zip
 
@@ -551,9 +551,9 @@ Sau khi giải nén ta kích hoạt theme bằng wp-cli:
 
     # wp theme activate soledad --allow-root
 
-![](/thuctap/img/Docker_ZIP_Soledad_Switch.png)
+![](/img/Docker_ZIP_Soledad_Switch.png)
 
-![](/thuctap/img/Docker_ZIP_Soledad_WEB.png)
+![](/img/Docker_ZIP_Soledad_WEB.png)
 
 
 Tương tự như theme chúng ta cũng cài plugin bằng tệp zip. Mình sẽ thử cài plugin bằng tệp zip bằng link này: https://tool.dotrungquan.info/wordpress/mythemeshop-plugins/mts-wp-google-translate.zip
@@ -574,8 +574,8 @@ Sau khi giải nén ta kích hoạt plugin lên:
 
     # wp plugin activate mts-wp-google-translate --allow-root
 
-![](/thuctap/img/Docker_ZIP_Plugin_Check.png)
+![](/img/Docker_ZIP_Plugin_Check.png)
 
-![](/thuctap/img/Docker_ZIP_Plugin_CheckWeb.png)
+![](/img/Docker_ZIP_Plugin_CheckWeb.png)
 
 # END
