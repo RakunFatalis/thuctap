@@ -541,7 +541,6 @@ Ta thêm phần cấu hình dưới đây để phpMyadmin sử dụng PHP 8.2:
         root /usr/share;
         index index.php;
 
-        # Xử lý các yêu cầu PHP cho phpMyAdmin bằng PHP 7.4
         location ~ ^/phpmyadmin/(.+\.php)$ {
             try_files $uri =404;
             fastcgi_pass unix:/run/php/php7.4-fpm.sock;
