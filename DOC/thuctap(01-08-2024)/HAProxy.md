@@ -58,7 +58,7 @@ Người dùng truy cập vào bộ cân bằng tải, bộ này sẽ chuyển t
 
 Cân bằng tải tại tầng 7 là cách cân bằng tải phức tạp nhất và cũng là cách cân bằng tải có nhiều tùy biến nhất. Sử dụng cân bằng tải tại tầng 7, ta có thể điều hướng request dựa trên nội dụng của request đó. Với kiểu câng bằng tải này, nhiều backend có thể được sử dụng cho dùng một domain và port.
 
-![](/thuctap/img/HAProxy_layer%207%20load.png)
+![](/img/HAProxy_layer%207%20load.png)
 
 ## 4. Bảng so sánh
 
