@@ -17,7 +17,7 @@
 
 # I. MySQL là gì ?
 
-MySQL là một hệ thống quản trị cơ sở dữ liệu mã nguồn mở (**Relational Database Management System**, viết tắt là RDBMS) hoạt động o mô hình **client-server**. RDBMS là một phần mềm hay dịch vụ dùng để tạo và quản lý các cơ sở dữ liệu (Database) o hình thức quản lý các mối liên hệ giữa chúng.
+MySQL là một hệ thống quản trị cơ sở dữ liệu mã nguồn mở (**Relational Database Management System**, viết tắt là RDBMS) hoạt động ở mô hình **client-server**. RDBMS là một phần mềm hay dịch vụ dùng để tạo và quản lý các cơ sở dữ liệu (Database) o hình thức quản lý các mối liên hệ giữa chúng.
 
 MySQL là một trong số các phần mềm RDBMS. RDBMS và MySQL thường được cho là một vì độ phổ biến quá lớn của MySQL. Các ứng dụng web lớn nhất như Facebook, Twitter, YouTube, Google, và Yahoo! đều dùng MySQL cho mục đích lưu trữ dữ liệu. Kể cả khi ban đầu nó chỉ được dùng rất hạn chế nhưng giờ nó đã tương thích với nhiều hạ tầng máy tính quan trọng như Linux, macOS, Microsoft Windows, và Ubuntu.
 
