@@ -229,11 +229,11 @@ Công ty AZDIGI là một trong những nhà cung cấp dịch vụ công nghệ
 
   + **Cho thuê Hosting**: một trong những dịch vụ chính của **AZDIGI**, giúp khách hàng dễ dàng xây dựng và vận hành website mà không cần lo lắng về việc quản lý máy chủ phức tạp. Các máy chủ Hosting tại **AZDIGI** đã được cài đặt các phần mềm chuyên dụng cho webserver, cùng với các phần mềm hỗ trợ giao diện quản lí trực quan giúp khách hàng dễ dàng đăng tải dữ liệu lên website,
   
-  ![](/thuctap/img/AZDIGI_Hosting_Price.png)
+  ![](/img/AZDIGI_Hosting_Price.png)
 
   + **Cho thuê VPS (máy chủ ảo riêng)**: tại **AZDIGI** tất cả các máy chủ VPS luôn hoạt động 24/24, khách hàng có thể sử dụng các máy chủ VPS cho nhiều mục đích khác nhau như làm máy chủ website, làm máy chủ VPN/Proxy,... Đặc biệt các máy chủ VPS luôn được trang bị các ổ cứng theo chuẩn NVMe, các vi xử lí Intel Platinum và AMD Gen 3 cao cấp 
 
-  ![](/thuctap/img/AZDIGI_VPS_Price.png)
+  ![](/img/AZDIGI_VPS_Price.png)
 
 
 Ngoài ra còn có các dịch vụ khác:
