@@ -225,9 +225,25 @@ Một số trường hợp sử dụng cụ thể cho máy chủ dedicated:
 
 # IV. Các dịch vụ AZDIGI đang cung cấp
 
-Công ty AZDIGI là một trong những nhà cung cấp dịch vụ công nghệ thông tin hàng đầu tại Việt Nam, chuyên cung cấp các giải pháp và dịch vụ liên quan đến lưu trữ web và máy chủ. Được thành lập với sứ mệnh hỗ trợ doanh nghiệp và cá nhân trong việc phát triển trên nền tảng số, AZDIGI cung cấp các dịch vụ chính như:
+Công ty AZDIGI là một trong những nhà cung cấp dịch vụ công nghệ thông tin hàng đầu tại Việt Nam, chuyên cung cấp các giải pháp và dịch vụ liên quan đến lưu trữ web và máy chủ. Được thành lập với sứ mệnh hỗ trợ doanh nghiệp và cá nhân trong việc phát triển trên nền tảng số, AZDIGI cung cấp hai dịch vụ chính như:
+
+  + **Cho thuê Hosting**: một trong những dịch vụ chính của **AZDIGI**, giúp khách hàng dễ dàng xây dựng và vận hành website mà không cần lo lắng về việc quản lý máy chủ phức tạp. Các máy chủ Hosting tại **AZDIGI** đã được cài đặt các phần mềm chuyên dụng cho webserver, cùng với các phần mềm hỗ trợ giao diện quản lí trực quan giúp khách hàng dễ dàng đăng tải dữ liệu lên website,
+  
+  ![](/thuctap/img/AZDIGI_Hosting_Price.png)
+
+  + **Cho thuê VPS (máy chủ ảo riêng)**: tại **AZDIGI** tất cả các máy chủ VPS luôn hoạt động 24/24, khách hàng có thể sử dụng các máy chủ VPS cho nhiều mục đích khác nhau như làm máy chủ website, làm máy chủ VPN/Proxy,... Đặc biệt các máy chủ VPS luôn được trang bị các ổ cứng theo chuẩn NVMe, các vi xử lí Intel Platinum và AMD Gen 3 cao cấp 
+
+  ![](/thuctap/img/AZDIGI_VPS_Price.png)
 
 
+Ngoài ra còn có các dịch vụ khác:
+
+  + **Email Hosting/Email Server**: dịch vụ cho thuê máy chủ mail chuyên nghiệp, cho phép khách hàng tạo và quản lý email theo tên miền riêng một cách dễ dàng. Với chi phí hợp lý, **AZDIGI** cung cấp giải pháp phù hợp cho mọi đối tượng khách hàng, từ cá nhân đến doanh nghiệp, nhằm tối ưu hóa chi phí nhưng vẫn đảm bảo hiệu suất hoạt động tốt nhất.
+  
+
+  + **Chứng chỉ SSL**: là giải pháp giúp bảo vệ và mã hóa dữ liệu khi truyền tải qua internet, đảm bảo an toàn cho thông tin người dùng và giao dịch trực tuyến. **AZDIGI** cung cấp nhiều chứng chỉ khác nhau, phù hợp với mọi nhu cầu, từ website cá nhân đến các trang thương mại điện tử và doanh nghiệp lớn. Khi sử dụng chứng chỉ SSL, website của bạn sẽ được hiển thị biểu tượng khóa bảo mật, tạo sự tin cậy cho người dùng và cải thiện thứ hạng SEO trên các công cụ tìm kiếm.
+
+  + **Đăng ký tên miền:** tại AZDIGI cho phép khách hàng dễ dàng lựa chọn và đăng ký cả tên miền Việt Nam và quốc tế. Chỉ cần điền đầy đủ thông tin, xác thực đối chiếu và hoàn tất thanh toán là tên miền có thể kích hoạt.
 
 
 # End
