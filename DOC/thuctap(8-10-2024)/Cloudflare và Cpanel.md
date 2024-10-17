@@ -26,21 +26,21 @@ Các bạn vào trang chủ của Cloudflare để tạo một tài khoản: htt
 
 Các bạn nhấn vào ô Sign Up để tiến hành vào trang đăng ký tài khoản.
 
-![](/thuctap/img/Cloude_Sign_Up.png)
+![](/img/Cloude_Sign_Up.png)
 
 Tại đây các bạn điền đẩy đủ thông tin email và mật khẩu cho tài khoản đăng ký của các bạn
 
-![](/thuctap/img/Cloude_Sign_Up_Process.png)
+![](/img/Cloude_Sign_Up_Process.png)
 
 ## 2.Trỏ tên miền về CloudFlare
 
 Sau khi các bạn dăng kí xong thì các bạn sẽ được chuyển tới trang "**Add site**" của Cloudflare, tại đây bạn nhập tên miền hiện có của mình để bắt đầu kết nối với Cloudflare.
 
-![](/thuctap/img/Cloude_Addsite.png)
+![](/img/Cloude_Addsite.png)
 
 Khi các bạn đã thêm tên miền thì trang sẽ chuyển hướng các bạn tới trang **lựa chọn gói dịch vụ** của CloudFlare.
 
-![](/thuctap/img/Cloude_Service.png)
+![](/img/Cloude_Service.png)
 
 Tại đây, bạn có thể chọn giữa các gói dịch vụ khác nhau dựa trên nhu cầu của website:
 
@@ -58,13 +58,13 @@ Cloudeflare sẽ cung cấp cho các bạn 2 nameserver tạo ngẫu nhiên, cá
 
 Khi tên miền của các bạn đã được kích hoạt trên Cloudflare, các bạn sẽ nhận được thông báo qua email từ Cloudflare.
 
-![](/thuctap/img/Cloude_Domain_NotActive.png)
+![](/img/Cloude_Domain_NotActive.png)
 
 ## 3. Trỏ IP host
 
 Để trỏ IP host đến tên miền của mình, bên trong mục Dashboard các bạn vào mục **DNS** -> **Records**. Sau khi các bạn vào được trang **Records**, bạn nhấp chuột vào ô **Add record**
 
-![](/thuctap/img/Cloude_Records.png)
+![](/img/Cloude_Records.png)
 
 Tại đây các bạn sẽ có các thông tin sau:
 
@@ -96,37 +96,37 @@ Giao diện của cPanel có 6 phần chính:
 
   Đây là phần trên cùng của giao diện cPanel, cung cấp truy cập nhanh đến các chức năng quan trọng:
 
-  ![](/thuctap/img/cPanel_NavigationBar.png)
+  ![](/img/cPanel_NavigationBar.png)
 
 * **2. Menu chính:**
 
   Menu chính cho phép bạn điều hướng đến trang Tools Page từ bất kỳ giao diện nào. Menu chính trong cPanel có thể tùy chỉnh tùy thuộc vào nhà cung cấp dịch vụ hosting. Mỗi nhà cung cấp có thể cài đặt cPanel theo cách riêng của họ và tùy chỉnh các tính năng hoặc module xuất hiện trong giao diện của cPanel để phù hợp với nhu cầu của khách hàng.
 
-  ![](/thuctap/img/cPanel_MainMenu.png)
+  ![](/img/cPanel_MainMenu.png)
 
 * **3. Trang công cụ**
 
   Trang công cụ của cPanel là nơi tập trung các công cụ và tính năng quản lý hosting được sắp xếp theo từng danh mục cụ thể. Đây là trang chính mà người dùng thường truy cập để thực hiện các tác vụ quản lý website, tài khoản email, tên miền, và cơ sở dữ liệu.
 
-  ![](/thuctap/img/cPanel_ToolPage.png)
+  ![](/img/cPanel_ToolPage.png)
 
 * **4. Tính năng**
 
   Đây là tập hợp các công cụ cụ thể mà cPanel cung cấp cho việc quản lý website và hosting. Từ việc quản lý tệp tin, email, cơ sở dữ liệu đến các công cụ bảo mật, quản trị viên có thể thao tác trực tiếp thông qua giao diện đồ họa.
 
-  ![](/thuctap/img/cPanel_Features.png)
+  ![](/img/cPanel_Features.png)
 
 * **5. Thông tin chung (General Information):**
 
   Thông tin chung (General Information) trong cPanel cung cấp cái nhìn tổng quan về tài khoản hosting và tình trạng hệ thống. Phần này thường nằm ở cột bên phải hoặc trên cùng của giao diện, tùy thuộc vào giao diện cPanel mà nhà cung cấp hosting tùy chỉnh.
 
-  ![](/thuctap/img/cPanel_General_Information.png)
+  ![](/img/cPanel_General_Information.png)
 
 * **6. Thống kê (Statistics)**
 
   Phần Thống kê (Statistics) trong cPanel cung cấp một cái nhìn tổng quan nhanh về việc sử dụng tài nguyên của tài khoản hosting, giúp người dùng theo dõi hiệu suất và đảm bảo họ không vượt quá các giới hạn được đặt ra bởi gói dịch vụ hosting của họ. Đây là một phần quan trọng vì nó cho phép người dùng kiểm soát tài nguyên mà website của họ tiêu thụ.
 
-  ![](/thuctap/img/cPanel_Statistics.png)
+  ![](/img/cPanel_Statistics.png)
 
 ## 3. Các chức năng của cPanel.
 
@@ -136,7 +136,7 @@ Trong phần công cụ (Tools) trong cPanel có nhiều mục khác nhau, tùy 
 
   Trong cPanel, phần Email (Quản lý email) cung cấp các công cụ để quản lý tài khoản email, cấu hình và kiểm soát các tính năng liên quan đến email.
 
-  ![](/thuctap/img/cPanel_Features_Email.png)
+  ![](/img/cPanel_Features_Email.png)
 
   Một số công cụ thường được dùng trong phần Email này:
 
@@ -155,7 +155,7 @@ Trong phần công cụ (Tools) trong cPanel có nhiều mục khác nhau, tùy 
 
   Trong cPanel, mục Files thường chứa nhiều công cụ và tùy chọn để quản lý các tập tin trên máy chủ của bạn.
 
-  ![](/thuctap/img/cPanel_Features_Files.png)
+  ![](/img/cPanel_Features_Files.png)
 
   Một số công cụ trong phần Files thường được sử dụng:
 
@@ -173,7 +173,7 @@ Trong phần công cụ (Tools) trong cPanel có nhiều mục khác nhau, tùy 
 
   Trong cPanel, mục Databases cung cấp các công cụ để quản lý cơ sở dữ liệu trên máy chủ của bạn.
 
-  ![](/thuctap/img/cPanel_Features_Databases.png)
+  ![](/img/cPanel_Features_Databases.png)
 
   + **phpMyAdmin**: Đây là công cụ phổ biến nhất để quản lý cơ sở dữ liệu MySQL. Bạn có thể sử dụng phpMyAdmin để tạo, sửa đổi, xóa cơ sở dữ liệu và bảng, cũng như thực hiện các truy vấn SQL.
 
@@ -187,7 +187,7 @@ Trong phần công cụ (Tools) trong cPanel có nhiều mục khác nhau, tùy 
 
   Phần Domains trong cPanel là khu vực quản lý các tên miền mà bạn sở hữu.
 
-  ![](/thuctap/img/cPanel_Features_Domains.png)
+  ![](/img/cPanel_Features_Domains.png)
 
   Một số công cụ phổ biến trong phần Domains này:
 
@@ -205,7 +205,7 @@ Trong phần công cụ (Tools) trong cPanel có nhiều mục khác nhau, tùy 
 
   Phần Metrics trong cPanel cung cấp các công cụ giúp bạn theo dõi và phân tích hoạt động của website, từ đó tối ưu hóa và cải thiện trải nghiệm người dùng.
 
-  ![](/thuctap/img/cPanel_Features_Metrics.png)
+  ![](/img/cPanel_Features_Metrics.png)
 
   Một số công cụ phổ biến trong Metrics:
 
@@ -221,7 +221,7 @@ Trong phần công cụ (Tools) trong cPanel có nhiều mục khác nhau, tùy 
 
   Phần Security trong cPanel cung cấp các công cụ bảo mật để bảo vệ website và máy chủ của bạn khỏi các mối đe dọa tiềm ẩn và giữ an toàn cho dữ liệu và thông tin của bạn.
 
-  ![](/thuctap/img/cPanel_Features_Security.png)
+  ![](/img/cPanel_Features_Security.png)
 
   Một số công cụ phổ biến trong mục Security:
 
@@ -238,7 +238,7 @@ Trong phần công cụ (Tools) trong cPanel có nhiều mục khác nhau, tùy 
 * **Software**
   Phần Software trong cPanel cung cấp các công cụ liên quan đến việc quản lý phần mềm và ứng dụng chạy trên máy chủ của bạn. Đây là nơi bạn có thể cài đặt và quản lý các ứng dụng, cũng như cấu hình môi trường lập trình.
 
-  ![](/thuctap/img/cPanel_Features_Software.png)
+  ![](/img/cPanel_Features_Software.png)
 
   Một số công cụ được dùng phổ biến trong mục Software:
 
@@ -254,7 +254,7 @@ Trong phần công cụ (Tools) trong cPanel có nhiều mục khác nhau, tùy 
   
   Mục Advanced cung cấp các công cụ và tính năng nâng cao dành cho người quản trị web để quản lý các tác vụ kỹ thuật phức tạp hơn. Các công cụ trong mục Advanced thường hỗ trợ quản lý website và server ở mức độ sâu hơn, bao gồm các cài đặt hệ thống, cron jobs, quản lý mã nguồn, và các tính năng liên quan đến bảo mật và tối ưu hóa.
 
-  ![](/thuctap/img/cPanel_Features_Advanced.png)
+  ![](/img/cPanel_Features_Advanced.png)
 
   Một số công cụ được dùng phổ biến trong mục Advanced:
 
@@ -272,7 +272,7 @@ Trong phần công cụ (Tools) trong cPanel có nhiều mục khác nhau, tùy 
 
   Trong cPanel, mục Preferences thường chứa các tùy chọn cấu hình cá nhân và cài đặt liên quan đến tài khoản người dùng.
 
-  ![](/thuctap/img/cPanel_Features_Preferences.png)
+  ![](/img/cPanel_Features_Preferences.png)
 
   + **Change Language**: Tùy chọn để thay đổi ngôn ngữ giao diện cPanel. Người dùng có thể chọn ngôn ngữ mà họ muốn sử dụng trong quá trình quản lý tài khoản.
 
@@ -286,7 +286,7 @@ Trong phần công cụ (Tools) trong cPanel có nhiều mục khác nhau, tùy 
 
   Softaculous là một công cụ tiện ích tích hợp trong cPanel, cho phép bạn dễ dàng cài đặt và quản lý các ứng dụng web phổ biến chỉ với vài cú nhấp chuột. Đây là một giải pháp tuyệt vời cho những người không có nhiều kinh nghiệm kỹ thuật nhưng vẫn muốn phát triển trang web của mình.
 
-  ![](/thuctap/img/cPanel_Features_SoftaculousAppInstaller.png)
+  ![](/img/cPanel_Features_SoftaculousAppInstaller.png)
 
 # III. Cài đặt website trên cPanel
 
@@ -308,35 +308,35 @@ Có nhiều cách để các bạn có thể cài đặt website lên trên cPan
 
   Các bạn nhớ thay **yourdomain.com** bằng các domain của các bạn.
 
-  ![](/thuctap/img/cPanel_LoginPage.png)
+  ![](/img/cPanel_LoginPage.png)
 
 * **Bước 2. Mở File Manager**
 
   Một khi các bạn đã vào được trang cPanel, các bạn tìm tới mục ''**Files**'' và tìm tới **File Manager** 
 
-  ![](/thuctap/img/cPanel_FileManager.png)
+  ![](/img/cPanel_FileManager.png)
 
 * **Bước 3: Điều hướng đến thư mục Public**
 
   Trong **File Manager**, điều hướng đến thư mục **public_html**. Đây là thư mục nơi các tệp website của bạn nên được lưu trữ.
 
-  ![](/thuctap/img/cPanel_public_html.png)
+  ![](/img/cPanel_public_html.png)
 
 * **Bước 4: Tải các tệp website lên**
 
   Sau khi các bạn đã trong thư mục ''**public_html**'' các bạn nhấn vào ô ''**Upload**'' để vào trang file upload
 
-  ![](/thuctap/img/cPanel_public_html_upload.png)
+  ![](/img/cPanel_public_html_upload.png)
 
-  ![](/thuctap/img/cPanel_Upload_Page.png)
+  ![](/img/cPanel_Upload_Page.png)
 
   Để tránh mất thời gian upload từng file lên thì các bạn đóng gói các file webiste của bạn thành tệp zip xong rồi tải lên trên cPanel và unzip nó ra trong thư mục ''**public_html**''.
 
-  ![](/thuctap/img/cPanel_Select_file.png)
+  ![](/img/cPanel_Select_file.png)
 
   Đây là trong thư mục "**public_html**" sau khi đã upload mã nguồn thành công
 
-  ![](/thuctap/img/cPanel_Upload_Success.png)
+  ![](/img/cPanel_Upload_Success.png)
 
   Các bạn vào tên miền của các bạn để kiểm tra xem website đã upload thành công chưa.
 
@@ -356,21 +356,21 @@ Cài đặt website thông qua Softaculous App Installer trên cPanel phù hợp
 
   Các bạn nhớ thay **yourdomain** bằng các domain của các bạn.
 
-  ![](/thuctap/img/cPanel_LoginPage.png)
+  ![](/img/cPanel_LoginPage.png)
 
 * **Bước 2. Truy cập vào trang cài đặt Wordpress**
 
 Các bạn tìm đến mục Software mà kiếm cho mình phần **Softaculous App Installer** tại đây của mình là **WordPress Manager by Softaculous** và click chuột vào phần đó để vào trang cài đặt Wordpress
 
-  ![](/thuctap/img/cPanel_Softaculos.png)
+  ![](/img/cPanel_Softaculos.png)
 
 * **Bước 3. Cài đặt Wordpress**
 
   Sau khi đã vào trang cài đặt các bạn click vào ô "**Install**" để bắt đầu thực hiện quá trình cài đặt Wordpress
 
-  ![](/thuctap/img/cPanel_Softaculos_WebInstall.png)
+  ![](/img/cPanel_Softaculos_WebInstall.png)
 
-  ![](/thuctap/img/cPanel_Wordpress_Install.png)
+  ![](/img/cPanel_Wordpress_Install.png)
 
   Tại đây sẽ có vài mục các bạn cần lưu ý:
 
@@ -386,7 +386,7 @@ Các bạn tìm đến mục Software mà kiếm cho mình phần **Softaculous 
 
     + **Choose the version you want to install**: Chọn phiên bản Wordpress mà bạn muốn cài đặt.
 
-    ![](/thuctap/img/cPanel_SoftwareSetup.png)
+    ![](/img/cPanel_SoftwareSetup.png)
 
   * Mục **Site Setting**, nơi bạn cấu hình tên, mô tả và một số tính năng cơ bản cho trang web WordPress của bạn:
     + **Site Name**: Đây là tên trang web của bạn. Tên này sẽ hiển thị trên tiêu đề của trình duyệt và trong phần đầu trang của trang web. Bạn có thể đặt tên theo sở thích hoặc theo chủ đề của trang web.
@@ -397,7 +397,7 @@ Các bạn tìm đến mục Software mà kiếm cho mình phần **Softaculous 
 
     + **Disable WordPress Cron**: Tùy chọn này cho phép bạn tắt chức năng Cron của WordPress, là một hệ thống để lập lịch thực hiện các tác vụ tự động (như tự động lưu bản nháp, gửi email thông báo, và cập nhật plugin). Nếu bạn tắt tùy chọn này, bạn sẽ cần quản lý cron jobs bằng cách khác (ví dụ: sử dụng cron trên server). Tùy chọn này thường không cần thiết cho người dùng bình thường và nên để ở trạng thái tắt trừ khi bạn có lý do cụ thể để bật.
 
-    ![](/thuctap/img/cPanel_SiteSettings.png)
+    ![](/img/cPanel_SiteSettings.png)
 
   * Mục **Admin Account**, nơi bạn cài đặt tài khoản và mật khẩu quản trị của Wordpress:
 
@@ -409,27 +409,27 @@ Các bạn tìm đến mục Software mà kiếm cho mình phần **Softaculous 
 
     + **Admin Email**: Đây là địa chỉ email của tài khoản quản trị viên. Email này sẽ được sử dụng để gửi thông báo, khôi phục mật khẩu, và nhận các thông báo quan trọng từ WordPress. Hãy chắc chắn rằng đây là một địa chỉ email chính xác mà bạn có quyền truy cập.
 
-    ![](/thuctap/img/cPanel_AdminAccount.png)
+    ![](/img/cPanel_AdminAccount.png)
 
   * Mục **Choose Language**, nơi bạn chọn ngôn ngữ hiển thị cho trang Wordpress
 
-    ![](/thuctap/img/cPanel_ChooseLanguage.png)
+    ![](/img/cPanel_ChooseLanguage.png)
 
   * Mục **Select Plugin(s)**, nơi bạn có thể chọn các plugin bổ sung cho trang web của mình. Nếu bạn không chắc chắn về một plugin nào đó, bạn có thể bỏ qua nó và cài đặt sau khi trang web đã hoạt động.
 
-    ![](/thuctap/img/cPanel_Select%20Plugin(s).png)
+    ![](/img/cPanel_Select%20Plugin(s).png)
   
   * Phần **Advanced Options**, tùy chọn trong phần này giúp bạn cấu hình cơ sở dữ liệu, tiền tố bảng, và các cài đặt nâng cấp tự động cho WordPress, cũng như quản lý thông báo và vị trí sao lưu. Nếu bạn không muốn thay đổi tên cơ sở dữ liệu, tiền tố bảng, hay cấu hình các tùy chọn nâng cấp và sao lưu, bạn có thể để các trường này ở mặc định.
 
-    ![](/thuctap/img/cPanel_AdvancedOptions.png)
+    ![](/img/cPanel_AdvancedOptions.png)
 
   * Phần **Select Theme**, tại phần này các bạn có thể lựa chọn giao diện cho Wordpress của mình. Nếu các bạn không muốn chọn hoặc đã có giao diện sẵn thì có thể bỏ qua phần này
 
-    ![](/thuctap/img/cPanel_SelectTheme.png)
+    ![](/img/cPanel_SelectTheme.png)
 
 Sau khi đã cấu hình đây đủ các bạn ấn ô ""**Install**"" để cài đặt. Khi cài đặt xong thì sẽ hiện thông báo như hình dưới. Giờ các bạn có thể vào domain của các bạn để kiểm tra website wordpress có bị lỗi gì không.
 
-  ![](/thuctap/img/cPanel_Wordpress_Done.png)
+  ![](/img/cPanel_Wordpress_Done.png)
 
 ## 3. Cài đặt thông qua Git™ Version Control
 
@@ -447,19 +447,19 @@ Cách cài đặt này phù hợp với những người phát triển web hoặ
 
   Các bạn nhớ thay **yourdomain** bằng các domain của các bạn.
 
-  ![](/thuctap/img/cPanel_LoginPage.png)
+  ![](/img/cPanel_LoginPage.png)
 
 * **Bước 2. Mở Git™ Version Control**
 
   Trong cPanel, tìm tới phần "**Files**" và chọn **Git™ Version Control**.
 
-  ![](/thuctap/img/cPanel_Git_Version-Control.png)
+  ![](/img/cPanel_Git_Version-Control.png)
 
 * **Bước 3. Tạo hoặc clone repository**
 
   Các bạn nhấn ô "Create" để tạo hoặc clone repository nếu bạn đã có repository ở trên Github, Gitlab,...
 
-  ![](/thuctap/img/cPanel_Create_Git.png)
+  ![](/img/cPanel_Create_Git.png)
 
   Sau khi các bạn đã vào trang tạo repository của Git Version Control sẽ có vài mục cần lưu ý
 
@@ -485,17 +485,17 @@ Cách cài đặt này phù hợp với những người phát triển web hoặ
 
   Tại đây mình sẽ clone repository của wordpress để tạo một trang website bằng wordpress.
 
-  ![](/thuctap/img/cPanel_Clone_Wordpress.png)
+  ![](/img/cPanel_Clone_Wordpress.png)
 
   Các bạn vào "**File Manager**" trên cPanel để kiểm tra xem đã clone được Wordpress chưa.
 
-  ![](/thuctap/img/cPanel_Git_CloneDone.png)
+  ![](/img/cPanel_Git_CloneDone.png)
 
 * **Bước 4. Chuyển sang thư mục public_html**
 
 Sau khi đã clone repository của wordpress xong, các bạn chuyển các file wordpress sang thư mục "**public_html**"
 
-![](/thuctap/img/cPanel_Move_Public.png)
+![](/img/cPanel_Move_Public.png)
 
 Khi đã bạn đã clone thành công các file wordpress thành công thì các bạn bắt đầu cấu hình wordpress bình thường.
 
@@ -510,6 +510,6 @@ Mở tệp **wp-config.php** và điền các thông tin cơ sở dữ liệu:
 
 Khi đã cấu hình xong các bạn truy cập vào tên miền của các bạn để tiến hành cài đặt wordpress như bình thường.
 
-  ![](/thuctap/img/cPanel_Git_Success.png)
+  ![](/img/cPanel_Git_Success.png)
 
 # END
