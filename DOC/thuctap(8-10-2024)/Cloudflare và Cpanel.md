@@ -493,23 +493,23 @@ Cách cài đặt này phù hợp với những người phát triển web hoặ
 
 * **Bước 4. Chuyển sang thư mục public_html**
 
-Sau khi đã clone repository của wordpress xong, các bạn chuyển các file wordpress sang thư mục "**public_html**"
+  Sau khi đã clone repository của wordpress xong, các bạn chuyển các file wordpress sang thư mục "**public_html**"
 
-![](/img/cPanel_Move_Public.png)
+  ![](/img/cPanel_Move_Public.png)
 
-Khi đã bạn đã clone thành công các file wordpress thành công thì các bạn bắt đầu cấu hình wordpress bình thường.
+  Khi đã bạn đã clone thành công các file wordpress thành công thì các bạn bắt đầu cấu hình wordpress bình thường.
 
-Trong thư mục WordPress mà bạn vừa clone, tìm tệp **wp-config-sample.php** và đổi tên **thành wp-config.php**.
+  Trong thư mục WordPress mà bạn vừa clone, tìm tệp **wp-config-sample.php** và đổi tên **thành wp-config.php**.
 
-Mở tệp **wp-config.php** và điền các thông tin cơ sở dữ liệu:
+  Mở tệp **wp-config.php** và điền các thông tin cơ sở dữ liệu:
 
-    define( 'DB_NAME', 'your_database_name' );
-    define( 'DB_USER', 'your_database_user' );
-    define( 'DB_PASSWORD', 'your_password' );
-    define( 'DB_HOST', 'localhost' );
+      define( 'DB_NAME', 'your_database_name' );
+      define( 'DB_USER', 'your_database_user' );
+      define( 'DB_PASSWORD', 'your_password' );
+      define( 'DB_HOST', 'localhost' );
 
-Khi đã cấu hình xong các bạn truy cập vào tên miền của các bạn để tiến hành cài đặt wordpress như bình thường.
+  Khi đã cấu hình xong các bạn truy cập vào tên miền của các bạn để tiến hành cài đặt wordpress như bình thường.
 
-  ![](/img/cPanel_Git_Success.png)
+    ![](/img/cPanel_Git_Success.png)
 
 # END
