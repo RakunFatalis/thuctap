@@ -28,11 +28,11 @@ Mặc dù giữa Direct Admin và cPanel đều có điểm chung là một bả
 
   **cPanel**: có giao diện trực quan hơn, với nhiều biểu tượng và tính năng hiển thị ngay từ màn hình chính. Mặc dù điều này giúp người dùng dễ dàng truy cập các chức năng, nhưng có thể khiến những người mới bắt đầu cảm thấy choáng ngợp. Ngoài ra, cPanel cung cấp khả năng tùy chỉnh giao diện thông qua các skin và sắp xếp các tính năng theo ý muốn.
 
-  ![](/thuctap/img/DA_cPanelUI.png)
+  ![](/img/DA_cPanelUI.png)
 
   **DirectAdmin**, ngược lại, có giao diện đơn giản và nhẹ nhàng hơn. Các tính năng được phân loại theo các tab và mục rõ ràng, giúp người dùng dễ dàng tìm thấy các công cụ cần thiết mà không cảm thấy quá tải. DirectAdmin không cung cấp nhiều tùy chọn tùy chỉnh giao diện như cPanel, nhưng giao diện gọn gàng và tối ưu hóa của nó làm cho việc sử dụng dễ dàng hơn đối với những người quản trị server có ít kinh nghiệm.
 
-  ![](/thuctap/img/DA_UI.png)
+  ![](/img/DA_UI.png)
 
 * **Tài nguyên hệ thống**
 
@@ -46,11 +46,11 @@ Mặc dù giữa Direct Admin và cPanel đều có điểm chung là một bả
 
   **cPanel**: Mấy năm gần đây đã có một số thay đổi về giá cả. Kể từ khi cPanel chuyển sang mô hình cấp phép theo tài khoản, mức giá đã tăng lên đáng kể, đặc biệt là đối với những nhà cung cấp dịch vụ hosting nhỏ hoặc trung bình.
 
-  ![](/thuctap/img/cPanel_Price.png)
+  ![](/img/cPanel_Price.png)
 
   **Direct Admin**: Sử dụng mô hình cấp phép đơn giản hơn, không tính phí theo số lượng tài khoản như cPanel. Thay vào đó, nó có các mức giá cố định cho từng loại giấy phép, giúp người dùng dễ dàng dự đoán chi phí.
 
-  ![](/thuctap/img/DA_Price.png)
+  ![](/img/DA_Price.png)
 
 # II. Giao diện của Direct Admin
 
@@ -60,13 +60,13 @@ Giao diện của Direct Admin quả thực rất đơn giản và thân thiện
 
   Thanh công cụ trong DirectAdmin cung cấp nhiều chức năng quản lý server và hosting dành cho người quản trị web. Nó bao gồm các công cụ như quản lý tài khoản người dùng, quản lý email, tên miền, cơ sở dữ liệu, FTP, và nhiều tính năng khác.
 
-  ![](/thuctap/img/DA_ToolBar.png)
+  ![](/img/DA_ToolBar.png)
 
 * **Bảng điều khiển**
 
   Tại đây sẽ hiển thị thông tin tài nguyên mà bạn có trên tài khoản hosting.
 
-  ![](/thuctap/img/DA_Dashboard.png)
+  ![](/img/DA_Dashboard.png)
 
 # III. Cài đặt website trên Direct Admin
 
@@ -76,17 +76,17 @@ Tương tự như cPanel, Direct Admin cũng có nhiều cách để cài đặt
 
 Các bạn vào phần "**System Info & Files**" và click vào chữ "**File Manager**" để chuyển tới trang quản lí tệp tin của Direct Admin
 
-![](/thuctap/img/DA_FileManager.png)
+![](/img/DA_FileManager.png)
 
 Sau khi các bạn đã vaò trang quản lí tệp tin, tiếp theo các bạn click vào thư mục "**public_html**" để vào trong đó upload mã nguồn các bạn lên hosting.
 
-![](/thuctap/img/DA_Public_html.png)
+![](/img/DA_Public_html.png)
 
-![](/thuctap/img/DA_Upload_File.png)
+![](/img/DA_Upload_File.png)
 
 Các bạn vào tên miền của các bạn để kiểm tra website đã được upload thành công chưa.
 
-![](/thuctap/img/DA_CheckWebsite.png)
+![](/img/DA_CheckWebsite.png)
 
 ## 2. Cài đặt thông qua ternimal
 
@@ -94,9 +94,9 @@ Cách này yêu cầu người sử dụng hiểu được cách sử dụng cơ
 
 Để vào được ternimal trong Direct Admin các bạn vào phần "**System Info & Files**" và click vào chữ "**Ternimal**" để vào mở ternimal của Direct Admin lên.
 
-![](/thuctap/img/DA_Ternimal.png)
+![](/img/DA_Ternimal.png)
 
-![](/thuctap/img/DA_Ternimal_Active.png)
+![](/img/DA_Ternimal_Active.png)
 
 Các bạn sử dụng các câu lệnh để tiến hành thao tác trong ternimal.
 
@@ -106,21 +106,21 @@ Ngoài cách cài đặt wordpress bằng cách upload file lên bằng File Man
 
 Để cài đặt, các bạn vào phần "**Advanced Features**" và click vào chữ "**Wordpress Manager**" để vào trang cài đặt Wordpress tự động.
 
-![](/thuctap/img/DA_Wordpress.png)
+![](/img/DA_Wordpress.png)
 
 Khi các bạn đã vào được trang cài đặt wordpress thì hãy ấn nút "Install" để tiến hành cài đặt.
 
-![](/thuctap/img/DA_Wordpress_Install.png)
+![](/img/DA_Wordpress_Install.png)
 
-![](/thuctap/img/DA_Wordpress_Create.png)
+![](/img/DA_Wordpress_Create.png)
 
 Trong mục **Advanced mode** thì sẽ cho phép các bạn tự đặt mật khẩu, tên cho tài khoản admin và email của admin. Còn nếu các bạn không muốn hoặc không quan tâm thì lúc các click vào ô "**CREATE**" thì hệ thống sẽ tự động đặt mật khẩu ngẫu nhiên và dùng email admin của các bạn làm tài khoản đăng nhập, nó cũng tiện thể tự động tạo luôn database cho các bạn.
 
 **Lưu ý nhỏ:** Việc cài đặt này sẽ ghi đè lên các tệp hiện có trong thư mục **public_html** nên các bạn như sao lưu lại các tệp tin quan trọng.
 
-![](/thuctap/img/DA_Infor.png)
+![](/img/DA_Infor.png)
 
-![](/thuctap/img/DA_Wordpress_Login.png)
+![](/img/DA_Wordpress_Login.png)
 
 # ENd
 
