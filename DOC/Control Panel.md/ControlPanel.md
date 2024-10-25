@@ -70,12 +70,12 @@ Mặc dù Webmin có thể không thân thiện với người mới bắt đầ
 Bảng dưới là bảng cấu hình yêu cầu để có thể cài đặt các control panel này.
 
 | Control Panel | RAM| CPU| Disk| Hệ Điều Hành|
-|---------------|----|----|-------------------|---------------------------------------------------------------------------------|
+|---------------|----|----|-------------------|`---------------------------------------------------------------------------------|
 | **aaPanel**      | Tối thiểu 512MB (Khuyến nghị 768MB)  | Tối thiểu 1 core       | Tối thiểu 100MB (Pure panel chiếm khoảng 20MB) | Ubuntu 20/22/24, Debian 11/12, CentOS 9                                          |
 | **FastPanel**     | Tối thiểu 1GB    | Tối thiểu 1 core, 1 GHz | Tối thiểu 5GB          | Debian 9/10/11/12, Ubuntu 18.04/20.04/22.04/24.04, CentOS 7, AlmaLinux 8, Rocky 8|
 | **CyberPanel**    | Tối thiểu 1GB    | Tối thiểu 1 core   | Tối thiểu 10GB         | Ubuntu 18.04, Ubuntu 20.04, Ubuntu 22.04                                         |
 | **VestaCP**       | Tối thiểu 512MB  | Tối thiểu 1 GHz    | Tối thiểu 20GB         | RHEL/CentOS 5/6/7, Debian 7/8/9, Ubuntu 12.04 - 18.10                            |
-
+| **Webmin**      | Tối thiểu 256MB| Tối thiểu 1 core| Tối thiểu 500MB| Debian, Ubuntu, CentOS, AlmaLinux, Rocky Linux, và nhiều bản phân phối Linux khác|
 
 > [!WARNING]
 > **Lưu ý chung khi cài đặt các control panel.**
