@@ -150,5 +150,4 @@ Các bạn click vào ô "Issue SSL" để Cyberpanel dùng Let's Encrypt để 
 
 ![](/thuctap/img/CP_Cyberpanel_SSL_Issue.png)
 
-
 # END
