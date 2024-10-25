@@ -9,6 +9,7 @@
   - [2. FastPanel](#2-fastpanel)
   - [3. CyperPanel](#3-cyperpanel)
   - [4. VestaCP](#4-vestacp)
+  - [5. Webmin](#5-webmin)
 - [II. Cấu hình yêu cầu](#ii-cấu-hình-yêu-cầu)
 - [END](#end)
 
@@ -55,6 +56,14 @@ Ngoài ra, CyberPanel cũng có phiên bản **CyberPanel Enterprise** với nhi
 VestaCP là một trình quản lý máy chủ mã nguồn mở (open-source) giúp bạn quản lý các dịch vụ web, bao gồm các máy chủ web, cơ sở dữ liệu, và DNS. Nó cung cấp giao diện đồ họa (GUI) thân thiện cho người dùng, giúp việc quản lý dễ dàng hơn cho cả người mới bắt đầu lẫn các quản trị viên hệ thống có kinh nghiệm.
 
 ![](/thuctap/img/CP_Logo_VestaCP.png)
+
+## 5. Webmin
+
+Webmin là một bảng điều khiển mã nguồn mở được thiết kế để quản lý các máy chủ dựa trên Unix thông qua giao diện web. Nó đặc biệt phù hợp cho người dùng có kinh nghiệm về Linux hoặc quản trị máy chủ.
+
+Mặc dù Webmin có thể không thân thiện với người mới bắt đầu như các bảng điều khiển khác, nhưng nó mang lại mức độ tùy chỉnh và linh hoạt cao, lý tưởng để điều chỉnh các thành phần bên trong của hệ điều hành, chẳng hạn như tài khoản người dùng và vai trò, hạn mức đĩa, dịch vụ và tệp cấu hình.
+
+![](/thuctap/img/CP_Webmin_Logo.png)
 
 # II. Cấu hình yêu cầu
 

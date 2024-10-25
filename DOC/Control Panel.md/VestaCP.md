@@ -88,22 +88,4 @@ Các bạn click vào ô "**UPLOAD**" để tải mã nguồn của các bạn l
 
 ![](/thuctap/img/CP_Vesta_Upload_file.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # END
