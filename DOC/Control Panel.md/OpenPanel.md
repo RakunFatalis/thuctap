@@ -26,7 +26,7 @@
 
 Điểm nổi bật của OpenPanel so với các bảng điều khiển hosting khác là khả năng cung cấp cho mỗi người dùng một môi trường riêng biệt và các công cụ quản lý đầy đủ. Điều này cho phép người dùng kiểm soát hoàn toàn môi trường của mình, tương tự như khi sử dụng VPS. Bạn có thể dễ dàng cài đặt các phiên bản PHP mới, tùy chỉnh cấu hình máy chủ, xem nhật ký tên miền, khởi động lại các dịch vụ và thực hiện nhiều tác vụ nâng cao khác.
 
-![](/thuctap/img/CP_OpenPanel_Scheme.png)
+![](/img/CP_OpenPanel_Scheme.png)
 
 Theo nhóm phát triển OpenPanel, bảng điều khiển này là thành quả của nhiều năm kinh nghiệm trong ngành dịch vụ lưu trữ, đã được tích hợp tất cả những tính năng thực sự cần thiết để đáp ứng nhu cầu của người dùng.
 
@@ -96,7 +96,8 @@ OpenPanel đã nhanh chóng thu hút sự chú ý trong ngành dịch vụ lưu 
 
 **Enterprise Edition:**
 
-Đây là phiên bản cao cấp cung cấp các tính năng nâng cao cho việc cách ly và quản lý người dùng. 
+Đây là phiên bản cao cấp cung cấp các tính năng nâng cao cho việc cách ly và quản lý người dùng.  Phiên bản này lý tưởng cho các nhà cung cấp dịch vụ lưu trữ web, những người cần các công cụ mạnh mẽ hơn để quản lý tài nguyên và người dùng.
+
 # II. Cài đặt OpenPanel
 
 
@@ -153,27 +154,26 @@ Dành cho hệ điều hành Centos:
 
 Sau khi đã cập nhật xong tất cả, các bạn vào trang web của OpenPanel để lấy script cài đặt. Các bạn hãy vào bằng đường link này: **https://openpanel.com/docs/admin/intro/#installation**
 
-![](/thuctap/img/CP_OpenPanel_Script_Web.png)
+![](/img/CP_OpenPanel_Script_Web.png)
 
 Dành cho những bạn không vào được đường dẫn trang web thì đây là script tự động cài đặt OpenPanel:
 
         # bash <(curl -sSL https://openpanel.org)
 
-![](/thuctap/img/CP_OpenPanel_RunScript.png)
+![](/img/CP_OpenPanel_RunScript.png)
 
 Khi cài đặt xong thì hệ thống sẽ cung cấp thông tin tài khoản và mật khẩu để bạn đăng nhập.
 
-![](/thuctap/img/CP_OpenPanel_Infor.png)
+![](/img/CP_OpenPanel_Infor.png)
 
 Trang đăng nhập OpenPanel.
 
-![](/thuctap/img/CP_OpenPanel_LoginPage.png)
+![](/img/CP_OpenPanel_LoginPage.png)
 
 Trang dashboard admin OpenPanel
 
-![](/thuctap/img/CP_OpenPanel_AdminDashboard.png)
+![](/img/CP_OpenPanel_AdminDashboard.png)
 
-Và thế là hoàn tất, giờ bạn có thể trải n
-
+Và thế là hoàn tất, giờ bạn có thể bắt đầu sử dụng OpenPanel để quản trị các website của mình.
 
 # END
