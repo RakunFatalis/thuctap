@@ -9,7 +9,7 @@
   - [2. FastPanel](#2-fastpanel)
   - [3. CyperPanel](#3-cyperpanel)
   - [4. VestaCP](#4-vestacp)
-  - [5. Webmin](#5-webmin)
+  - [5. Openpanel](#5-openpanel)
 - [II. Cấu hình yêu cầu](#ii-cấu-hình-yêu-cầu)
 - [END](#end)
 
@@ -57,13 +57,11 @@ VestaCP là một trình quản lý máy chủ mã nguồn mở (open-source) gi
 
 ![](/thuctap/img/CP_Logo_VestaCP.png)
 
-## 5. Webmin
+## 5. Openpanel
 
-Webmin là một bảng điều khiển mã nguồn mở được thiết kế để quản lý các máy chủ dựa trên Unix thông qua giao diện web. Nó đặc biệt phù hợp cho người dùng có kinh nghiệm về Linux hoặc quản trị máy chủ.
+OpenPanel là một bảng điều khiển hosting mạnh mẽ và linh hoạt dành cho hệ thống Linux. Với hai phiên bản — một được cộng đồng hỗ trợ và một phiên bản cao cấp với nhiều tính năng hơn và hỗ trợ chuyên nghiệp, OpenPanel trở thành giải pháp quản lý hosting toàn diện và tiết kiệm chi phí.
 
-Mặc dù Webmin có thể không thân thiện với người mới bắt đầu như các bảng điều khiển khác, nhưng nó mang lại mức độ tùy chỉnh và linh hoạt cao, lý tưởng để điều chỉnh các thành phần bên trong của hệ điều hành, chẳng hạn như tài khoản người dùng và vai trò, hạn mức đĩa, dịch vụ và tệp cấu hình.
 
-![](/thuctap/img/CP_Webmin_Logo.png)
 
 # II. Cấu hình yêu cầu
 
@@ -75,7 +73,7 @@ Bảng dưới là bảng cấu hình yêu cầu để có thể cài đặt cá
 | **FastPanel**     | Tối thiểu 1GB    | Tối thiểu 1 core, 1 GHz | Tối thiểu 5GB          | Debian 9/10/11/12, Ubuntu 18.04/20.04/22.04/24.04, CentOS 7, AlmaLinux 8, Rocky 8|
 | **CyberPanel**    | Tối thiểu 1GB    | Tối thiểu 1 core   | Tối thiểu 10GB         | Ubuntu 18.04, Ubuntu 20.04, Ubuntu 22.04                                         |
 | **VestaCP**       | Tối thiểu 512MB  | Tối thiểu 1 GHz    | Tối thiểu 20GB         | RHEL/CentOS 5/6/7, Debian 7/8/9, Ubuntu 12.04 - 18.10                            |
-| **Webmin**      | Tối thiểu 256MB| Tối thiểu 1 core| Tối thiểu 500MB| Debian, Ubuntu, CentOS, AlmaLinux, Rocky Linux, và nhiều bản phân phối Linux khác|
+| **OpenPanel**     | Tối thiểu 1GB (Khuyến nghị 4GB) | Tối thiểu 1 core       | Tối thiểu 15GB                | AlmaLinux 9.4, Fedora 40, RockyLinux 9.4, CentOS 9, Ubuntu 22/24, Debian 11/12 |
 
 > [!WARNING]
 > **Lưu ý chung khi cài đặt các control panel.**
