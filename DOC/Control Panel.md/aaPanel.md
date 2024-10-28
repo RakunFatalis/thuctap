@@ -29,7 +29,7 @@ Cài đặt các gói cần thiết như wget và curl.
 
 Sau khi đã setup xong tất cả, các bạn vào trang web của aaPanel để lấy script cài đặt. Các bạn hãy vào bằng đường link này: **https://www.aapanel.com/new/download.html#install**
 
-![](/thuctap/img/CP_aaPanel_Script.png)
+![](/img/CP_aaPanel_Script.png)
 
 Đoạn script cài đặt aaPanel:
 
@@ -37,15 +37,15 @@ Sau khi đã setup xong tất cả, các bạn vào trang web của aaPanel đ�
 
 Các bạn nhấn Y để đồng ý cài đặt.
 
-![](/thuctap/img/CP_aaPanel_Script_Copy.png)
+![](/img/CP_aaPanel_Script_Copy.png)
 
 Sau khi hoàn tất quá trình cài đặt aaPanel thì hệ thống cũng sẽ cung cấp luôn địa chỉ ip để đăng nhập và thông tin tài khoản đăng nhập cho các bạn.
 
-![](/thuctap/img/CP_aaPanel_infoLogin.png)
+![](/img/CP_aaPanel_infoLogin.png)
 
 Nếu các bạn không truy cập được địa chỉ ip thì nên kiểm tra tường lửa có chặn các cổng kết nối của aaPanel không.
 
-![](/thuctap/img/CP_aaPanel_install_success.png)
+![](/img/CP_aaPanel_install_success.png)
 
 
 # II. Cài đặt website, SSL lên aaPanel
@@ -60,25 +60,25 @@ Khi cài đặt xong thì aaPanel sẽ cho bạn lựa chọn cài đặt LNMP s
 
 Tại đây mình sẽ chọn cài đặt LNMP stack với phương thức tải Fast.
 
-![](/thuctap/img/CP_aapanel_LNMP.png)
-![](/thuctap/img/CP_aapanel_LNMP_install.png)
+![](/img/CP_aapanel_LNMP.png)
+![](/img/CP_aapanel_LNMP_install.png)
 
 Sau khi đã cài đặt xong các bạn vào phần "**Website**" và click vào ô "**Add site**" để thêm tên miền của các bạn.
 
-![](/thuctap/img/CP_aaPanel_Addsite.png)
+![](/img/CP_aaPanel_Addsite.png)
 
-![](/thuctap/img/CP_aaPanel_Addsite_Infor1.png)
+![](/img/CP_aaPanel_Addsite_Infor1.png)
 
-![](/thuctap/img/CP_aaPanel_Addsite_Infor2.png)
+![](/img/CP_aaPanel_Addsite_Infor2.png)
 
-![](/thuctap/img/CP_aaPanel_Website_success.png)
+![](/img/CP_aaPanel_Website_success.png)
 Cũng trong phần "**Website**", các bạn click vào đường dẫn chứa thư mục mã nguồn website của các bạn tại cột "**Document Root**" để chuyển sang trang quản lí tệp tin tại thư mục root.
 
-![](/thuctap/img/CP_aaPanel_Docroot.png)
+![](/img/CP_aaPanel_Docroot.png)
 
 Trong trang quản lí tệp tin của các bạn hãy click vào ô "**Upload**" để tải mã nguồn các bạn lên.
 
-![](/thuctap/img/CP_aaPanel_Upload.png)
+![](/img/CP_aaPanel_Upload.png)
 
 Sau khi đã upload xong mã nguồn thì các bạn vào tên miền của các bạn để kiểm tra xem website đã được hoạt động chưa.
 
@@ -86,30 +86,30 @@ Sau khi đã upload xong mã nguồn thì các bạn vào tên miền của các
 
 Các bạn vào phần "**Website**" và hãy click vào ô "**Default Website**"
 
-![](/thuctap/img/CP_aaPanel_Defaultweb.png)
+![](/img/CP_aaPanel_Defaultweb.png)
 
 Sau đó các bạn click chọn vào tên miền mà các bạn muốn dùng địa chỉ IP để truy cập trang web.
 
-![](/thuctap/img/CP_aaPanel_Defaultweb_Select.png)
+![](/img/CP_aaPanel_Defaultweb_Select.png)
 
-![](/thuctap/img/CP_aaPanel_Defaultweb_Check.png)
+![](/img/CP_aaPanel_Defaultweb_Check.png)
 
 ## 2. Cài đặt SSL cho trang web
 
 Để cài đặt SSL cho tên miền, các bạn vào phần "**Website**" và click vào tên miền của các bạn tại ô **Site name**.
 
-![](/thuctap/img/CP_aaPanel_SSL.png)
+![](/img/CP_aaPanel_SSL.png)
 
 Nó sẽ hiện bảng "**Site modification**", các bạn tìm tới phần ``SSL``.
 
 Chọn ô "**Let's Encrypt**" để tạo một SSL miễn phí cho trang web các bạn.
 
-![](/thuctap/img/CP_aaPanel_SSL_Create.png)
+![](/img/CP_aaPanel_SSL_Create.png)
 
-![](/thuctap/img/CP_aaPanel_SSL_process.png)
+![](/img/CP_aaPanel_SSL_process.png)
 
 Sau khi chương trình chạy xong thì nó sẽ tự tạo chứng chỉ và private key cho bạn. Bạn ấn ô "Save" để lưu vào website của bạn.
 
-![](/thuctap/img/CP_aaPanel_SSL_Done.png)
+![](/img/CP_aaPanel_SSL_Done.png)
 
 # END

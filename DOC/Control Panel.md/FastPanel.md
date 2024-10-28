@@ -26,13 +26,13 @@ Cài đặt các gói cần thiết như wget và curl.
 
 Sau khi đã setup xong tất cả, các bạn vào trang web của FastPanel để lấy script cài đặt. Các bạn hãy vào bằng đường link này: **https://kb.fastpanel.direct/quick_start/how-to-install-fastpanel/**
 
-![](/thuctap/img/CP_FastPanel_Script.png)
+![](/img/CP_FastPanel_Script.png)
 
 Đoạn script cài đăt:
 
         # wget http://repo.fastpanel.direct/install_fastpanel.sh -O - | bash -
 
-![](/thuctap/img/CP_FastPanel_Script_Run.png)
+![](/img/CP_FastPanel_Script_Run.png)
 
 FastPanel sẽ tự động cài đặt các web service cho bạn và cung cấp cho bạn địa chỉ đăng nhập và tài khoản mật khẩu để đăng nhập.
 
@@ -42,7 +42,7 @@ FastPanel sẽ tự động cài đặt các web service cho bạn và cung cấ
 
 Trong giao diện của FastPanel để cài đặt một website các bạn click vào "**Create site**".
 
-![](/thuctap/img/CP_FastPanel_CreateSite.png)
+![](/img/CP_FastPanel_CreateSite.png)
 
 Tại đây bạn có hai lựa chọn:
 
@@ -50,7 +50,7 @@ Tại đây bạn có hai lựa chọn:
 
   2. **Create a site manually:** Các bạn tạo một trang web bằng cách thủ công.
 
-![](/thuctap/img/CP_FastPanel_Create_Option.png)
+![](/img/CP_FastPanel_Create_Option.png)
 
 Mình sẽ làm bằng cách thủ công trước.
 
@@ -62,17 +62,17 @@ Mình sẽ làm bằng cách thủ công trước.
   
   3. **DNS account**: Lựa chọn có tạo DNS account hay không.
 
-![](/thuctap/img/CP_FastPanel_Domainbinding.png)
+![](/img/CP_FastPanel_Domainbinding.png)
 
 Phần tiếp theo là phần "**Configuration**", tại đây các bạn cấu hình các mục User, Database, Backend,...
 
-![](/thuctap/img/CP_Fastpanel_Configuration.png)
+![](/img/CP_Fastpanel_Configuration.png)
 
 Sau khi đã cấu hình xong các bạn ấn creatsite là các bạn đã tạo được 1 trang web thủ công.
 
-![](/thuctap/img/CP_Fastpanel_Create_Site_Done.png)
+![](/img/CP_Fastpanel_Create_Site_Done.png)
 
-![](/thuctap/img/CP_Fastpanel_Create_Site_Done2.png)
+![](/img/CP_Fastpanel_Create_Site_Done2.png)
 
 Đó là chỉ mới tạo một trang web cơ bạn, nếu các bạn đã có mã nguồn một trang web thì bước tiếp theo sau đây là cách để bạn up mã nguồn của các bạn lên FastPanel.
 
@@ -80,27 +80,27 @@ Sau khi đã cấu hình xong các bạn ấn creatsite là các bạn đã tạ
 
 Để upload mã nguồn của các bạn, các bạn click vào site mà các bạn muốn upload mã nguồn của các bạn lên.
 
-![](/thuctap/img/CP_Fastpanel_choose_site.png)
+![](/img/CP_Fastpanel_choose_site.png)
 
 Trong phần site card của tên miền các bạn, các bạn kéo chuột để kiếm tới phần "Files".
 
-![](/thuctap/img/CP_Fastpanel_Files.png)
+![](/img/CP_Fastpanel_Files.png)
 
 Khi đã vào trong trang Files thì các bạn up mã nguồn các bạn lên trên đó.
 
-![](/thuctap/img/CP_Fastpanel_Upload_File.png)
+![](/img/CP_Fastpanel_Upload_File.png)
 
-![](/thuctap/img/CP_Fastpanel_checkstie.png)
+![](/img/CP_Fastpanel_checkstie.png)
 
 ## 2. Cài đặt SSL cho website
 
 Để cài đặt SSL cho website trong trang site card các bạn kéo xuống kiếm phần **SSL certificates**.
 
-![](/thuctap/img/CP_Fastpanel_SSL.png)
+![](/img/CP_Fastpanel_SSL.png)
 
 Trong danh sách SSL các bạn click vào ô "**New certificate**" để tạo một SSL cho website
 
-![](/thuctap/img/CP_FastPanel_SSL_new.png)
+![](/img/CP_FastPanel_SSL_new.png)
 
 Tại đây có 4 lựa chọn cho bạn:
 
@@ -112,11 +112,11 @@ Tại đây có 4 lựa chọn cho bạn:
 
 4. **Certificate Signing Request (CSR)** đây là lựa chọn khi bạn có nhu cầu muốn mua SSL từ một nhà cung cấp bên ngoài nhưng chưa có chứng chỉ, bạn cần tạo một yêu cầu ký chứng chỉ (CSR).
 
-![](/thuctap/img/CP_FastPanel_SSL_4Option.png)
+![](/img/CP_FastPanel_SSL_4Option.png)
 
 Mình sẽ sử dụng Let's Encrypt để cài đặt SSL cho website của mình. Hình ảnh bên dưới là kết quả cài đặt SSL của mình lên website
 
-![](/thuctap/img/CP_Fastpanel_SSL_Done.png)
+![](/img/CP_Fastpanel_SSL_Done.png)
 
 
 # END

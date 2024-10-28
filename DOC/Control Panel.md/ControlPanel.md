@@ -28,7 +28,7 @@ aaPanel thuộc quyền sở hữu và phát triển bởi công ty BT.CN (BaoTa
 
 Tuy nhiên bản miễn phí của aaPanel vẫn sẽ bị hạn chế một số tính năng nâng cao.
 
-![](/thuctap/img/CP_Logo_aaPanel.png)
+![](/img/CP_Logo_aaPanel.png)
 
 
 ## 2. FastPanel
@@ -39,7 +39,7 @@ FastPanel thuộc quyền sở hữu và phát triển bởi công ty FASTVPS. �
 
 Fast Panel có phiên bản miễn phí và phiên bản trả phí. Phiên bản miễn phí thường có các tính năng cơ bản cần thiết để quản lý máy chủ, trong khi phiên bản trả phí sẽ cung cấp thêm nhiều tính năng nâng cao và hỗ trợ kỹ thuật.
 
-![](/thuctap/img/CP_Logo_Fastpanel.png)
+![](/img/CP_Logo_Fastpanel.png)
 
 ## 3. CyperPanel
 
@@ -49,19 +49,19 @@ CyberPanel cung cấp phiên bản miễn phí với nhiều tính năng cơ b�
 
 Ngoài ra, CyberPanel cũng có phiên bản **CyberPanel Enterprise** với nhiều tính năng nâng cao hơn, bao gồm hỗ trợ thương mại, tối ưu hóa hiệu suất, và các tùy chọn quản lý cao cấp. Phiên bản Enterprise này yêu cầu người dùng phải trả phí để sử dụng.
 
-![](/thuctap/img/CP_Logo_CyberPanel.png)
+![](/img/CP_Logo_CyberPanel.png)
 
 ## 4. VestaCP
 
 VestaCP là một trình quản lý máy chủ mã nguồn mở (open-source) giúp bạn quản lý các dịch vụ web, bao gồm các máy chủ web, cơ sở dữ liệu, và DNS. Nó cung cấp giao diện đồ họa (GUI) thân thiện cho người dùng, giúp việc quản lý dễ dàng hơn cho cả người mới bắt đầu lẫn các quản trị viên hệ thống có kinh nghiệm.
 
-![](/thuctap/img/CP_Logo_VestaCP.png)
+![](/img/CP_Logo_VestaCP.png)
 
 ## 5. Openpanel
 
 OpenPanel là một bảng điều khiển hosting mạnh mẽ và linh hoạt dành cho hệ thống Linux. Với hai phiên bản — một được cộng đồng hỗ trợ và một phiên bản cao cấp với nhiều tính năng hơn và hỗ trợ chuyên nghiệp, OpenPanel trở thành giải pháp quản lý hosting toàn diện và tiết kiệm chi phí.
 
-
+![](/thuctap/img/CP_Logo_OpenPanel.png)
 
 # II. Cấu hình yêu cầu
 
